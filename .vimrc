@@ -1,9 +1,4 @@
 
-call plug#begin()
-Plug 'davidhalter/jedi-vim'
-Plug 'jalvesaq/Nvim-R'
-call plug#end()
-
 
 
 " Comments in Vimscript start with a `"`.
