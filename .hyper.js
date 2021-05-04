@@ -17,7 +17,7 @@ module.exports = {
       resizable: false,
       startAlone: false,
       startup: true,
-      size: 1,
+      size: 0.5,
       tray: false,
       unique: true
     },
