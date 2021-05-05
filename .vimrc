@@ -1,4 +1,6 @@
-
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
 
 
 " Comments in Vimscript start with a `"`.
