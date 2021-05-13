@@ -16,7 +16,8 @@ syntax on
 set shortmess+=I
 
 " Show line numbers.
-set number
+set relativenumber
+set rnu
 
 " This enables relative line numbering mode. With both number and
 " relativenumber enabled, the current line shows the true line number, while
