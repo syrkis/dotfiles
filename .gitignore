@@ -1,0 +1,6 @@
+# Exclude all files from .config directory
+.config/*
+
+# Include specific files within .config directory
+!.config/fish
+!.config/mutt
