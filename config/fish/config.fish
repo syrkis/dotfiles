@@ -20,3 +20,16 @@ if status is-interactive
    and not set -q TMUX
    exec tmux
 end
+
+# neovim default editor
+set -Ux EDITOR nvim
+
+if not functions -q vi
+    alias vi=nvim
+    funcsave vi
+end
+
+if not functions -q vim
+    alias vim=nvim
+    funcsave vim
+end
