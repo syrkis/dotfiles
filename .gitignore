@@ -1,6 +1,7 @@
 # Exclude all files from .config directory
 config/*
 **/*.db
+config/fish/fish_variables
 
 # Include specific files within .config directory
 !config/fish
