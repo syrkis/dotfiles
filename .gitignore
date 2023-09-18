@@ -1,8 +1,8 @@
 # Exclude all files from .config directory
-.config/*
+config/*
 **/*.db
 
 # Include specific files within .config directory
-!.config/fish
-!.config/mutt
-!.config/epy
+!config/fish
+!config/mutt
+!config/epy
