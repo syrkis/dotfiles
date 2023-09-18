@@ -6,3 +6,4 @@ config/*
 !config/fish
 !config/mutt
 !config/epy
+!config/tmux
