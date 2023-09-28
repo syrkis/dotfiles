@@ -3,6 +3,7 @@ config/*
 **/*.db
 **/pack/
 config/fish/fish_variables
+**/plugins
 
 # Include specific files within .config directory
 !config/fish
