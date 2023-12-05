@@ -13,4 +13,5 @@ function print
         -V fontsize="12pt" \
         -V date="\today" \
         -V linestretch="1.5"
+    open $output
 end

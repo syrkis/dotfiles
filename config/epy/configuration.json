@@ -2,7 +2,7 @@
   "Setting": {
     "DefaultViewer": "auto",
     "DictionaryClient": "auto",
-    "ShowProgressIndicator": true,
+    "ShowProgressIndicator": false,
     "PageScrollAnimation": false,
     "MouseSupport": false,
     "StartWithDoubleSpread": false,
@@ -12,7 +12,7 @@
     "DarkColorBG": 235,
     "LightColorFG": 238,
     "LightColorBG": 253,
-    "SeamlessBetweenChapters": false,
+    "SeamlessBetweenChapters": true,
     "PreferredTTSEngine": "gtts-mpv",
     "TTSEngineArgs": []
   },

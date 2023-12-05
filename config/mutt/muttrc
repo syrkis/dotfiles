@@ -16,3 +16,10 @@ set postponed = "+Draft"
 mailboxes =INBOX =Sent =Trash =Draft =Junk =Other
 
 source color.muttrc
+
+
+set editor = "nvim"
+# Set preffered view modes
+auto_view text/html text/calendar application/ics # view html automatically
+alternative_order text/html text/plain text/enriched text/*
+

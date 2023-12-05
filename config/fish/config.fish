@@ -4,8 +4,6 @@ if status is-interactive
     # Add Homebrew directories to the PATH
     set -Ua fish_user_paths /opt/homebrew/bin /opt/homebrew/sbin
     
-    # Add Python to path
-    pyenv init - | source
 end
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
@@ -16,13 +14,15 @@ starship init fish | source
 set -gx PATH /Users/syrkis/.local/bin $PATH
 set -gx PATH /Applications/Julia-1.9.app/Contents/Resources/julia/bin $PATH
 
-if status is-interactive
-   and not set -q TMUX
-   exec tmux
-end
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+
+
+set -gx NILEARN_DATA ~/.cache/nilearn_data
+set -gx TFDS_DATA_DIR ~/.cache/tensorflow_datasets
 
 # neovim default editor
 set -Ux EDITOR nvim
+
 
 if not functions -q vi
     alias vi=nvim
@@ -33,3 +33,9 @@ if not functions -q vim
     alias vim=nvim
     funcsave vim
 end
+
+alias ls='eza'
+alias l='eza -lh'
+
+# Add Python to path
+pyenv init - | source
