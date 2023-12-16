@@ -1,0 +1,112 @@
+\documentclass[aspectratio=32]{beamer}
+
+% Packages
+\usepackage{datetime, graphicx, biblatex, longtable, booktabs, siunitx, listings, caption, etoolbox}
+\usefonttheme{serif}
+
+% Bibliography
+\addbibresource{~/text/Zotero/biblio/library.bib}
+
+% Title Information
+\title{$title$}
+\author{Noah Syrkis}
+\date{\mydate{\today}}
+
+% siunitx Configuration
+\sisetup{group-separator={\,}, group-minimum-digits=4}
+
+% listings Configuration
+\lstset{language=Python, basicstyle=\ttfamily\small, breaklines=true}
+
+% Beamer Templates
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{frametitle continuation}{}
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{itemize item}{\textemdash}
+\setbeamertemplate{itemize subitem}{\textemdash}
+\setbeamertemplate{itemize subsubitem}{\textemdash}
+
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=6ex,dp=1.5ex,leftskip=1cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle\par
+  \end{beamercolorbox}
+}
+
+% Beamer Colors
+\setbeamercolor{structure}{fg=black}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{background canvas}{bg=white}
+
+% Custom Commands
+\newcommand{\image}[2][]{
+    \begin{figure}
+    \centering
+    \vfill % This will add space at the top, pushing the figure down
+    \includegraphics[width=\textwidth, height=0.80\textheight, keepaspectratio]{#2}
+    \vfill % This will add space at the bottom, pushing the figure up, thus centering it vertically
+    \captionsetup{font={scriptsize,stretch=0.8}, belowskip=-10pt} % Adjust the 'belowskip' to move the caption up or down as needed
+    \caption{#1}
+    \end{figure}
+}
+
+\newcommand{\tightlist}{\setlength{\itemsep}{0.2em}\setlength{\parskip}{0pt}}
+
+% Date Format
+\newdateformat{mydate}{\ordinal{DAY} \monthname[\THEMONTH] \THEYEAR}
+
+% Adjustments
+\linespread{1.5} % Line spread for readability
+\setbeamersize{text margin left=10mm,text margin right=10mm} % Margins
+
+% Customized Title Page
+\defbeamertemplate*{title page}{customized}[1][]{
+  \begin{center}
+    \vfill
+    \usebeamerfont{title}\inserttitle\par
+    \vfill
+    \large\usebeamerfont{author}\insertauthor\par
+    \vfill
+    \large\usebeamerfont{date}\insertdate\par
+    \vfill
+  \end{center}
+}
+
+% Document
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+   \tableofcontents    % itemize
+\end{frame}
+
+$body$
+
+\begin{frame}[allowframebreaks]{References}
+  \begingroup
+  \setbeamertemplate{footline}{} 
+  \setbeamercolor{background canvas}{bg=white}
+  \linespread{1.2}
+  \scriptsize
+  \printbibliography
+  \endgroup
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \vfill
+    \large Noah Syrkis
+    \vfill
+    \large The Virian Project
+    \vfill
+    \large www.virian.org
+    \vfill
+  \end{center}
+\end{frame}
+
+\end{document}
