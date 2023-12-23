@@ -2,7 +2,7 @@ function print
     set file $argv[1]
     set bibfile ~/text/Zotero/biblio/library.bib
     set output (string replace -r ".md" ".pdf" $file)
-    set template_path /Users/syrkis/text/template
+    set template_path /Users/syrkis/.config/fish/functions
 
     # Check if the Markdown file contains a title
     set title (sed -n 's/^title: \(.*\)$/\1/p' $file)
@@ -13,8 +13,8 @@ function print
     end
 
     # Create a temporary modified markdown file
-    set temp_file temp.md
-    sed '/—$/s/$/\\\\hfill\\\\today/' $file > $temp_file
+    set temp_file (mktemp)
+    sed '/—$/s/$/\\hfill\\textbf{\\today}/' $file > $temp_file
 
     # Pandoc command with conditional template
     pandoc $temp_file --bibliography=$bibfile --citeproc -o $output \
