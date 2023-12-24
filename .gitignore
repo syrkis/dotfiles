@@ -7,8 +7,8 @@ config/fish/fish_variables
 
 # Include specific files within .config directory
 !config/fish
-!config/mutt
 !config/epy
 !config/tmux
 !config/nvim
+!config/alacritty
 
