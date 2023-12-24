@@ -41,8 +41,7 @@ function press
                 -V fontsize="12pt" \
                 -V date="\today" \
                 -V linestretch="1.5" \
-                --metadata=link-citations:true \
-                --biblatex \
+                --metadata=link-citations:true --biblatex \
                 --template=$template_path/report.tex \
                 -o temp.tex
 

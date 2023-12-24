@@ -1,10 +1,8 @@
 function edit
-    set file_path (realpath $argv[1])
-    if test -e $file_path
-        ln -sf $file_path ~/text/writing/open_file.md
-        open "obsidian://open?vault=writing&file=open_file.md"
-    else
-        echo "File does not exist."
-    end
+    # file is the first argument
+    set file $argv[1]
+    # file path is current directory + file
+    set file_path (pwd)/$file
+    # Open Alacritty in fullscreen mode with nvim editing the file
+    alacritty --option window.startup_mode=Fullscreen -e nvim $file_path
 end
-
