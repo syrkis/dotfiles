@@ -85,4 +85,39 @@ else
     echo "pass is already set up."
 fi
 
+
+
+# Install pyenv dependencies
+echo "Installing pyenv dependencies..."
+PYENV_DEPS="libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git"
+for dep in $PYENV_DEPS; do
+    if ! dpkg -s "$dep" >/dev/null 2>&1; then
+        sudo apt install -y "$dep"
+    else
+        echo "$dep is already installed."
+    fi
+done
+
+# Install pyenv
+echo "Installing pyenv..."
+if [ ! -d "$HOME/.pyenv" ]; then
+    curl https://pyenv.run | bash
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+    echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+    echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+else
+    echo "pyenv is already installed."
+fi
+
+# Install starship
+echo "Installing starship..."
+if ! command -v starship >/dev/null 2>&1; then
+    curl -fsSL https://starship.rs/install.sh | bash
+    echo 'eval "$(starship init fish)"' >> ~/.config/fish/config.fish
+else
+    echo "starship is already installed."
+fi
+
 echo "Setup complete!"
