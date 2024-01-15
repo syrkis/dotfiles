@@ -89,7 +89,7 @@ ln -sfn "$DOTFILES_DIR/config/tmux" ~/.config/tmux
 
 # Install pyenv dependencies
 echo "Installing pyenv dependencies..."
-PYENV_DEPS="libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git"
+PYENV_DEPS="libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git"
 for dep in $PYENV_DEPS; do
     if ! dpkg -s "$dep" >/dev/null 2>&1; then
         sudo apt install -y "$dep"
@@ -98,15 +98,23 @@ for dep in $PYENV_DEPS; do
     fi
 done
 
+# install eza
+if ! command -v eza >/dev/null 2>&1; then
+    echo "Installing eza..."
+    sudo mkdir -p /etc/apt/keyrings
+    wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+    sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+    sudo apt update
+    sudo apt install -y eza
+else
+    echo "eza is already installed."
+fi
+
 # Install pyenv
 echo "Installing pyenv..."
 if [ ! -d "$HOME/.pyenv" ]; then
     curl https://pyenv.run | bash
-    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-    echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
-    echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-    echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 else
     echo "pyenv is already installed."
 fi
