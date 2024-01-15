@@ -1,0 +1,32 @@
+[colors.cursor]
+cursor = "0x999999"
+text = "0x999999"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0x999999"
+
+[font]
+size = 28.0
+
+[font.normal]
+family = "Fira Code"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 70
+
+[scrolling]
+multiplier = 4
+
+[window]
+decorations = "buttonless"
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 100
+y = 20

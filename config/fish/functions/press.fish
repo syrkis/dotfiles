@@ -24,13 +24,24 @@ function press
         case letter 
             # Letter processing
             sed '/—$/s/$/\\\\hfill\\\\today/' $file > .temp.md
-            pandoc .temp.md -o $output \
+            pandoc .temp.md -o /Users/syrkis/text/collator/$output \
                 -V documentclass="article" \
                 -V geometry="margin=3cm" \
                 -V fontsize="12pt" \
                 -V linestretch="1.5" \
-                --template=$template_path/letter.tex
-            open $output ; rm .temp.md
+                --metadata=link-citations:true --biblatex \
+                --template=$template_path/letter.tex \
+                -o temp.tex
+
+            pdflatex temp.tex && biber temp.bcf && pdflatex temp.tex && pdflatex temp.tex
+
+            # copy latex of .md to clipboard ([@name2000] should be \citet and @name200 \cite). We are on mac so use sed right
+            cat .temp.md | sed -e 's/\[@\([^]]*\)\]/\\\cite{\1}/g' -e 's/@\([^ ]*\)/\\\citet{\1}/g' -e 's/\*\([^*]*\)\*/\\emph{\1}/g' | pbcopy
+
+            mv temp.pdf /Users/syrkis/text/collator/$output
+
+            open /Users/syrkis/text/collator/$output
+            rm temp.* .temp.md
 
         case report
             # Report processing
@@ -47,8 +58,8 @@ function press
 
             pdflatex temp.tex && biber temp.bcf && pdflatex temp.tex && pdflatex temp.tex
 
-            mv temp.pdf $output
-            open $output
+            mv temp.pdf /Users/syrkis/text/collator/$output
+            open /Users/syrkis/text/collator/$output
             rm temp.*
 
         case slide
@@ -72,7 +83,7 @@ function press
                 -o output/output.tex
 
             pushd output
-            cp ../*.{png,jpg,jpeg} .
+            cp ../figures/*.{png,jpg,jpeg} .
 
             for img in *.png *.jpg *.jpeg
                 if test -e $img
@@ -81,8 +92,8 @@ function press
             end
 
             pdflatex output.tex && biber output.bcf && pdflatex output.tex && pdflatex output.tex
-            mv output.pdf "../$title.pdf"
+            mv output.pdf /Users/syrkis/text/collator/$title.pdf
             popd
-            open "$title.pdf"
+            open /Users/syrkis/text/collator/$title.pdf
     end
 end

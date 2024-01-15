@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot', {'branch': 'master'}
 Plug 'godlygeek/tabular', {'branch': 'master'}
 Plug 'lervag/vimtex', {'branch': 'master'}
@@ -37,7 +36,6 @@ function! MarkdownSettings()
   setlocal foldenable      " Enable folding
   setlocal nofoldenable    " But start with folds open
   setlocal colorcolumn=0   " No color column
-  setlocal textwidth=80    " Set text width for wrapping
   setlocal wrap            " Enable text wrapping
   setlocal showbreak=      " Set wrapped line indicator to empty or something subtle
   setlocal linebreak       " Wrap lines at word (not in the middle)

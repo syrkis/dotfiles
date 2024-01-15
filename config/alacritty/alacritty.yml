@@ -11,8 +11,8 @@ window:
   # Transparency settings
   background_opacity: 0.5
   padding:
-    x: 200  # Horizontal padding
-    y: 100  # Vertical padding
+    x: 100  # Horizontal padding
+    y: 20  # Vertical padding
 
 # Font settings
 font:
