@@ -30,10 +30,15 @@ read -p "Enter your Git email: " gitemail
 git config --global user.email "$gitemail"
 
 echo "Installing Snap applications..."
-# Installs applications using Snap
-sudo snap install --classic code obsidian
+# Installs applications using Snap (make list of snap apps to install, and then loop through)
+declare -a snapapps=("slack" "discord" "obsidian" "code")
+for app in "${snapapps[@]}"
+do
+    sudo snap install --classic $app
+done
 
 # Change default shell to Fish
-chsh -s `which fish`
+echo "Changing default shell to Fish..."
+chsh -s $(which fish)
 
 echo "Setup complete!"
