@@ -46,7 +46,7 @@ done
 
 echo "Installing Snap applications..."
 # Installs applications using Snap
-sudo snap install --classic code obsidian logseq
+sudo snap install --classic code obsidian
 
 # Change default shell to Fish
 chsh -s `which fish`
