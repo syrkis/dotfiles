@@ -111,6 +111,11 @@ else
     echo "eza is already installed."
 fi
 
+# Install nvm plugin for fish
+echo "Installing vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # Install pyenv
 echo "Installing pyenv..."
 if [ ! -d "$HOME/.pyenv" ]; then
