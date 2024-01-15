@@ -115,6 +115,8 @@ fi
 echo "Installing pyenv..."
 if [ ! -d "$HOME/.pyenv" ]; then
     curl https://pyenv.run | bash
+    set -Ux PYENV_ROOT $HOME/.pyenv
+    fish_add_path $PYENV_ROOT/bin
 else
     echo "pyenv is already installed."
 fi
