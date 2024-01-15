@@ -24,9 +24,9 @@ sudo apt install -y \
 
 echo "Configuring Git..."
 # Prompt for Git username and email, repeat if input is empty
-read -p "Enter your Git global username: " gitusername
+read -p "Enter your Git username: " gitusername
 git config --global user.name "$gitusername"
-read -p "Enter your Git global email: " gitemail
+read -p "Enter your Git email: " gitemail
 git config --global user.email "$gitemail"
 
 echo "Installing Snap applications..."
