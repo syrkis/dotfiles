@@ -24,25 +24,10 @@ sudo apt install -y \
 
 echo "Configuring Git..."
 # Prompt for Git username and email, repeat if input is empty
-while true; do
-    read -p "Enter your Git global username: " gitusername
-    if [ -n "$gitusername" ]; then
-        git config --global user.name "$gitusername"
-        break
-    else
-        echo "Username cannot be empty. Please enter a valid username."
-    fi
-done
-
-while true; do
-    read -p "Enter your Git global email: " gitemail
-    if [ -n "$gitemail" ]; then
-        git config --global user.email "$gitemail"
-        break
-    else
-        echo "Email cannot be empty. Please enter a valid email."
-    fi
-done
+read -p "Enter your Git global username: " gitusername
+git config --global user.name "$gitusername"
+read -p "Enter your Git global email: " gitemail
+git config --global user.email "$gitemail"
 
 echo "Installing Snap applications..."
 # Installs applications using Snap
