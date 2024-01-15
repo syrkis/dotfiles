@@ -24,7 +24,7 @@ sudo apt install -y \
 
 echo "Configuring Git..."
 # Prompt for Git username and email, repeat if input is empty
-read -p "Enter your Git username: " gitusername
+read -p "Enter your Git name: " gitusername
 git config --global user.name "$gitusername"
 read -p "Enter your Git email: " gitemail
 git config --global user.email "$gitemail"
@@ -40,5 +40,23 @@ done
 # Change default shell to Fish
 echo "Changing default shell to Fish..."
 chsh -s $(which fish)
+
+# Give credentials to new machine
+echo "Checking for existing SSH keys..."
+SSH_DIR="$HOME/.ssh"
+if [ ! -d "$SSH_DIR" ] || [ -z "$(ls -A $SSH_DIR)" ]; then
+    echo "No SSH keys found. Generating a new SSH key..."
+    # Replace 'your_email@example.com' with your email
+    ssh-keygen
+else
+    echo "SSH keys already exist."
+fi
+
+echo "Your public SSH key:"
+cat $SSH_DIR/id_rsa.pub
+
+echo "Add this key to your GitHub account in some way."
+echo "Press Enter once you've added the key to GitHub..."
+read -p ""
 
 echo "Setup complete!"
