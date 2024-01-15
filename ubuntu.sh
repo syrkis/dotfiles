@@ -59,4 +59,15 @@ echo "Add this key to your GitHub account in some way."
 echo "Press Enter once you've added the key to GitHub..."
 read -p ""
 
+# clone dot files repo into ~/code/dotfiles
+echo "Cloning dotfiles repo..."
+mkdir -p ~/code
+git clone git@github.com:syrkis/dotfiles.git ~/code/dotfiles
+
+# symlink dotfiles
+echo "Symlinking dotfiles..."
+ln -s ~/code/dotfiles/config ~/.config
+
+# setup pass-cli (password manager) (this needs some GPG setup)
+
 echo "Setup complete!"
