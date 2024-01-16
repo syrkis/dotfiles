@@ -39,3 +39,5 @@ alias l='eza -lh'
 
 # Add Python to path
 pyenv init - | source
+eval "$(starship init fish)"
+eval "$(starship init fish)"
