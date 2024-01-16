@@ -69,21 +69,21 @@ ln -sfn "$DOTFILES_DIR/config/nvim" ~/.config/nvim
 ln -sfn "$DOTFILES_DIR/config/tmux" ~/.config/tmux
 
 # Setup pass-cli (password manager)
-# echo "Setting up pass..."
-# if [ ! -d "$HOME/.password-store" ]; then
-#     echo "put public.key and private.key in ~/Desktop (will be deleted after setup)"
-#     read -p "Press Enter once you've done this..."
-#     if [ ! -f ~/Desktop/public.key ] || [ ! -f ~/Desktop/private.key ]; then
-#         echo "public.key and/or private.key not found in ~/Desktop. exiting pass setup, and continuing with setup..."
-#         exit 1
-#     fi
-#     git clone git@github.com/syrkis/pass.git "$HOME/.password-store"
-#     gpg --import ~/Desktop/public.key
-#     gpg --allow-secret-key-import --import ~/Desktop/private.key
-#     rm ~/Desktop/public.key ~/Desktop/private.key
-# else
-#     echo "pass is already set up."
-# fi
+echo "Setting up pass..."
+if [ ! -d "$HOME/.password-store" ]; then
+    echo "put public.key and private.key in ~/Desktop (will be deleted after setup)"
+    read -p "Press Enter once you've done this..."
+    if [ ! -f ~/Desktop/public.key ] || [ ! -f ~/Desktop/private.key ]; then
+        echo "public.key and/or private.key not found in ~/Desktop. exiting pass setup, and continuing with setup..."
+        exit 1
+    fi
+    git clone git@github.com:syrkis/pass.git "$HOME/.password-store"
+    gpg --import ~/Desktop/public.key
+    gpg --allow-secret-key-import --import ~/Desktop/private.key
+    # rm ~/Desktop/public.key ~/Desktop/private.key
+else
+    echo "pass is already set up."
+fi
 
 
 
@@ -112,7 +112,7 @@ else
 fi
 
 # Install nvm plugin for fish
-echo "Installing vim-plug
+echo "Installing vim-plug"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
