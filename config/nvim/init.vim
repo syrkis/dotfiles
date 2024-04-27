@@ -7,6 +7,9 @@ Plug 'lervag/vimtex', {'branch': 'master'}
 
 call plug#end()
 
+" syntax
+" syntax on
+
 " Use system clipboard by default
 set clipboard+=unnamedplus
 

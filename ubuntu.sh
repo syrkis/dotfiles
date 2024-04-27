@@ -41,7 +41,7 @@ fi
 SSH_DIR="$HOME/.ssh"
 if [ ! -d "$SSH_DIR" ] || [ -z "$(ls -A $SSH_DIR)" ]; then
     echo "No SSH keys found. Generating a new SSH key..."
-    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    ssh-keygen -t rsa -b 4096 -C "
 else
     echo "SSH keys already exist."
 fi
@@ -112,7 +112,7 @@ else
 fi
 
 # Install nvm plugin for fish
-echo "Installing vim-plug
+echo "Installing vim-plug..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 

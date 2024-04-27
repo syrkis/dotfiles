@@ -37,5 +37,11 @@ end
 alias ls='eza'
 alias l='eza -lh'
 
-# Add Python to path
+set -lx lines (cat ~/.env)
+for line in $lines
+    set -lx key (echo $line | cut -d '=' -f 1)
+    set -lx value (echo $line | cut -d '=' -f 2-)
+    set -gx $key $value
+end
+
 pyenv init - | source
