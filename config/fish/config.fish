@@ -45,3 +45,5 @@ for line in $lines
 end
 
 pyenv init - | source
+eval "$(starship init fish)"
+eval "$(starship init fish)"
