@@ -22,8 +22,8 @@ multiplier = 2
 decorations = "buttonless"
 
 [window.dimensions]
-columns = 48
-lines = 8
+columns = 84
+lines = 14
 
 [window.padding]
 x = 25

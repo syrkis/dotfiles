@@ -7,6 +7,13 @@ Plug 'lervag/vimtex', {'branch': 'master'}
 
 call plug#end()
 
+autocmd BufNewFile,BufRead *.rasp set filetype=rasp
+
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+    pattern = { "*.rasp" },
+    command = 'set filetype=rasp'
+})
+
 " syntax
 " syntax on
 

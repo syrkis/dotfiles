@@ -3,7 +3,7 @@ if status is-interactive
 
     # Add Homebrew directories to the PATH
     set -Ua fish_user_paths /opt/homebrew/bin /opt/homebrew/sbin
-    
+
 end
 export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
@@ -15,6 +15,7 @@ set -gx PATH /Users/syrkis/.local/bin $PATH
 set -gx PATH /Applications/Julia-1.9.app/Contents/Resources/julia/bin $PATH
 
 set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
+set -U fish_user_paths /opt/homebrew/bin $fish_user_paths
 
 
 set -gx NILEARN_DATA ~/.cache/nilearn_data
