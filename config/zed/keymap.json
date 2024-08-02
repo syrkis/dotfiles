@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j j": "vim::NormalBefore" // remap jj in insert mode to escape
+    }
+  }
+]
