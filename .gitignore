@@ -4,6 +4,7 @@ config/*
 **/pack/
 config/fish/fish_variables
 **/plugins
+**/*.mdb
 
 # Include specific files within .config directory
 !config/fish
@@ -13,3 +14,6 @@ config/fish/fish_variables
 !config/alacritty
 !config/zed
 
+# Except this stuff
+config/zed/embeddings/
+config/zed/prompts/
