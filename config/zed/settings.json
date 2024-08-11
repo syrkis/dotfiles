@@ -7,26 +7,64 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "formatter": [
+    {
+      "external": {
+        "command": "ruff",
+        "arguments": [
+          "format",
+          "-"
+        ]
+      }
+    },
+    {
+      "language_server": {
+        "enabled": true
+      }
+    }
+  ],
+  "assistant": {
+    "version": "2",
+    "button": false,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4"
+    }
+  },
   "extend_comment_on_newline": false,
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ],
+      "format_on_save": "on"
+    }
+  },
   "project_panel": {
     "button": true,
     "dock": "right",
     "git_status": true
   },
   "collaboration_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "chat_panel": {
+    "button": false,
     "dock": "right"
   },
   "outline_panel": {
+    "button": false,
     "dock": "right"
   },
-  "nightly": {
-    "enabled": false,
-    "auto_update": true
+  "notification_panel": {
+    "button": false
   },
   "terminal": {
     "dock": "right",
     "copy_on_select": true,
-    "default_width": 500,
+    "default_width": 600,
     "line_height": {
       "custom": 2.5
     }
@@ -38,21 +76,26 @@
   "tab_bar": {
     "show": false
   },
+  "dock": "right",
   "jupyter": {
     "enabled": true,
     "dock": "right",
-    "default_width": 300
+    "kernel_selections": {
+      "python": "miiii"
+    }
   },
-  "auto_update": true,
   "ui_font_size": 16,
   "soft_wrap": "editor_width",
   "format_on_save": "on",
-  "current_line_highlight": "none",
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 16,
   "buffer_line_height": {
     "custom": 2.5
   },
+  "vim": {
+    "use_multiline_find": true
+  },
+  "use_autoclose": true,
   "vim_mode": true,
   "scrollbar": {
     "show": "auto",
@@ -62,7 +105,6 @@
     "selected_symbol": true,
     "diagnostics": true
   },
-  "autosave": "on_focus_change",
   "theme": {
     "mode": "system",
     "light": "One Light",
