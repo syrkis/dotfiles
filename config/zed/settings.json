@@ -7,6 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
   "formatter": [
     {
       "external": {
@@ -23,14 +30,6 @@
       }
     }
   ],
-  "assistant": {
-    "version": "2",
-    "button": false,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4"
-    }
-  },
   "extend_comment_on_newline": false,
   "languages": {
     "Python": {
@@ -73,6 +72,17 @@
     "show_status_indicator": true
   },
   "relative_line_numbers": true,
+  "always_treat_brackets_as_autoclosed": true,
+  "auto_signature_help": true,
+  "auto_install_extensions": {
+    "enabled": true
+  },
+  "restore_on_startup": "last_workspace",
+  "slash_commands": {
+    "docs": {
+      "enabled": true
+    }
+  },
   "tab_bar": {
     "show": false
   },
@@ -81,7 +91,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "miiii"
+      "python": "parabellum"
     }
   },
   "ui_font_size": 16,
@@ -91,6 +101,9 @@
   "buffer_font_size": 16,
   "buffer_line_height": {
     "custom": 2.5
+  },
+  "features": {
+    "inline_completion_provider": "copilot"
   },
   "vim": {
     "use_multiline_find": true
