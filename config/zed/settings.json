@@ -30,14 +30,15 @@
       }
     }
   ],
-  "extend_comment_on_newline": false,
+  "extend_comment_on_newline": true,
   "languages": {
     "Python": {
       "language_servers": [
         "pyright",
         "ruff"
       ],
-      "format_on_save": "on"
+      "format_on_save": "on",
+      "use_autoclose": false
     }
   },
   "project_panel": {
@@ -63,7 +64,7 @@
   "terminal": {
     "dock": "right",
     "copy_on_select": true,
-    "default_width": 600,
+    "default_width": 420,
     "line_height": {
       "custom": 2.5
     }
@@ -77,7 +78,7 @@
   "auto_install_extensions": {
     "enabled": true
   },
-  "restore_on_startup": "last_workspace",
+  "restore_on_startup": "none",
   "slash_commands": {
     "docs": {
       "enabled": true
@@ -101,9 +102,6 @@
   "buffer_font_size": 16,
   "buffer_line_height": {
     "custom": 2.5
-  },
-  "features": {
-    "inline_completion_provider": "copilot"
   },
   "vim": {
     "use_multiline_find": true
