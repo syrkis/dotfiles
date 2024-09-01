@@ -7,7 +7,6 @@ config/fish/fish_variables
 **/*.mdb
 
 # Include specific files within .config directory
-!config/fish
 !config/epy
 !config/tmux
 !config/nvim
