@@ -55,7 +55,6 @@
     "dock": "right"
   },
   "outline_panel": {
-    "button": false,
     "dock": "right"
   },
   "notification_panel": {
