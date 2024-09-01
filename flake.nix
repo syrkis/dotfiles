@@ -12,38 +12,21 @@
     };
 
     outputs = inputs : {
-        darwinConfigurations.c24 = inputs.darwin.lib.darwinSystem {
+        darwinConfigurations.mac624172 = inputs.darwin.lib.darwinSystem {
             system = "aarch64-darwin";
             pkgs = import inputs.nixpkgs { system = "aarch64-darwin"; };
             modules = [
-                ({pkgs, ...}: {
-                    programs.zsh.enable = true;
-                    environment.shells = [ pkgs.zsh pkgs.bash ];  # enable multiple shells
-                    environment.loginShell = pkgs.zsh;  # set zsh as the login shell
-                    nix.extraOptions = ''
-                        experimental-features = nix-command flakes
-                    '';
-                    environment.systemPackages = [ pkgs.coreutils ];
-                    fonts.packages = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
-                    services.nix-daemon.enable = true;
-                    system.defaults.dock.autohide = true;
-                    system.stateVersion = 4;
-                })
+                ./modules/darwin
                 inputs.home-manager.darwinModules.home-manager
                 {
+                    users.users.nobr = {
+                        name = "nobr";
+                        home = "/Users/nobr";
+                    };
                     home-manager = {
                         useGlobalPkgs = true;
                         useUserPackages = true;
-                        users.nobr.imports = [
-                            ({ pkgs, ...}: {
-                                home.stateVersion = "22.11";
-                                home.packages = with pkgs; [ ripgrep fd curl less ];
-
-                                programs.bat.enable = true;
-                                programs.git.enable = true;
-                                programs.zsh.enable = true;
-                            })
-                        ];
+                        users.nobr.imports = [ ./modules/home-manager ];
                     };
                 }
             ];
