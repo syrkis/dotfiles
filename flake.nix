@@ -1,6 +1,5 @@
 {
     description = "learning nix";
-
     inputs  = {
         nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
@@ -10,7 +9,6 @@
         darwin.url = "github:lnl7/nix-darwin";
         darwin.inputs.nixpkgs.follows = "nixpkgs";
     };
-
     outputs = inputs : {
         darwinConfigurations.mac624172 = inputs.darwin.lib.darwinSystem {
             system = "aarch64-darwin";

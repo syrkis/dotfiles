@@ -24,7 +24,6 @@
             "raycast"
             "brave-browser"
             "slack"
-            "iterm2"
             "amethyst"
             "zed"
             "markedit"
