@@ -28,7 +28,6 @@
             "zed"
             "markedit"
             "skim"
-            "zotero@beta"
         ];
     };
 }

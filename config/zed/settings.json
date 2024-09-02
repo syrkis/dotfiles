@@ -91,7 +91,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "parabellum"
+      "python": "aigs"
     }
   },
   "ui_font_size": 16,
