@@ -4,16 +4,22 @@
         ripgrep
         fd
         curl
+        wget
         less
         neovim
         fzf
         typst
         iterm2
+        gnupg1orig
         pass
         passExtensions.pass-otp
         tealdeer
         python311
         poetry
+        todo
+        cargo
+        uiua
+        eza
     ];
     programs = {
         bat.enable = true;

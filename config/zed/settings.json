@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "auto_update_extensions": {
+    "typst": false
+  },
   "assistant": {
     "default_model": {
       "provider": "anthropic",
@@ -17,8 +20,10 @@
   "formatter": [
     {
       "external": {
-        "command": "ruff",
+        "command": "poetry",
         "arguments": [
+          "run",
+          "ruff",
           "format",
           "-"
         ]
@@ -32,10 +37,15 @@
   ],
   "extend_comment_on_newline": true,
   "languages": {
+    "Markdown-Inline": {
+      "show_inline_completions": false
+    },
+    "Typst": {
+      "show_inline_completions": false
+    },
     "Python": {
       "language_servers": [
-        "pyright",
-        "ruff"
+        "pyright"
       ],
       "format_on_save": "on",
       "use_autoclose": false
@@ -47,7 +57,7 @@
     "git_status": true
   },
   "collaboration_panel": {
-    "button": false,
+    "button": true,
     "dock": "right"
   },
   "chat_panel": {

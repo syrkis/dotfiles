@@ -28,6 +28,8 @@
             "zed"
             "markedit"
             "skim"
+            "obs"
+            "utm"
         ];
     };
 }
