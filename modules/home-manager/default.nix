@@ -20,6 +20,8 @@
         cargo
         uiua
         eza
+        ffmpeg
+        swig4
     ];
     programs = {
         bat.enable = true;

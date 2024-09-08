@@ -41,7 +41,7 @@
       "show_inline_completions": false
     },
     "Typst": {
-      "show_inline_completions": false
+      "show_inline_completions": true
     },
     "Python": {
       "language_servers": [
