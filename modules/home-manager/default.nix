@@ -22,6 +22,9 @@
         eza
         ffmpeg
         swig4
+        wakatime
+        just
+        zellij
     ];
     programs = {
         bat.enable = true;

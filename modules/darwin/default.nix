@@ -30,6 +30,7 @@
             "skim"
             "obs"
             "utm"
+            "julia"
         ];
     };
 }
