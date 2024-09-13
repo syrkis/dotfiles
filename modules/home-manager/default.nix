@@ -12,7 +12,6 @@
         iterm2
         gnupg1orig
         pass
-        passExtensions.pass-otp
         tealdeer
         python311
         poetry
@@ -24,7 +23,8 @@
         swig4
         wakatime
         just
-        zellij
+        tinymist
+        himalaya
     ];
     programs = {
         bat.enable = true;
@@ -32,7 +32,7 @@
         starship.enable = true;
         starship.enableZshIntegration = true;
         starship.enableFishIntegration = true;
-        zsh.enable = true;
+        zellij.enable = true;
         alacritty.enable = true;
     };
 }

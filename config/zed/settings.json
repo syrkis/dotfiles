@@ -35,6 +35,7 @@
       }
     }
   ],
+  "preferred_line_length": 120,
   "extend_comment_on_newline": true,
   "languages": {
     "Markdown-Inline": {
@@ -50,6 +51,11 @@
       "format_on_save": "on",
       "use_autoclose": false
     }
+  },
+  "centered_layout": {
+    "enabled": true,
+    "left_padding": 0.1,
+    "right_padding": 0.1,
   },
   "project_panel": {
     "button": true,
@@ -131,7 +137,7 @@
     "dark": "Evil Rabbit (Dark)"
   },
   "journal": {
-    "path": "~",
+    "path": "~/desk/text",
     "hour_format": "hour24"
   },
   "telemetry": {

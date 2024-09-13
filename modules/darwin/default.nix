@@ -31,6 +31,7 @@
             "obs"
             "utm"
             "julia"
+            "zettlr"
         ];
     };
 }
