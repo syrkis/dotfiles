@@ -7,9 +7,6 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "auto_update_extensions": {
-    "typst": false
-  },
   "assistant": {
     "default_model": {
       "provider": "anthropic",
@@ -17,24 +14,6 @@
     },
     "version": "2"
   },
-  "formatter": [
-    {
-      "external": {
-        "command": "poetry",
-        "arguments": [
-          "run",
-          "ruff",
-          "format",
-          "-"
-        ]
-      }
-    },
-    {
-      "language_server": {
-        "enabled": true
-      }
-    }
-  ],
   "preferred_line_length": 120,
   "extend_comment_on_newline": true,
   "languages": {
@@ -42,20 +21,32 @@
       "show_inline_completions": false
     },
     "Typst": {
-      "show_inline_completions": true
+      "language_servers": ["tinymist"],
+      "format_on_save": "on",
+      "use_autoclose": false,
+      "formatter": {
+        "external": {
+          "command": "typstyle",
+          "arguments": []
+        }
+      }
     },
     "Python": {
-      "language_servers": [
-        "pyright"
-      ],
+      "language_servers": ["pyright"],
       "format_on_save": "on",
-      "use_autoclose": false
+      "use_autoclose": false,
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "-"]
+        }
+      }
     }
   },
   "centered_layout": {
     "enabled": true,
     "left_padding": 0.1,
-    "right_padding": 0.1,
+    "right_padding": 0.1
   },
   "project_panel": {
     "button": true,
@@ -107,7 +98,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "aigs"
+      "python": "llllll"
     }
   },
   "ui_font_size": 16,
