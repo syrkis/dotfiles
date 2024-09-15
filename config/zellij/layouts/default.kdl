@@ -1,9 +1,15 @@
 // layout_file.kdl
 
 layout {
-    pane
+    // split vertically and open htop in the left pane
     pane split_direction="vertical" {
         pane
-        pane command="htop"
+        pane
     }
+    // pane split_direction="horizontal" {
+        // pane split_direction="vertical" {
+            // pane command="vim"
+            // pane command="ls"
+        // }
+    // }
 }

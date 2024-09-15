@@ -32,6 +32,7 @@
             "utm"
             "julia"
             "zettlr"
+            "qutebrowser"
         ];
     };
 }

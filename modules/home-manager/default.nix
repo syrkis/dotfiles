@@ -17,7 +17,7 @@
         ollama
         python311
         # python311Packages.pip
-        python311Packages.ipykernel
+        # python311Packages.ipykernel
         # python311Packages.notebook
         poetry
         todo
@@ -32,6 +32,7 @@
         tinymist
         himalaya
         ruff
+        racket
     ];
     programs = {
         bat.enable = true;
