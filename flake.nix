@@ -10,7 +10,7 @@
         darwin.inputs.nixpkgs.follows = "nixpkgs";
     };
     outputs = inputs : {
-        darwinConfigurations.mac624172 = inputs.darwin.lib.darwinSystem {
+        darwinConfigurations.c24 = inputs.darwin.lib.darwinSystem {
             system = "aarch64-darwin";
             pkgs = import inputs.nixpkgs { system = "aarch64-darwin"; };
             modules = [

@@ -32,8 +32,9 @@
       }
     },
     "Python": {
-      "language_servers": ["pyright"],
+      "language_servers": ["pyright"], // , "ruff"],
       "format_on_save": "on",
+      "preferred_line_length": 120,
       "use_autoclose": false,
       "formatter": {
         "external": {
@@ -98,7 +99,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "llllll"
+      "python": "miiii"
     }
   },
   "ui_font_size": 16,
