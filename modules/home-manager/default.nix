@@ -36,6 +36,8 @@
         ruff
         nodejs_20
         racket
+        zoxide
+        nushell
     ];
     programs = {
         bat.enable = true;

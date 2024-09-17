@@ -16,7 +16,6 @@
     system.defaults.dock.autohide = true;
     system.keyboard.enableKeyMapping = true;
     system.keyboard.remapCapsLockToEscape = true;
-    system.
     system.stateVersion = 4;
     homebrew = {
         enable = true;
