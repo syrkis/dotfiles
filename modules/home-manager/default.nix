@@ -41,8 +41,6 @@
         bat.enable = true;
         git.enable = true;
         starship.enable = true;
-        starship.enableZshIntegration = true;
-        starship.enableFishIntegration = true;
         zellij.enable = true;
         alacritty.enable = true;
     };

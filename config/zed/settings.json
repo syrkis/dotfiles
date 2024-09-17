@@ -91,7 +91,7 @@
       "program": "fish"
     },
     "copy_on_select": true,
-    "default_width": 600,
+    "default_width": 666,
     "line_height": {
       "custom": 2.5
     }
