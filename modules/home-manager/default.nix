@@ -38,6 +38,7 @@
         racket
         zoxide
         nushell
+        sd
     ];
     programs = {
         bat.enable = true;
