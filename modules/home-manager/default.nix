@@ -32,6 +32,7 @@
         tinymist
         himalaya
         ruff
+        nodejs_20
         racket
     ];
     programs = {
