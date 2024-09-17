@@ -29,6 +29,7 @@
         wakatime
         just
         typstyle
+        hurl
         tinymist
         himalaya
         ruff

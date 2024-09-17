@@ -20,6 +20,18 @@
     "Markdown-Inline": {
       "show_inline_completions": false
     },
+    "Svelte": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
     "Typst": {
       "language_servers": ["tinymist"],
       "format_on_save": "on",
@@ -70,8 +82,16 @@
   },
   "terminal": {
     "dock": "right",
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish"
+      }
+    },
+    "shell": {
+      "program": "fish"
+    },
     "copy_on_select": true,
-    "default_width": 420,
+    "default_width": 600,
     "line_height": {
       "custom": 2.5
     }
