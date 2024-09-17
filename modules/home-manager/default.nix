@@ -4,6 +4,7 @@
         ripgrep
         fd
         curl
+        starship
         wget
         less
         neovim
