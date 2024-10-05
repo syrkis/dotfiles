@@ -2,7 +2,9 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "j j": "vim::NormalBefore" // remap jj in insert mode to escape
+      "j j": "vim::NormalBefore", // remap jj in insert mode to escape
+      "cmd-k cmd-right": "pane::GoForward",
+      "cmd-k cmd-left": "pane::GoBack"
     }
   }
 ]

@@ -1,8 +1,14 @@
 { pkgs, ...}: {
-    home.stateVersion = "24.05";
+    home.stateVersion = "24.11";
     home.packages = with pkgs; [
+        (pass.withExtensions (ps: [ ps.pass-otp ]))
         ripgrep
         fd
+        lima # docker alternative
+        colima  # vagrant vm stuff
+        croc
+        docker
+        netlify-cli
         curl
         starship
         wget
@@ -13,13 +19,11 @@
         iterm2
         gnupg1orig
         htop
-        pass
+        # pass
+        pandoc
         tealdeer
         ollama
         python311
-        # python311Packages.pip
-        # python311Packages.ipykernel
-        # python311Packages.notebook
         poetry
         todo
         cargo
@@ -39,12 +43,21 @@
         zoxide
         nushell
         sd
+        # nmap
+        # texlive
     ];
     programs = {
         bat.enable = true;
         git.enable = true;
         starship.enable = true;
         zellij.enable = true;
-        alacritty.enable = true;
+        alacritty = {
+            enable = true;
+        };
+        # nixvim = {
+            # enable = true;
+            # colorschemes.catppuccin.enable = true;
+            # plugins.lualine.enable = true;
+        # };
     };
 }

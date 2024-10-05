@@ -7,153 +7,74 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ui_font_family": "FiraCode Nerd Font Mono",
+  "auto_update_extensions": { "enabled": true },
   "assistant": {
-    "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-5-sonnet-20240620"
-    },
+    "default_model": { "provider": "openai", "model": "gpt-4o" },
     "version": "2"
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
   },
   "preferred_line_length": 120,
   "extend_comment_on_newline": true,
   "languages": {
-    "Markdown-Inline": {
-      "show_inline_completions": false
-    },
-    "Svelte": {
-      "format_on_save": "on",
-      "use_autoclose": true
-    },
-    "JavaScript": {
-      "format_on_save": "on",
-      "use_autoclose": true
-    },
-    "TypeScript": {
-      "format_on_save": "on",
-      "use_autoclose": true
-    },
+    "Markdown-Inline": { "show_inline_completions": false },
+    "Svelte": { "format_on_save": "on", "use_autoclose": true },
+    "JavaScript": { "format_on_save": "on", "use_autoclose": true },
+    "Markdown": { "show_inline_completions": true, "format_on_save": "on" },
+    "TypeScript": { "format_on_save": "on", "use_autoclose": true },
     "Typst": {
       "language_servers": ["tinymist"],
       "format_on_save": "on",
       "use_autoclose": false,
-      "formatter": {
-        "external": {
-          "command": "typstyle",
-          "arguments": []
-        }
-      }
+      "formatter": { "external": { "command": "typstyle", "arguments": [] } }
     },
     "Python": {
+      "show_inline_completions": true,
       "language_servers": ["pyright"], // , "ruff"],
       "format_on_save": "on",
       "preferred_line_length": 120,
       "use_autoclose": false,
-      "formatter": {
-        "external": {
-          "command": "ruff",
-          "arguments": ["format", "-"]
-        }
-      }
+      "formatter": { "external": { "command": "ruff", "arguments": ["format", "-"] } }
     }
   },
-  "centered_layout": {
-    "enabled": true,
-    "left_padding": 0.1,
-    "right_padding": 0.1
-  },
-  "project_panel": {
-    "button": true,
-    "dock": "right",
-    "git_status": true
-  },
-  "collaboration_panel": {
-    "button": true,
-    "dock": "right"
-  },
-  "chat_panel": {
-    "button": false,
-    "dock": "right"
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "notification_panel": {
-    "button": false
-  },
+  "centered_layout": { "enabled": true, "left_padding": 0.1, "right_padding": 0.1 },
+  "project_panel": { "button": true, "dock": "right", "git_status": true },
+  "collaboration_panel": { "button": true, "dock": "right" },
+  "chat_panel": { "button": false, "dock": "right" },
+  "outline_panel": { "dock": "right" },
+  "notification_panel": { "button": false },
   "terminal": {
     "dock": "right",
     "detect_venv": {
-      "on": {
-        "activate_script": "fish"
-      }
+      "on": { "activate_script": "fish", "command": "source .venv/bin/activate.fish" }
     },
-    "shell": {
-      "program": "fish"
-    },
-    "copy_on_select": true,
-    "default_width": 666,
-    "line_height": {
-      "custom": 2.5
-    }
+    "shell": { "program": "fish" },
+    "line_height": { "custom": 2.5 }
   },
-  "task": {
-    "show_status_indicator": true
-  },
+  "task": { "show_status_indicator": true },
   "relative_line_numbers": true,
   "always_treat_brackets_as_autoclosed": true,
   "auto_signature_help": true,
-  "auto_install_extensions": {
-    "enabled": true
-  },
+  "auto_install_extensions": { "enabled": true },
   "restore_on_startup": "none",
-  "slash_commands": {
-    "docs": {
-      "enabled": true
-    }
-  },
-  "tab_bar": {
-    "show": false
-  },
+  "slash_commands": { "docs": { "enabled": true } },
+  "tab_bar": { "show": false },
   "dock": "right",
-  "jupyter": {
-    "enabled": true,
-    "dock": "right",
-    "kernel_selections": {
-      "python": "miiii"
-    }
-  },
+  "jupyter": { "enabled": true, "dock": "right", "kernel_selections": { "python": "aigs" } },
   "ui_font_size": 16,
   "soft_wrap": "editor_width",
   "format_on_save": "on",
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 16,
-  "buffer_line_height": {
-    "custom": 2.5
-  },
-  "vim": {
-    "use_multiline_find": true
-  },
+  "buffer_line_height": { "custom": 2.5 },
+  "vim": { "use_multiline_find": true },
   "use_autoclose": true,
   "vim_mode": true,
-  "scrollbar": {
-    "show": "auto",
-    "cursors": true,
-    "git_diff": true,
-    "search_results": true,
-    "selected_symbol": true,
-    "diagnostics": true
-  },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Evil Rabbit (Dark)"
-  },
-  "journal": {
-    "path": "~/desk/text",
-    "hour_format": "hour24"
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  }
+  "scrollbar": { "show": "auto", "cursors": true, "git_diff": true, "search_results": true },
+  "theme": { "mode": "system", "light": "One Light", "dark": "Evil Rabbit (Dark)" },
+  "journal": { "path": "~/desk/text", "hour_format": "hour24" },
+  "telemetry": { "diagnostics": false, "metrics": false }
 }

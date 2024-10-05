@@ -35,7 +35,8 @@
             "julia"
             "zettlr"
             "notunes"
-            "qutebrowser"
+            "obsidian"
+            "vagrant"
         ];
     };
 }
