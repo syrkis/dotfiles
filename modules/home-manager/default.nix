@@ -4,12 +4,16 @@
         (pass.withExtensions (ps: [ ps.pass-otp ]))
         ripgrep
         fd
+        typescript
         lima # docker alternative
+        nmap
+        # proxychains
         colima  # vagrant vm stuff
         croc
         docker
         netlify-cli
         curl
+        biome
         starship
         wget
         less
@@ -19,7 +23,6 @@
         iterm2
         gnupg1orig
         htop
-        # pass
         pandoc
         tealdeer
         ollama
@@ -41,9 +44,8 @@
         nodejs_20
         racket
         zoxide
-        nushell
+        # nushell
         sd
-        # nmap
         # texlive
     ];
     programs = {

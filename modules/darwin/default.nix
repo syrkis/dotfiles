@@ -21,8 +21,10 @@
         enable = true;
         caskArgs.no_quarantine = true;
         global.brewfile = true;
+        brews = ["cairo"];
         casks = [
             "beeper"
+            "steam"
             "raycast"
             "brave-browser"
             "slack"
@@ -37,6 +39,8 @@
             "notunes"
             "obsidian"
             "vagrant"
+            "orion"
+            "protonvpn"
         ];
     };
 }

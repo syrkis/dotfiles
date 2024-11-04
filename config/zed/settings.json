@@ -7,10 +7,21 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ssh_connections": [
+    {
+      "host": "tripper2.itu.dk",
+      "username": "noah",
+      "projects": [
+        {
+          "paths": ["~/miiii"]
+        }
+      ]
+    }
+  ],
   "ui_font_family": "FiraCode Nerd Font Mono",
   "auto_update_extensions": { "enabled": true },
   "assistant": {
-    "default_model": { "provider": "openai", "model": "gpt-4o" },
+    "default_model": { "provider": "anthropic", "model": "claude-3-5-sonnet-latest" },
     "version": "2"
   },
   "tabs": {
@@ -33,7 +44,7 @@
     },
     "Python": {
       "show_inline_completions": true,
-      "language_servers": ["pyright"], // , "ruff"],
+      "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
       "preferred_line_length": 120,
       "use_autoclose": false,
@@ -41,10 +52,10 @@
     }
   },
   "centered_layout": { "enabled": true, "left_padding": 0.1, "right_padding": 0.1 },
-  "project_panel": { "button": true, "dock": "right", "git_status": true },
+  "project_panel": { "button": true, "dock": "left", "git_status": true },
   "collaboration_panel": { "button": true, "dock": "right" },
   "chat_panel": { "button": false, "dock": "right" },
-  "outline_panel": { "dock": "right" },
+  "outline_panel": { "dock": "left" },
   "notification_panel": { "button": false },
   "terminal": {
     "dock": "right",
@@ -63,7 +74,7 @@
   "slash_commands": { "docs": { "enabled": true } },
   "tab_bar": { "show": false },
   "dock": "right",
-  "jupyter": { "enabled": true, "dock": "right", "kernel_selections": { "python": "aigs" } },
+  "jupyter": { "enabled": true, "dock": "right", "kernel_selections": { "python": "miiii" } },
   "ui_font_size": 16,
   "soft_wrap": "editor_width",
   "format_on_save": "on",
@@ -76,5 +87,6 @@
   "scrollbar": { "show": "auto", "cursors": true, "git_diff": true, "search_results": true },
   "theme": { "mode": "system", "light": "One Light", "dark": "Evil Rabbit (Dark)" },
   "journal": { "path": "~/desk/text", "hour_format": "hour24" },
-  "telemetry": { "diagnostics": false, "metrics": false }
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "features": { "inline_completion_provider": "supermaven" }
 }

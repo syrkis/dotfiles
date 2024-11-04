@@ -1,6 +1,7 @@
 # Exclude all files from .config directory
 config/*
 **/*.db
+**/.DS_Store
 **/pack/
 config/fish/fish_variables
 **/plugins
