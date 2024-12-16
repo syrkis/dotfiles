@@ -2,7 +2,6 @@
     programs.zsh.enable = true;
     programs.fish.enable = true;
     environment.shells = with pkgs; [ zsh bash fish ];
-    environment.loginShell = pkgs.zsh;
     nix.extraOptions = ''
         experimental-features = nix-command flakes
     '';
@@ -21,25 +20,28 @@
         enable = true;
         caskArgs.no_quarantine = true;
         global.brewfile = true;
-        brews = ["cairo"];
+        brews = ["libffi" "pkg-config" "fswatch" "pdf2svg"];
         casks = [
+            "spotify"
+            "font-new-computer-modern"
+            "freesurfer"
             "beeper"
             "steam"
+            "arc"
             "raycast"
             "brave-browser"
             "slack"
+            "libreoffice"
             "amethyst"
             "zed"
             "markedit"
             "skim"
             "obs"
             "utm"
-            "julia"
-            "zettlr"
+            "warp"
             "notunes"
             "obsidian"
             "vagrant"
-            "orion"
             "protonvpn"
         ];
     };

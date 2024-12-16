@@ -1,8 +1,12 @@
 if status is-interactive
 	# Commands to run in interactive sessions can go here
-	set -gx EDITOR  vim
+	# set -gx EDITOR  vim
+set -gx EDITOR "zed --wait"
+
 	   set -x DOCKER_HOST unix:///Users/nobr/.colima/default/docker.sock
    set -x PATH $HOME/.npm-global/bin $PATH
+	set -gx PATH $PATH /Users/nobr/.juliaup/bin
+
 
 	zoxide init fish | source
 	starship init fish | source

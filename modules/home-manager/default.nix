@@ -5,12 +5,12 @@
         ripgrep
         fd
         typescript
-        lima # docker alternative
         nmap
-        # proxychains
+        s3cmd
         colima  # vagrant vm stuff
         croc
         docker
+        nixd
         netlify-cli
         curl
         biome
@@ -30,7 +30,6 @@
         poetry
         todo
         cargo
-        uiua
         eza
         ffmpeg
         swig4
@@ -44,9 +43,7 @@
         nodejs_20
         racket
         zoxide
-        # nushell
         sd
-        # texlive
     ];
     programs = {
         bat.enable = true;

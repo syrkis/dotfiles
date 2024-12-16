@@ -9,6 +9,15 @@
 {
   "ssh_connections": [
     {
+      "host": "130.226.143.130",
+      "username": "nobr",
+      "projects": [
+        {
+          "paths": ["~/pensim"]
+        }
+      ]
+    },
+    {
       "host": "tripper2.itu.dk",
       "username": "noah",
       "projects": [
@@ -21,7 +30,7 @@
   "ui_font_family": "FiraCode Nerd Font Mono",
   "auto_update_extensions": { "enabled": true },
   "assistant": {
-    "default_model": { "provider": "anthropic", "model": "claude-3-5-sonnet-latest" },
+    "default_model": { "provider": "zed.dev", "model": "claude-3-5-sonnet-latest" },
     "version": "2"
   },
   "tabs": {
@@ -34,9 +43,10 @@
     "Markdown-Inline": { "show_inline_completions": false },
     "Svelte": { "format_on_save": "on", "use_autoclose": true },
     "JavaScript": { "format_on_save": "on", "use_autoclose": true },
-    "Markdown": { "show_inline_completions": true, "format_on_save": "on" },
+    "Markdown": { "show_inline_completions": false, "format_on_save": "on" },
     "TypeScript": { "format_on_save": "on", "use_autoclose": true },
     "Typst": {
+      "show_inline_completions": true,
       "language_servers": ["tinymist"],
       "format_on_save": "on",
       "use_autoclose": false,
@@ -49,13 +59,19 @@
       "preferred_line_length": 120,
       "use_autoclose": false,
       "formatter": { "external": { "command": "ruff", "arguments": ["format", "-"] } }
+    },
+    "Julia": {
+      "show_inline_completions": true,
+      "language_servers": ["julia"],
+      "format_on_save": "on",
+      "use_autoclose": false
     }
   },
   "centered_layout": { "enabled": true, "left_padding": 0.1, "right_padding": 0.1 },
   "project_panel": { "button": true, "dock": "left", "git_status": true },
   "collaboration_panel": { "button": true, "dock": "right" },
   "chat_panel": { "button": false, "dock": "right" },
-  "outline_panel": { "dock": "left" },
+  "outline_panel": { "dock": "right" },
   "notification_panel": { "button": false },
   "terminal": {
     "dock": "right",
@@ -63,9 +79,10 @@
       "on": { "activate_script": "fish", "command": "source .venv/bin/activate.fish" }
     },
     "shell": { "program": "fish" },
-    "line_height": { "custom": 2.5 }
+    "line_height": { "custom": 2.5 },
+    "default_width": 666
   },
-  "task": { "show_status_indicator": true },
+  "task": { "show_status_indicator": false },
   "relative_line_numbers": true,
   "always_treat_brackets_as_autoclosed": true,
   "auto_signature_help": true,
@@ -74,19 +91,25 @@
   "slash_commands": { "docs": { "enabled": true } },
   "tab_bar": { "show": false },
   "dock": "right",
-  "jupyter": { "enabled": true, "dock": "right", "kernel_selections": { "python": "miiii" } },
+  "jupyter": { "enabled": true, "dock": "right" },
   "ui_font_size": 16,
   "soft_wrap": "editor_width",
   "format_on_save": "on",
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 16,
   "buffer_line_height": { "custom": 2.5 },
+  "current_line_highlight": "none",
   "vim": { "use_multiline_find": true },
   "use_autoclose": true,
   "vim_mode": true,
+  // "cursor_shape": "underline",
   "scrollbar": { "show": "auto", "cursors": true, "git_diff": true, "search_results": true },
-  "theme": { "mode": "system", "light": "One Light", "dark": "Evil Rabbit (Dark)" },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Evil Rabbit (Dark)"
+  },
   "journal": { "path": "~/desk/text", "hour_format": "hour24" },
   "telemetry": { "diagnostics": false, "metrics": false },
-  "features": { "inline_completion_provider": "supermaven" }
+  "features": { "inline_completion_provider": "copilot" }
 }
