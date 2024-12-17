@@ -7,6 +7,7 @@
         typescript
         nmap
         s3cmd
+        nil
         colima  # vagrant vm stuff
         croc
         docker

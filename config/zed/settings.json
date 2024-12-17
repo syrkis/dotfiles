@@ -30,7 +30,7 @@
   "ui_font_family": "FiraCode Nerd Font Mono",
   "auto_update_extensions": { "enabled": true },
   "assistant": {
-    "default_model": { "provider": "zed.dev", "model": "claude-3-5-sonnet-latest" },
+    "default_model": { "provider": "copilot_chat", "model": "gpt-4o" },
     "version": "2"
   },
   "tabs": {
