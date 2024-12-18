@@ -10,7 +10,7 @@
         systemPath = [ "/opt/homebrew/bin/" ];
         pathsToLink = [ "/Applications" ];
     };
-    fonts.packages = [ (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; }) ];
+    fonts.packages = [ pkgs.nerd-fonts.fira-code ];
     services.nix-daemon.enable = true;
     system.defaults.dock.autohide = true;
     system.keyboard.enableKeyMapping = true;
