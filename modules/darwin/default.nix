@@ -20,7 +20,26 @@
         enable = true;
         caskArgs.no_quarantine = true;
         global.brewfile = true;
-        brews = ["libffi" "pkg-config" "fswatch" "pdf2svg" "cmake" "freetype" "gettext" "gmp" "hiredis" "jpeg-turbo" "jsoncpp" "leveldb" "libogg" "libpng" "libvorbis" "luajit" "zstd" "gettext"];
+        brews = [
+          "libffi"
+          "pkg-config"
+          "fswatch"
+          "pdf2svg"
+          "cmake"
+          "freetype"
+          "gettext"
+          "gmp"
+          "hiredis"
+          "jpeg-turbo"
+          "jsoncpp"
+          "leveldb"
+          "libogg"
+          "libpng"
+          "libvorbis"
+          "luajit"
+          "zstd"
+          "gettext"
+        ];
         casks = [
             "spotify"
             "font-new-computer-modern"
