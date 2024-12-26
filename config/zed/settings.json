@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // "cursor_shape": "underline",
   "ssh_connections": [
     {
       "host": "130.226.143.130",
@@ -45,9 +46,6 @@
   },
   "extend_comment_on_newline": true,
   "languages": {
-    "JSON": {
-      "tab_size": 4
-    },
     "Markdown-Inline": {
       "show_inline_completions": false
     },
@@ -184,8 +182,8 @@
     "git_gutter": "hide",
     "gutter_debounce": null,
     "inline_blame": {
-      "enabled": true,
-      "show_commit_summary": true
+      "enabled": true
+      // "show_commit_summary": true
     }
   },
   // "indent_guides": {
@@ -208,6 +206,7 @@
   "format_on_save": "on",
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 16,
+  "show_user_picture": false,
   "buffer_line_height": {
     "custom": 2.5
   },
@@ -217,7 +216,6 @@
   },
   "use_autoclose": true,
   "vim_mode": true,
-  // "cursor_shape": "underline",
   "scrollbar": {
     "show": "auto",
     "cursors": false,
