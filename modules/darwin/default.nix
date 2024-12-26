@@ -57,11 +57,11 @@
             "skim"
             "obs"
             "utm"
-            "warp"
             "notunes"
             "obsidian"
             "vagrant"
             "protonvpn"
+            "whatsapp"
         ];
     };
 }

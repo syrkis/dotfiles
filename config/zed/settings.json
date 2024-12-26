@@ -28,37 +28,72 @@
     }
   ],
   "ui_font_family": "FiraCode Nerd Font Mono",
-  "auto_update_extensions": { "enabled": true },
+  "auto_update_extensions": {
+    "enabled": true
+  },
   "assistant": {
-    "default_model": { "provider": "copilot_chat", "model": "gpt-4o" },
-    "version": "2"
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2",
+    "button": false
   },
   "tabs": {
     "file_icons": true,
     "git_status": true
   },
-  "preferred_line_length": 120,
   "extend_comment_on_newline": true,
   "languages": {
-    "Markdown-Inline": { "show_inline_completions": false },
-    "Svelte": { "format_on_save": "on", "use_autoclose": true },
-    "JavaScript": { "format_on_save": "on", "use_autoclose": true },
-    "Markdown": { "show_inline_completions": false, "format_on_save": "on" },
-    "TypeScript": { "format_on_save": "on", "use_autoclose": true },
+    "JSON": {
+      "tab_size": 4
+    },
+    "Markdown-Inline": {
+      "show_inline_completions": false
+    },
+    "Svelte": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
+    "Markdown": {
+      "show_inline_completions": false,
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
     "Typst": {
-      "show_inline_completions": true,
+      "show_inline_completions": false,
       "language_servers": ["tinymist"],
       "format_on_save": "on",
       "use_autoclose": false,
-      "formatter": { "external": { "command": "typstyle", "arguments": [] } }
+      "formatter": {
+        "external": {
+          "command": "typstyle",
+          "arguments": []
+        }
+      }
     },
     "Python": {
       "show_inline_completions": true,
       "language_servers": ["pyright", "ruff"],
+      "indent_guides": {
+        "enabled": false
+      },
       "format_on_save": "on",
-      "preferred_line_length": 120,
+      // "preferred_line_length": 120,
       "use_autoclose": false,
-      "formatter": { "external": { "command": "ruff", "arguments": ["format", "-"] } }
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "-"]
+        }
+      }
     },
     "Julia": {
       "show_inline_completions": true,
@@ -67,49 +102,143 @@
       "use_autoclose": false
     }
   },
-  "centered_layout": { "enabled": true, "left_padding": 0.1, "right_padding": 0.1 },
-  "project_panel": { "button": true, "dock": "left", "git_status": true },
-  "collaboration_panel": { "button": true, "dock": "right" },
-  "chat_panel": { "button": false, "dock": "right" },
-  "outline_panel": { "dock": "right" },
-  "notification_panel": { "button": false },
+  "unnecessary_code_fade": 0.8,
+  "calls": {
+    // Join calls with the microphone live by default
+    "mute_on_join": true,
+    // Share your project when you are the first to join a channel
+    "share_on_join": false
+  },
+  "centered_layout": {
+    "enabled": true,
+    "left_padding": 0.1,
+    "right_padding": 0.1
+  },
+  "project_panel": {
+    "button": false,
+    "dock": "left",
+    "git_status": true
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "chat_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right",
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
   "terminal": {
     "dock": "right",
+    "button": false,
     "detect_venv": {
-      "on": { "activate_script": "fish", "command": "source .venv/bin/activate.fish" }
+      "on": {
+        "activate_script": "fish",
+        "command": "source .venv/bin/activate.fish"
+      }
     },
-    "shell": { "program": "fish" },
-    "line_height": { "custom": 2.5 },
-    "default_width": 666
+    "shell": {
+      "program": "fish"
+    },
+    "line_height": {
+      "custom": 2.5
+    },
+    // "default_width": 600,
+    "font_family": "FiraCode Nerd Font Mono",
+    "font_features": {
+      "liga": true,
+      "calt": true
+    }
   },
-  "task": { "show_status_indicator": false },
+  "task": {
+    "show_status_indicator": false
+  },
   "relative_line_numbers": true,
+  "expand_excerpt_lines": 5,
   "always_treat_brackets_as_autoclosed": true,
   "auto_signature_help": true,
-  "auto_install_extensions": { "enabled": true },
+  "auto_install_extensions": {
+    "enabled": true
+  },
   "restore_on_startup": "none",
-  "slash_commands": { "docs": { "enabled": true } },
-  "tab_bar": { "show": false },
+  "slash_commands": {
+    "docs": {
+      "enabled": true
+    }
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false
+  },
   "dock": "right",
-  "jupyter": { "enabled": true, "dock": "right" },
+  "git": {
+    "git_gutter": "hide",
+    "gutter_debounce": null,
+    "inline_blame": {
+      "enabled": true,
+      "show_commit_summary": true
+    }
+  },
+  // "indent_guides": {
+  // "enabled": true
+  // "line_width": 1,
+  // "active_line_width": 2,
+  // "coloring": "fixed",
+  // "background_coloring": "disabled"
+  // },
+  "jupyter": {
+    "enabled": true,
+    "dock": "right",
+    "kernel_selections": {
+      "python": "neuroscope"
+    }
+  },
   "ui_font_size": 16,
   "soft_wrap": "editor_width",
+  // "preferred_line_length": null,
   "format_on_save": "on",
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 16,
-  "buffer_line_height": { "custom": 2.5 },
+  "buffer_line_height": {
+    "custom": 2.5
+  },
   "current_line_highlight": "none",
-  "vim": { "use_multiline_find": true },
+  "vim": {
+    "use_multiline_find": true
+  },
   "use_autoclose": true,
   "vim_mode": true,
   // "cursor_shape": "underline",
-  "scrollbar": { "show": "auto", "cursors": true, "git_diff": true, "search_results": true },
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false,
+    "git_diff": true,
+    "search_results": true
+    // "selected_symbol": true
+  },
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Evil Rabbit (Dark)"
+    "dark": "Lila (Dark)"
   },
-  "journal": { "path": "~/desk/text", "hour_format": "hour24" },
-  "telemetry": { "diagnostics": false, "metrics": false },
-  "features": { "inline_completion_provider": "copilot" }
+  "journal": {
+    "path": "~/desk/text",
+    "hour_format": "hour24"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "features": {
+    "inline_completion_provider": "copilot"
+  }
 }
