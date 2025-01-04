@@ -100,7 +100,7 @@
       "use_autoclose": false
     }
   },
-  "unnecessary_code_fade": 0.8,
+  // "unnecessary_code_fade": 0.8,
   "calls": {
     // Join calls with the microphone live by default
     "mute_on_join": true,
@@ -197,7 +197,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "neuroscope"
+      "python": "miiii"
     }
   },
   "ui_font_size": 16,
@@ -218,10 +218,10 @@
   "vim_mode": true,
   "scrollbar": {
     "show": "auto",
-    "cursors": false,
+    "cursors": true,
     "git_diff": true,
-    "search_results": true
-    // "selected_symbol": true
+    "search_results": true,
+    "selected_symbol": true
   },
   "theme": {
     "mode": "system",

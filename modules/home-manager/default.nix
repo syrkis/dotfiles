@@ -12,7 +12,6 @@
         croc
         docker
         nixd
-        netlify-cli
         curl
         biome
         starship
@@ -22,7 +21,7 @@
         fzf
         typst
         iterm2
-        gnupg1orig
+        # gnupg1orig
         htop
         pandoc
         tealdeer
@@ -42,7 +41,7 @@
         himalaya
         ruff
         nodejs_20
-        racket
+        # racket
         zoxide
         sd
     ];
