@@ -1,0 +1,16 @@
+[
+  // {
+  // "label": "File Finder",
+  // "command": "zed \"$(tv --preview 'bat -n --color=always {}')\"",
+  // "hide": "always",
+  // "allow_concurrent_runs": true,
+  // "use_new_terminal": true
+  // },
+  {
+    "label": "poetry run",
+    "command": "poetry run python main.py"
+    // "hide": "always",
+    // "allow_concurrent_runs": true,
+    // "use_new_terminal": true
+  }
+]

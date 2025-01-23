@@ -8,6 +8,7 @@
         nmap
         s3cmd
         nil
+        hledger
         colima  # vagrant vm stuff
         croc
         docker
@@ -23,7 +24,6 @@
         iterm2
         # gnupg1orig
         htop
-        pandoc
         tealdeer
         ollama
         python311
@@ -41,7 +41,6 @@
         himalaya
         ruff
         nodejs_20
-        # racket
         zoxide
         sd
     ];

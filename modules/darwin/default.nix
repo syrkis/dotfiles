@@ -39,6 +39,7 @@
           "luajit"
           "zstd"
           "gettext"
+          "pandoc"
         ];
         casks = [
             "spotify"

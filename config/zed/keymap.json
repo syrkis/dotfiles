@@ -7,4 +7,12 @@
       "cmd-k cmd-left": "pane::GoBack"
     }
   }
+  // {
+  // "bindings": {
+  // "cmd-p": [
+  // "task::Spawn",
+  // { "task_name": "File Finder", "reveal_target": "center" }
+  // ]
+  // }
+  // }
 ]

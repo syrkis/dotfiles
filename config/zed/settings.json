@@ -8,6 +8,13 @@
 // from the command palette or from `Zed` application menu.
 {
   // "cursor_shape": "underline",
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    },
+    "version": "2"
+  },
   "ssh_connections": [
     {
       "host": "130.226.143.130",
@@ -31,14 +38,6 @@
   "ui_font_family": "FiraCode Nerd Font Mono",
   "auto_update_extensions": {
     "enabled": true
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2",
-    "button": false
   },
   "tabs": {
     "file_icons": true,
@@ -66,7 +65,7 @@
       "use_autoclose": true
     },
     "Typst": {
-      "show_inline_completions": false,
+      "show_inline_completions": true,
       "language_servers": ["tinymist"],
       "format_on_save": "on",
       "use_autoclose": false,
@@ -197,7 +196,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "miiii"
+      "python": "neuroscope"
     }
   },
   "ui_font_size": 16,
