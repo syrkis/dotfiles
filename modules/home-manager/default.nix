@@ -9,6 +9,9 @@
         s3cmd
         nil
         hledger
+        hledger-ui
+        ledger-web
+        asciinema
         colima  # vagrant vm stuff
         croc
         docker
