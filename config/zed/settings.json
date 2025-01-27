@@ -46,7 +46,9 @@
   "extend_comment_on_newline": true,
   "languages": {
     "Markdown-Inline": {
-      "show_inline_completions": false
+      "show_inline_completions": false,
+      "format_on_save": "on",
+      "preferred_line_length": 80
     },
     "Svelte": {
       "format_on_save": "on",
@@ -228,7 +230,7 @@
     "dark": "Lila (Dark)"
   },
   "journal": {
-    "path": "~/desk/text",
+    "path": "~/desk/text/diary",
     "hour_format": "hour24"
   },
   "telemetry": {

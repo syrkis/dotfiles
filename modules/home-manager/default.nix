@@ -10,7 +10,6 @@
         nil
         hledger
         hledger-ui
-        ledger-web
         asciinema
         colima  # vagrant vm stuff
         croc
