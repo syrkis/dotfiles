@@ -8,10 +8,12 @@
         nmap
         s3cmd
         nil
+       	zed-editor
         hledger
+        newcomputermodern
         hledger-ui
         asciinema
-        colima  # vagrant vm stuff
+        colima
         croc
         docker
         nixd
@@ -20,11 +22,12 @@
         starship
         wget
         less
+        pandoc
         neovim
         fzf
         typst
+        raycast
         iterm2
-        # gnupg1orig
         htop
         tealdeer
         ollama
@@ -54,10 +57,5 @@
         alacritty = {
             enable = true;
         };
-        # nixvim = {
-            # enable = true;
-            # colorschemes.catppuccin.enable = true;
-            # plugins.lualine.enable = true;
-        # };
     };
 }

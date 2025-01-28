@@ -39,21 +39,16 @@
           "luajit"
           "zstd"
           "gettext"
-          "pandoc"
+          # "pandoc"
         ];
         casks = [
             "spotify"
-            "font-new-computer-modern"
             "freesurfer"
             "beeper"
             "steam"
             "arc"
-            "raycast"
             "brave-browser"
             "slack"
-            "libreoffice"
-            "amethyst"
-            "zed"
             "markedit"
             "skim"
             "obs"
@@ -63,6 +58,7 @@
             "vagrant"
             "protonvpn"
             "whatsapp"
+            "lm-studio"
         ];
     };
 }

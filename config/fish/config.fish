@@ -17,3 +17,6 @@ set -gx EDITOR "zed --wait"
 	alias cat='bat -p'
 	alias cd='z'
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/nobr/.lmstudio/bin
