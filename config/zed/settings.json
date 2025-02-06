@@ -198,7 +198,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "neuroscope"
+      "python": "parabellum"
     }
   },
   "ui_font_size": 16,

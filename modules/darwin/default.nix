@@ -28,6 +28,7 @@
           "cmake"
           "freetype"
           "gettext"
+          "wakatime-cli"
           "gmp"
           "hiredis"
           "jpeg-turbo"
@@ -39,7 +40,6 @@
           "luajit"
           "zstd"
           "gettext"
-          # "pandoc"
         ];
         casks = [
             "spotify"

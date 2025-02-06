@@ -1,5 +1,5 @@
 { pkgs, ...}: {
-    home.stateVersion = "24.11";
+    home.stateVersion = "25.05";
     home.packages = with pkgs; [
         (pass.withExtensions (ps: [ ps.pass-otp ]))
         ripgrep
@@ -31,16 +31,15 @@
         htop
         tealdeer
         ollama
-        python311
         poetry
         todo
         cargo
         eza
         ffmpeg
         swig4
-        wakatime
         just
         typstyle
+        pyenv
         hurl
         tinymist
         himalaya
