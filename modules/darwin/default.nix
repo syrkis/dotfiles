@@ -11,7 +11,8 @@
         pathsToLink = [ "/Applications" ];
     };
     fonts.packages = [ pkgs.nerd-fonts.fira-code ];
-    services.nix-daemon.enable = true;
+    # services.nix-daemon.enable = true;
+    ids.gids.nixbld = 350;
     system.defaults.dock.autohide = true;
     system.keyboard.enableKeyMapping = true;
     system.keyboard.remapCapsLockToEscape = true;
@@ -23,6 +24,7 @@
         brews = [
           "libffi"
           "pkg-config"
+          "bfg"
           "fswatch"
           "pdf2svg"
           "cmake"
@@ -38,27 +40,31 @@
           "libpng"
           "libvorbis"
           "luajit"
+          "vercel-cli"
           "zstd"
           "gettext"
+          "tinymist"
         ];
         casks = [
-            "spotify"
             "freesurfer"
             "beeper"
             "steam"
             "arc"
+            "psst"
             "brave-browser"
             "slack"
+            "zed"
+            "logseq"
+            "tuta-mail"
+            "raycast"
             "markedit"
             "skim"
             "obs"
             "utm"
             "notunes"
-            "obsidian"
             "vagrant"
             "protonvpn"
             "whatsapp"
-            "lm-studio"
         ];
     };
 }

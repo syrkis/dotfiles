@@ -6,9 +6,9 @@
         fd
         typescript
         nmap
+        clojure
         s3cmd
         nil
-       	zed-editor
         hledger
         newcomputermodern
         hledger-ui
@@ -26,7 +26,6 @@
         neovim
         fzf
         typst
-        raycast
         iterm2
         htop
         tealdeer
@@ -41,7 +40,7 @@
         typstyle
         pyenv
         hurl
-        tinymist
+        # tinymist
         himalaya
         ruff
         nodejs_20
@@ -50,7 +49,16 @@
     ];
     programs = {
         bat.enable = true;
-        git.enable = true;
+        git = {
+            enable = true;
+            userName = "Noah Syrkis";
+            userEmail = "noah@syrkis.com";
+            signing = {
+                            key = null;  # Set to your signing key if you want to sign commits
+                            signByDefault = false;
+                            format = "ssh";  # or "gpg" depending on your preference
+                        };
+        };
         starship.enable = true;
         zellij.enable = true;
         alacritty = {

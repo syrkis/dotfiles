@@ -8,12 +8,11 @@
 // from the command palette or from `Zed` application menu.
 {
   // "cursor_shape": "underline",
-  "file_scan_exclusions": ["**/*.svg"],
   "assistant": {
     "button": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },
@@ -46,21 +45,9 @@
     "git_status": true
   },
   "extend_comment_on_newline": true,
-  "lsp": {
-    "tinymist": {
-      "initialization_options": {
-        "exportPdf": "onSave"
-        // "outputPath": "$name"
-      },
-      "settings": {
-        "exportPdf": "onSave"
-        // "outputPath": "$name"
-      }
-    }
-  },
   "languages": {
     "Markdown-Inline": {
-      "show_edit_predictions": false,
+      "show_inline_completions": false,
       "format_on_save": "on",
       "preferred_line_length": 80
     },
@@ -73,7 +60,7 @@
       "use_autoclose": true
     },
     "Markdown": {
-      "show_edit_predictions": false,
+      "show_inline_completions": false,
       "format_on_save": "on"
     },
     "TypeScript": {
@@ -81,10 +68,9 @@
       "use_autoclose": true
     },
     "Typst": {
-      "show_edit_predictions": true,
+      "show_inline_completions": true,
       "language_servers": ["tinymist"],
       "format_on_save": "on",
-      "enable_language_server": true,
       "use_autoclose": false,
       "formatter": {
         "external": {
@@ -94,7 +80,7 @@
       }
     },
     "Python": {
-      "show_edit_predictions": true,
+      "show_inline_completions": true,
       "language_servers": ["pyright", "ruff"],
       "indent_guides": {
         "enabled": false
@@ -110,7 +96,7 @@
       }
     },
     "Julia": {
-      "show_edit_predictions": true,
+      "show_inline_completions": true,
       "language_servers": ["julia"],
       "format_on_save": "on",
       "use_autoclose": false
@@ -138,7 +124,7 @@
     "dock": "right"
   },
   "chat_panel": {
-    "button": "never",
+    "button": false,
     "dock": "right"
   },
   "outline_panel": {
@@ -195,8 +181,8 @@
   },
   "dock": "right",
   "git": {
-    // "git_gutter": "hide",
-    // "gutter_debounce": null,
+    "git_gutter": "hide",
+    "gutter_debounce": null,
     "inline_blame": {
       "enabled": true
       // "show_commit_summary": true
@@ -242,7 +228,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Evil Rabbit (Dark)"
+    "dark": "Lila (Dark)"
   },
   "journal": {
     "path": "~/desk/text/diary",
@@ -253,6 +239,6 @@
     "metrics": false
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "inline_completion_provider": "zed"
   }
 }

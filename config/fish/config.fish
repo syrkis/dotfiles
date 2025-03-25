@@ -6,6 +6,7 @@ if status is-interactive
     set -x DOCKER_HOST unix:///Users/nobr/.colima/default/docker.sock
     set -x PATH $HOME/.npm-global/bin $PATH
     set -gx PATH $PATH /Users/nobr/.juliaup/bin
+	# set -gx UIUA_ENABLE_SIXEL 1
 
 
     zoxide init fish | source
@@ -20,3 +21,5 @@ end
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/nobr/.lmstudio/bin
+
+pyenv init - fish | source
