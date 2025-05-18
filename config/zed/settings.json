@@ -8,11 +8,32 @@
 // from the command palette or from `Zed` application menu.
 {
   // "cursor_shape": "underline",
-  "file_scan_exclusions": ["**/*.svg"],
+  // "file_scan_exclusions": ["**/*.svg"],
+  // "edit_predictions": {
+  // "mode": "subtle"
+  // "enabled_in_text_threads": false
+  // },
   "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-haiku-latest"
+    },
+    "version": "2"
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
     "button": false,
     "default_model": {
-      "provider": "zed.dev",
+      "provider": "anthropic",
       "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
@@ -32,9 +53,17 @@
       "username": "noah",
       "projects": [
         {
+          "paths": ["~/c2sim"]
+        },
+        {
           "paths": ["~/miiii"]
         }
       ]
+    },
+    {
+      "host": "tripper2.itu.dk",
+      "username": "noah",
+      "projects": []
     }
   ],
   "ui_font_family": "FiraCode Nerd Font Mono",
@@ -47,18 +76,21 @@
   },
   "extend_comment_on_newline": true,
   "lsp": {
-    "tinymist": {
-      "initialization_options": {
-        "exportPdf": "onSave"
-        // "outputPath": "$name"
-      },
-      "settings": {
-        "exportPdf": "onSave"
-        // "outputPath": "$name"
-      }
-    }
+    // "tinymist": {
+    // "initialization_options": {
+    // "exportPdf": "onSave"
+    // "outputPath": "$name"
+    // },
+    // "settings": {
+    // "exportPdf": "onSave"
+    // "outputPath": "$name"
+    // }
+    // }
   },
   "languages": {
+    "Uiua": {
+      "show_inline_completions": false
+    },
     "Markdown-Inline": {
       "show_edit_predictions": false,
       "format_on_save": "on",
@@ -78,7 +110,8 @@
     },
     "TypeScript": {
       "format_on_save": "on",
-      "use_autoclose": true
+      "use_autoclose": true,
+      "tab_size": 4
     },
     "Typst": {
       "show_edit_predictions": true,
@@ -96,9 +129,9 @@
     "Python": {
       "show_edit_predictions": true,
       "language_servers": ["pyright", "ruff"],
-      "indent_guides": {
-        "enabled": false
-      },
+      // "indent_guides": {
+      // "enabled": false
+      // },
       "format_on_save": "on",
       // "preferred_line_length": 120,
       "use_autoclose": false,
@@ -130,7 +163,7 @@
   },
   "project_panel": {
     "button": false,
-    "dock": "left",
+    "dock": "right",
     "git_status": true
   },
   "collaboration_panel": {
@@ -149,7 +182,7 @@
     "button": false
   },
   "terminal": {
-    "dock": "right",
+    "dock": "bottom",
     "button": false,
     "detect_venv": {
       "on": {
@@ -190,8 +223,8 @@
     "show": false
   },
   "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
+    "breadcrumbs": true
+    // "quick_actions": false
   },
   "dock": "right",
   "git": {
@@ -213,7 +246,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "parabellum"
+      "python": "miiii"
     }
   },
   "ui_font_size": 16,
@@ -226,7 +259,7 @@
   "buffer_line_height": {
     "custom": 2.5
   },
-  "current_line_highlight": "none",
+  "current_line_highlight": "all",
   "vim": {
     "use_multiline_find": true
   },
@@ -245,7 +278,7 @@
     "dark": "Evil Rabbit (Dark)"
   },
   "journal": {
-    "path": "~/desk/text/diary",
+    "path": "~/desk/text/journal",
     "hour_format": "hour24"
   },
   "telemetry": {

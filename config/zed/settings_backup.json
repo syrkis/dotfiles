@@ -8,11 +8,22 @@
 // from the command palette or from `Zed` application menu.
 {
   // "cursor_shape": "underline",
+  // "file_scan_exclusions": ["**/*.svg"],
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_assistant": false
+  },
   "assistant": {
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "button": false,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "provider": "anthropic",
+      "model": "claude-3-7-sonnet-thinking-latest"
     },
     "version": "2"
   },
@@ -22,7 +33,9 @@
       "username": "nobr",
       "projects": [
         {
-          "paths": ["~/pensim"]
+          "paths": [
+            "~/pensim"
+          ]
         }
       ]
     },
@@ -31,9 +44,21 @@
       "username": "noah",
       "projects": [
         {
-          "paths": ["~/miiii"]
+          "paths": [
+            "~/c2sim"
+          ]
+        },
+        {
+          "paths": [
+            "~/miiii"
+          ]
         }
       ]
+    },
+    {
+      "host": "tripper2.itu.dk",
+      "username": "noah",
+      "projects": []
     }
   ],
   "ui_font_family": "FiraCode Nerd Font Mono",
@@ -45,9 +70,21 @@
     "git_status": true
   },
   "extend_comment_on_newline": true,
+  "lsp": {
+    // "tinymist": {
+    // "initialization_options": {
+    // "exportPdf": "onSave"
+    // "outputPath": "$name"
+    // },
+    // "settings": {
+    // "exportPdf": "onSave"
+    // "outputPath": "$name"
+    // }
+    // }
+  },
   "languages": {
     "Markdown-Inline": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "format_on_save": "on",
       "preferred_line_length": 80
     },
@@ -60,17 +97,19 @@
       "use_autoclose": true
     },
     "Markdown": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "format_on_save": "on"
     },
     "TypeScript": {
       "format_on_save": "on",
-      "use_autoclose": true
+      "use_autoclose": true,
+      "tab_size": 4
     },
     "Typst": {
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "language_servers": ["tinymist"],
       "format_on_save": "on",
+      "enable_language_server": true,
       "use_autoclose": false,
       "formatter": {
         "external": {
@@ -80,11 +119,11 @@
       }
     },
     "Python": {
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "language_servers": ["pyright", "ruff"],
-      "indent_guides": {
-        "enabled": false
-      },
+      // "indent_guides": {
+      // "enabled": false
+      // },
       "format_on_save": "on",
       // "preferred_line_length": 120,
       "use_autoclose": false,
@@ -96,7 +135,7 @@
       }
     },
     "Julia": {
-      "show_inline_completions": true,
+      "show_edit_predictions": true,
       "language_servers": ["julia"],
       "format_on_save": "on",
       "use_autoclose": false
@@ -116,7 +155,7 @@
   },
   "project_panel": {
     "button": false,
-    "dock": "left",
+    "dock": "right",
     "git_status": true
   },
   "collaboration_panel": {
@@ -124,7 +163,7 @@
     "dock": "right"
   },
   "chat_panel": {
-    "button": false,
+    "button": "never",
     "dock": "right"
   },
   "outline_panel": {
@@ -176,13 +215,13 @@
     "show": false
   },
   "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
+    "breadcrumbs": true
+    // "quick_actions": false
   },
   "dock": "right",
   "git": {
-    "git_gutter": "hide",
-    "gutter_debounce": null,
+    // "git_gutter": "hide",
+    // "gutter_debounce": null,
     "inline_blame": {
       "enabled": true
       // "show_commit_summary": true
@@ -212,7 +251,7 @@
   "buffer_line_height": {
     "custom": 2.5
   },
-  "current_line_highlight": "none",
+  "current_line_highlight": "all",
   "vim": {
     "use_multiline_find": true
   },
@@ -228,7 +267,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Lila (Dark)"
+    "dark": "Evil Rabbit (Dark)"
   },
   "journal": {
     "path": "~/desk/text/diary",
@@ -239,6 +278,6 @@
     "metrics": false
   },
   "features": {
-    "inline_completion_provider": "zed"
+    "edit_prediction_provider": "zed"
   }
 }

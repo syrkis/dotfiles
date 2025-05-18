@@ -1,5 +1,6 @@
 {pkgs, ...}: {
     programs.zsh.enable = true;
+    system.primaryUser = "nobr";  # Match the username you're using
     programs.fish.enable = true;
     environment.shells = with pkgs; [ zsh bash fish ];
     nix.extraOptions = ''
@@ -22,8 +23,12 @@
         caskArgs.no_quarantine = true;
         global.brewfile = true;
         brews = [
-          "libffi"
+          # "autoconf"
+          # "automake"
+          # "libtool"
+          # "libffi"
           "pkg-config"
+          "watch"
           "bfg"
           "fswatch"
           "pdf2svg"
@@ -40,20 +45,18 @@
           "libpng"
           "libvorbis"
           "luajit"
-          "vercel-cli"
+          # "vercel-cli"
           "zstd"
           "gettext"
           "tinymist"
         ];
         casks = [
             "freesurfer"
-            "beeper"
             "steam"
             "arc"
             "psst"
             "brave-browser"
             "slack"
-            "zed"
             "logseq"
             "tuta-mail"
             "raycast"
@@ -65,6 +68,7 @@
             "vagrant"
             "protonvpn"
             "whatsapp"
+            "vivaldi"
         ];
     };
 }

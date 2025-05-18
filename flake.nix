@@ -5,7 +5,7 @@
 
         home-manager.url = "github:nix-community/home-manager/master";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
+        fenix.url = "github:nix-community/fenix";
         darwin.url = "github:lnl7/nix-darwin";
         darwin.inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -25,6 +25,7 @@
                         useGlobalPkgs = true;
                         useUserPackages = true;
                         users.nobr.imports = [ ./modules/home-manager ];
+                        extraSpecialArgs = { inherit inputs; };
                     };
                 }
             ];

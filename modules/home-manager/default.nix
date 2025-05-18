@@ -1,19 +1,33 @@
-{ pkgs, ...}: {
+{ pkgs, inputs, ...}: {
     home.stateVersion = "25.05";
     home.packages = with pkgs; [
+        # Rust toolchain from Fenix
+        inputs.fenix.packages.${pkgs.system}.stable.toolchain
+
+        # Uiua language
+        uiua
+
+        # uv instead of poetry
+        uv
+
+
+        blender
         (pass.withExtensions (ps: [ ps.pass-otp ]))
         ripgrep
         fd
         typescript
+        imagemagick
+        ghostscript
         nmap
         clojure
-        s3cmd
+        # s3cmd
+        zed-editor
         nil
         hledger
         newcomputermodern
         hledger-ui
         asciinema
-        colima
+        # colima
         croc
         docker
         nixd
@@ -30,15 +44,14 @@
         htop
         tealdeer
         ollama
-        poetry
-        todo
-        cargo
+        # poetry
+        # todo
         eza
         ffmpeg
         swig4
         just
         typstyle
-        pyenv
+        # pyenv
         hurl
         # tinymist
         himalaya
