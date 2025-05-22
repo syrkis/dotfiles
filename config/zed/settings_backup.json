@@ -9,17 +9,28 @@
 {
   // "cursor_shape": "underline",
   // "file_scan_exclusions": ["**/*.svg"],
+  // "edit_predictions": {
+  // "mode": "subtle"
+  // "enabled_in_text_threads": false
+  // },
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-haiku-latest"
+    },
+    "version": "2"
+  },
   "edit_predictions": {
     "mode": "subtle",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": false
+    "enabled_in_text_threads": false
   },
-  "assistant": {
+  "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "button": false,
     "default_model": {
       "provider": "anthropic",
@@ -33,9 +44,7 @@
       "username": "nobr",
       "projects": [
         {
-          "paths": [
-            "~/pensim"
-          ]
+          "paths": ["~/pensim"]
         }
       ]
     },
@@ -44,14 +53,10 @@
       "username": "noah",
       "projects": [
         {
-          "paths": [
-            "~/c2sim"
-          ]
+          "paths": ["~/c2sim"]
         },
         {
-          "paths": [
-            "~/miiii"
-          ]
+          "paths": ["~/miiii"]
         }
       ]
     },
@@ -83,6 +88,9 @@
     // }
   },
   "languages": {
+    "Uiua": {
+      "show_inline_completions": false
+    },
     "Markdown-Inline": {
       "show_edit_predictions": false,
       "format_on_save": "on",
@@ -136,7 +144,7 @@
     },
     "Julia": {
       "show_edit_predictions": true,
-      "language_servers": ["julia"],
+      // "language_servers": ["julia"],
       "format_on_save": "on",
       "use_autoclose": false
     }
@@ -174,7 +182,7 @@
     "button": false
   },
   "terminal": {
-    "dock": "right",
+    "dock": "bottom",
     "button": false,
     "detect_venv": {
       "on": {
@@ -238,7 +246,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "parabellum"
+      "python": "miiii"
     }
   },
   "ui_font_size": 16,
@@ -270,7 +278,7 @@
     "dark": "Evil Rabbit (Dark)"
   },
   "journal": {
-    "path": "~/desk/text/diary",
+    "path": "~/desk/text/journal",
     "hour_format": "hour24"
   },
   "telemetry": {

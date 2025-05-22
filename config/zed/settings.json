@@ -13,27 +13,21 @@
   // "mode": "subtle"
   // "enabled_in_text_threads": false
   // },
-  "assistant": {
-    "default_model": {
-      "provider": "anthropic",
-      "model": "claude-3-5-haiku-latest"
-    },
-    "version": "2"
-  },
+  "minimap": { "show": "always" },
   "edit_predictions": {
-    "mode": "subtle",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null
-    },
-    "enabled_in_text_threads": false
+    "mode": "subtle"
+    // "copilot": {
+    // "proxy": null,
+    // "proxy_no_verify": null
+    // },
+    // "enabled_in_text_threads": false
   },
   "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "ask",
     "button": false,
     "default_model": {
-      "provider": "anthropic",
+      "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
@@ -76,20 +70,17 @@
   },
   "extend_comment_on_newline": true,
   "lsp": {
-    // "tinymist": {
-    // "initialization_options": {
-    // "exportPdf": "onSave"
-    // "outputPath": "$name"
-    // },
-    // "settings": {
-    // "exportPdf": "onSave"
-    // "outputPath": "$name"
-    // }
-    // }
+    "ty": {
+      "binary": {
+        "path": "/Users/nobr/.local/bin/ty",
+        "arguments": ["server"]
+      }
+    }
   },
+  "search": { "button": false },
   "languages": {
     "Uiua": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
     },
     "Markdown-Inline": {
       "show_edit_predictions": false,
@@ -127,28 +118,17 @@
       }
     },
     "Python": {
-      "show_edit_predictions": true,
-      "language_servers": ["pyright", "ruff"],
-      // "indent_guides": {
-      // "enabled": false
-      // },
-      "format_on_save": "on",
-      // "preferred_line_length": 120,
-      "use_autoclose": false,
-      "formatter": {
-        "external": {
-          "command": "ruff",
-          "arguments": ["format", "-"]
-        }
-      }
-    },
-    "Julia": {
-      "show_edit_predictions": true,
-      "language_servers": ["julia"],
-      "format_on_save": "on",
-      "use_autoclose": false
+      "language_servers": ["ruff", "ty", "pyright"],
+      "extend_comment_on_newline": false
     }
   },
+  "Julia": {
+    "show_edit_predictions": true,
+    // "language_servers": ["julia"],
+    "format_on_save": "on",
+    "use_autoclose": false
+  },
+
   // "unnecessary_code_fade": 0.8,
   "calls": {
     // Join calls with the microphone live by default
@@ -184,15 +164,15 @@
   "terminal": {
     "dock": "bottom",
     "button": false,
-    "detect_venv": {
-      "on": {
-        "activate_script": "fish",
-        "command": "source .venv/bin/activate.fish"
-      }
-    },
-    "shell": {
-      "program": "fish"
-    },
+    // "detect_venv": {
+    // "on": {
+    // "activate_script": "fish",
+    // "command": "source .venv/bin/activate.fish"
+    // }
+    // },
+    // "shell": {
+    // "program": "fish"
+    // },
     "line_height": {
       "custom": 2.5
     },

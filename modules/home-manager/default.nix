@@ -1,5 +1,5 @@
 { pkgs, inputs, ...}: {
-    home.stateVersion = "25.05";
+    home.stateVersion = "25.11";
     home.packages = with pkgs; [
         # Rust toolchain from Fenix
         inputs.fenix.packages.${pkgs.system}.stable.toolchain
@@ -21,7 +21,7 @@
         nmap
         clojure
         # s3cmd
-        zed-editor
+        # zed-editor
         nil
         hledger
         newcomputermodern
@@ -56,7 +56,7 @@
         # tinymist
         himalaya
         ruff
-        nodejs_20
+        nodejs_22
         zoxide
         sd
     ];

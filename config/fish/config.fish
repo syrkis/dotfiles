@@ -24,3 +24,6 @@ if status is-interactive
     alias cat='bat -p'
     alias cd='z'
 end
+
+# uv
+fish_add_path "/Users/nobr/.local/bin"
