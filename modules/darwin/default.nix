@@ -24,6 +24,7 @@
         global.brewfile = true;
         brews = [
             "pkg-config"
+            "gleam"
             "watch"
             "bfg"
             "fswatch"

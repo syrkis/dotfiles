@@ -24,11 +24,11 @@
   },
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "minimal",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
@@ -75,10 +75,26 @@
         "path": "/Users/nobr/.local/bin/ty",
         "arguments": ["server"]
       }
+    },
+    // "gleam": {},
+    "tinymist": {
+      "settings": {}
     }
   },
   "search": { "button": false },
   "languages": {
+    "Typst": {
+      "format_on_save": "on",
+      // "preferred_line_length": 80,
+      // "soft_wrap": "preferred_line_length",
+      // "wrap"
+      "formatter": {
+        "external": {
+          "command": "typstyle",
+          "arguments": ["-c", "80", "--wrap-text"]
+        }
+      }
+    },
     "Uiua": {
       "show_edit_predictions": false
     },
@@ -104,21 +120,8 @@
       "use_autoclose": true,
       "tab_size": 4
     },
-    "Typst": {
-      "show_edit_predictions": true,
-      "language_servers": ["tinymist"],
-      "format_on_save": "on",
-      "enable_language_server": true,
-      "use_autoclose": false,
-      "formatter": {
-        "external": {
-          "command": "typstyle",
-          "arguments": []
-        }
-      }
-    },
     "Python": {
-      "language_servers": ["ruff", "ty", "pyright"],
+      "language_servers": ["ruff", "ty"],
       "extend_comment_on_newline": false
     }
   },
@@ -162,14 +165,14 @@
     "button": false
   },
   "terminal": {
-    "dock": "bottom",
+    "dock": "right",
     "button": false,
-    // "detect_venv": {
-    // "on": {
-    // "activate_script": "fish",
-    // "command": "source .venv/bin/activate.fish"
-    // }
-    // },
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish",
+        "command": "source .venv/bin/activate.fish"
+      }
+    },
     // "shell": {
     // "program": "fish"
     // },
@@ -255,7 +258,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Evil Rabbit (Dark)"
+    "dark": "Lila (Dark)"
   },
   "journal": {
     "path": "~/desk/text/journal",
