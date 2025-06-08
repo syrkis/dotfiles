@@ -76,7 +76,13 @@
         "arguments": ["server"]
       }
     },
-    // "gleam": {},
+    "nil": {
+      "initialization_options": {
+        "formatting": {
+          "command": ["nixfmt"]
+        }
+      }
+    },
     "tinymist": {
       "settings": {}
     }
@@ -85,9 +91,6 @@
   "languages": {
     "Typst": {
       "format_on_save": "on",
-      // "preferred_line_length": 80,
-      // "soft_wrap": "preferred_line_length",
-      // "wrap"
       "formatter": {
         "external": {
           "command": "typstyle",
