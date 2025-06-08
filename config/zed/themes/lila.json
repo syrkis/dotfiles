@@ -26,6 +26,7 @@
         "editor.line_number": "#ffffff32",
         "editor.gutter.background": "#0a0a0a",
         "ghost_element.selected": "#ffffff10",
+        "scrollbar.thumb.background": "#171717",
         "ghost_element.background": "#ffffff08",
         "ghost_element.hover": "#ffffff10",
         "syntax": {
