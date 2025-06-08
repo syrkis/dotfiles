@@ -15,6 +15,7 @@
         (pass.withExtensions (ps: [ ps.pass-otp ]))
         ripgrep
         fd
+zoxide
         typescript
         imagemagick
         ghostscript

@@ -1,6 +1,6 @@
 {pkgs, ...}: {
     programs.zsh.enable = true;
-    system.primaryUser = "nobr";  # Match the username you're using
+    system.primaryUser = "syrkis";  # Match the username you're using
     programs.fish.enable = true;
     environment.shells = with pkgs; [ zsh bash fish ];
     nix.extraOptions = ''
@@ -18,19 +18,20 @@
     system.keyboard.enableKeyMapping = true;
     system.keyboard.remapCapsLockToEscape = true;
     system.stateVersion = 4;
+
+    # Homebrew configuration - works with nix-homebrew
     homebrew = {
-        enable = true;
+        enable = true;  # This is required for nix-darwin to manage packages!
         caskArgs.no_quarantine = true;
         global.brewfile = true;
+
         brews = [
             "pkg-config"
-            "gleam"
             "watch"
             "bfg"
             "fswatch"
             "pdf2svg"
             "cmake"
-            "freetype"
             "gettext"
             "wakatime-cli"
             "gmp"
@@ -46,25 +47,20 @@
             "gettext"
             "tinymist"
         ];
+
         casks = [
-            "freesurfer"
             "steam"
-            "arc"
-            "psst"
             "brave-browser"
             "slack"
+            "zen-browser"
             "logseq"
-            "tuta-mail"
             "raycast"
             "zed"
-            "markedit"
+            "iterm2"
             "skim"
             "obs"
-            "utm"
             "notunes"
             "vagrant"
-            "protonvpn"
-            "whatsapp"
         ];
     };
 }

@@ -24,11 +24,11 @@
   },
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "minimal",
+    "default_profile": "ask",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
@@ -258,7 +258,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Lila (Dark)"
+    "dark": "One Black"
   },
   "journal": {
     "path": "~/desk/text/journal",
