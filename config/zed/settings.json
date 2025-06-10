@@ -62,7 +62,11 @@
   ],
   "ui_font_family": "FiraCode Nerd Font Mono",
   "auto_update_extensions": {
-    "enabled": true
+    "enabled": true,
+    "ruff": true,
+    "ty": true,
+    "typst": true
+    // "ruff": true
   },
   "tabs": {
     "file_icons": true,
