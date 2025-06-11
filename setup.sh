@@ -62,6 +62,13 @@ if [ -d "$DOTFILES_DIR/config/ghostty" ]; then
     create_link "$DOTFILES_DIR/config/ghostty" "$HOME/.config/ghostty"
 fi
 
+# Fish shell
+if [ -d "$DOTFILES_DIR/config/fish" ]; then
+    echo "🐟 Setting up Fish shell..."
+    backup_and_remove "$HOME/.config/fish"
+    create_link "$DOTFILES_DIR/config/fish" "$HOME/.config/fish"
+fi
+
 # Add more configurations here as needed
 # Example:
 # if [ -f "$DOTFILES_DIR/.tmux.conf" ]; then
@@ -86,4 +93,5 @@ echo "🗑️  To uninstall:"
 echo "   rm ~/.config/zed/settings.json ~/.config/zed/themes"
 echo "   rm ~/.config/nvim"
 echo "   rm ~/.config/ghostty"
+echo "   rm ~/.config/fish"
 echo "   # Then restore from backup if needed"
