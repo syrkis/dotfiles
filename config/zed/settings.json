@@ -62,11 +62,7 @@
   ],
   "ui_font_family": "FiraCode Nerd Font Mono",
   "auto_update_extensions": {
-    "enabled": true,
-    "ruff": true,
-    "ty": true,
-    "typst": true
-    // "ruff": true
+    "enabled": true
   },
   "tabs": {
     "file_icons": true,
@@ -201,7 +197,10 @@
   "always_treat_brackets_as_autoclosed": true,
   "auto_signature_help": true,
   "auto_install_extensions": {
-    "enabled": true
+    "enabled": true,
+    "ruff": true,
+    "ty": true,
+    "typst": true
   },
   "restore_on_startup": "none",
   "slash_commands": {
