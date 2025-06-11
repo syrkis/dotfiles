@@ -72,7 +72,7 @@
   "lsp": {
     "ty": {
       "binary": {
-        "path": "/Users/nobr/.local/bin/ty",
+        "path": "/etc/profiles/per-user/nobr/bin/ty",
         "arguments": ["server"]
       }
     },
