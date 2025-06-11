@@ -24,7 +24,7 @@
   },
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "write",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
@@ -200,7 +200,12 @@
     "enabled": true,
     "ruff": true,
     "ty": true,
-    "typst": true
+    "svelte": true,
+    "nix": true,
+    "typst": true,
+    "julia": true,
+    "uiua": true,
+    "astro": true
   },
   "restore_on_startup": "none",
   "slash_commands": {
