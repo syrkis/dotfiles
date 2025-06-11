@@ -1,0 +1,4 @@
+# Dark theme for Ghostty
+background = #000000
+foreground = #ffffff
+cursor-color = #ffffff

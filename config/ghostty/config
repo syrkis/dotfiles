@@ -1,0 +1,61 @@
+# Ghostty Configuration
+# Basic configuration with sensible defaults
+
+# Font Configuration
+font-family = "Fira Code Nerd Font"
+font-size = 20
+adjust-cell-height = 30
+
+# Theme Configuration - adapts to system light/dark mode
+theme = light:light,dark:dark
+
+# Cursor Configuration
+cursor-style = block
+cursor-color = #f5e0dc
+
+# Window Configuration
+window-padding-x = 8
+window-padding-y = 8
+window-decoration = none
+background-opacity = 0.6
+background-blur = true
+
+# Terminal Behavior
+scrollback-limit = 10000
+copy-on-select = true
+clipboard-trim-trailing-spaces = true
+
+# Shell Integration
+shell-integration = detect
+
+# Mouse Configuration
+mouse-hide-while-typing = true
+
+# Tab navigation
+keybind = ctrl+shift+left=previous_tab
+keybind = ctrl+shift+right=next_tab
+
+# Quality of life improvements
+confirm-close-surface = true
+quit-after-last-window-closed = false
+initial-window = false
+window-inherit-working-directory = true
+window-inherit-font-size = true
+
+# Performance
+window-vsync = true
+
+# Quick Terminal (Dropdown) Configuration
+quick-terminal-position = bottom
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0.2
+quick-terminal-autohide = true
+window-height = 50
+window-width = 120
+
+# Global keybind for dropdown terminal
+keybind = global:alt+space=toggle_quick_terminal
+
+# macOS specific settings (only applied on macOS)
+macos-option-as-alt = true
+macos-titlebar-style = hidden
