@@ -69,6 +69,13 @@ if [ -d "$DOTFILES_DIR/config/fish" ]; then
     create_link "$DOTFILES_DIR/config/fish" "$HOME/.config/fish"
 fi
 
+# Starship prompt
+if [ -f "$DOTFILES_DIR/config/starship.toml" ]; then
+    echo "🚀 Setting up Starship prompt..."
+    backup_and_remove "$HOME/.config/starship.toml"
+    create_link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
+fi
+
 # Add more configurations here as needed
 # Example:
 # if [ -f "$DOTFILES_DIR/.tmux.conf" ]; then
@@ -94,4 +101,5 @@ echo "   rm ~/.config/zed/settings.json ~/.config/zed/themes"
 echo "   rm ~/.config/nvim"
 echo "   rm ~/.config/ghostty"
 echo "   rm ~/.config/fish"
+echo "   rm ~/.config/starship.toml"
 echo "   # Then restore from backup if needed"
