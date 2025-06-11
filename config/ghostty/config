@@ -49,9 +49,7 @@ window-vsync = true
 quick-terminal-position = bottom
 quick-terminal-screen = main
 quick-terminal-animation-duration = 0.2
-quick-terminal-autohide = true
-window-height = 50
-window-width = 120
+
 
 # Global keybind for dropdown terminal
 keybind = global:alt+space=toggle_quick_terminal
