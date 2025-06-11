@@ -76,6 +76,13 @@ if [ -f "$DOTFILES_DIR/config/starship.toml" ]; then
     create_link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 fi
 
+# Epy ebook reader
+if [ -d "$DOTFILES_DIR/config/epy" ]; then
+    echo "📚 Setting up Epy ebook reader..."
+    backup_and_remove "$HOME/.config/epy"
+    create_link "$DOTFILES_DIR/config/epy" "$HOME/.config/epy"
+fi
+
 # Add more configurations here as needed
 # Example:
 # if [ -f "$DOTFILES_DIR/.tmux.conf" ]; then
@@ -102,4 +109,5 @@ echo "   rm ~/.config/nvim"
 echo "   rm ~/.config/ghostty"
 echo "   rm ~/.config/fish"
 echo "   rm ~/.config/starship.toml"
+echo "   rm ~/.config/epy"
 echo "   # Then restore from backup if needed"
