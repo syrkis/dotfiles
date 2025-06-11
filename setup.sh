@@ -55,6 +55,13 @@ if [ -d "$DOTFILES_DIR/config/nvim" ]; then
     create_link "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
 fi
 
+# Ghostty terminal
+if [ -d "$DOTFILES_DIR/config/ghostty" ]; then
+    echo "👻 Setting up Ghostty..."
+    backup_and_remove "$HOME/.config/ghostty"
+    create_link "$DOTFILES_DIR/config/ghostty" "$HOME/.config/ghostty"
+fi
+
 # Add more configurations here as needed
 # Example:
 # if [ -f "$DOTFILES_DIR/.tmux.conf" ]; then
@@ -78,4 +85,5 @@ echo ""
 echo "🗑️  To uninstall:"
 echo "   rm ~/.config/zed/settings.json ~/.config/zed/themes"
 echo "   rm ~/.config/nvim"
+echo "   rm ~/.config/ghostty"
 echo "   # Then restore from backup if needed"

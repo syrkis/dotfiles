@@ -200,6 +200,7 @@
     "enabled": true,
     "ruff": true,
     "ty": true,
+    "toml": true,
     "svelte": true,
     "nix": true,
     "typst": true,
