@@ -30,6 +30,7 @@ shell-integration = detect
 
 # Mouse Configuration
 mouse-hide-while-typing = true
+mouse-scroll-multiplier = 3
 
 # Tab navigation
 keybind = ctrl+shift+left=previous_tab

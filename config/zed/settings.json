@@ -6,22 +6,134 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
+
 {
-  // "cursor_shape": "underline",
-  // "file_scan_exclusions": ["**/*.svg"],
-  // "edit_predictions": {
-  // "mode": "subtle"
-  // "enabled_in_text_threads": false
-  // },
-  "minimap": { "show": "always" },
-  "edit_predictions": {
-    "mode": "subtle"
-    // "copilot": {
-    // "proxy": null,
-    // "proxy_no_verify": null
-    // },
-    // "enabled_in_text_threads": false
+  // ========================================
+  // APPEARANCE & THEME
+  // ========================================
+  "theme": {
+    "mode": "system",
+    "light": "Lila Light",
+    "dark": "Lila Dark"
   },
+  "ui_font_family": "FiraCode Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_size": 16.0,
+  "buffer_line_height": {
+    "custom": 2.3
+  },
+
+  // ========================================
+  // EDITOR BEHAVIOR
+  // ========================================
+  "vim_mode": true,
+  "vim": {
+    "use_multiline_find": true
+  },
+  "use_autoclose": true,
+  "always_treat_brackets_as_autoclosed": true,
+  "auto_signature_help": true,
+  "current_line_highlight": "none",
+  "relative_line_numbers": true,
+  "expand_excerpt_lines": 5,
+  "extend_comment_on_newline": true,
+  "soft_wrap": "editor_width",
+  "format_on_save": "on",
+  "restore_on_startup": "none",
+
+  // ========================================
+  // EDITOR VISUAL ELEMENTS
+  // ========================================
+  "minimap": {
+    "show": "always"
+  },
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+
+  // ========================================
+  // LAYOUT & PANELS
+  // ========================================
+  "dock": "right",
+  "centered_layout": {
+    "enabled": true,
+    "left_padding": 0.1,
+    "right_padding": 0.1
+  },
+  "project_panel": {
+    "button": false,
+    "dock": "right",
+    "git_status": true
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "chat_panel": {
+    "button": "never",
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right",
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+
+  // ========================================
+  // TERMINAL CONFIGURATION
+  // ========================================
+  "terminal": {
+    "dock": "right",
+    "button": false,
+    "font_family": "FiraCode Nerd Font Mono",
+    "font_features": {
+      "liga": true,
+      "calt": true
+    },
+    "line_height": {
+      "custom": 2.5
+    },
+    "detect_venv": {
+      "on": {
+        "activate_script": "fish",
+        "command": "source .venv/bin/activate.fish"
+      }
+    }
+  },
+
+  // ========================================
+  // GIT INTEGRATION
+  // ========================================
+  "git": {
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+
+  // ========================================
+  // AI AGENT CONFIGURATION
+  // ========================================
   "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "write",
@@ -32,6 +144,117 @@
     },
     "version": "2"
   },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+
+  // ========================================
+  // LANGUAGE SERVERS & FORMATTING
+  // ========================================
+  "lsp": {
+    "ty": {
+      "binary": {
+        "path": "/etc/profiles/per-user/nobr/bin/ty",
+        "arguments": ["server"]
+      }
+    },
+    "nil": {
+      "initialization_options": {
+        "formatting": {
+          "command": ["nixfmt"]
+        }
+      }
+    },
+    "tinymist": {
+      "settings": {}
+    }
+  },
+
+  // ========================================
+  // LANGUAGE-SPECIFIC SETTINGS
+  // ========================================
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "ty"],
+      "extend_comment_on_newline": false
+    },
+    "Julia": {
+      "show_edit_predictions": true,
+      "format_on_save": "on",
+      "use_autoclose": false
+    },
+    "Typst": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "typstyle",
+          "arguments": ["-c", "80", "--wrap-text"]
+        }
+      }
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "use_autoclose": true,
+      "tab_size": 4
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
+    "Svelte": {
+      "format_on_save": "on",
+      "use_autoclose": true
+    },
+    "Markdown": {
+      "show_edit_predictions": false,
+      "format_on_save": "on"
+    },
+    "Markdown-Inline": {
+      "show_edit_predictions": false,
+      "format_on_save": "on",
+      "preferred_line_length": 80
+    },
+    "Uiua": {
+      "show_edit_predictions": false
+    }
+  },
+
+  // ========================================
+  // EXTENSIONS & AUTO-INSTALL
+  // ========================================
+  "auto_update_extensions": {
+    "enabled": true
+  },
+  "auto_install_extensions": {
+    "enabled": true,
+    "ruff": true,
+    "ty": true,
+    "toml": true,
+    "svelte": true,
+    "nix": true,
+    "typst": true,
+    "julia": true,
+    "uiua": true,
+    "astro": true
+  },
+
+  // ========================================
+  // JUPYTER INTEGRATION
+  // ========================================
+  "jupyter": {
+    "enabled": true,
+    "dock": "right",
+    "kernel_selections": {
+      "python": "miiii"
+    }
+  },
+
+  // ========================================
+  // SSH CONNECTIONS
+  // ========================================
   "ssh_connections": [
     {
       "host": "130.226.143.130",
@@ -60,227 +283,36 @@
       "projects": []
     }
   ],
-  "ui_font_family": "FiraCode Nerd Font Mono",
-  "auto_update_extensions": {
-    "enabled": true
-  },
-  "tabs": {
-    "file_icons": true,
-    "git_status": true
-  },
-  "extend_comment_on_newline": true,
-  "lsp": {
-    "ty": {
-      "binary": {
-        "path": "/etc/profiles/per-user/nobr/bin/ty",
-        "arguments": ["server"]
-      }
-    },
-    "nil": {
-      "initialization_options": {
-        "formatting": {
-          "command": ["nixfmt"]
-        }
-      }
-    },
-    "tinymist": {
-      "settings": {}
-    }
-  },
-  "search": { "button": false },
-  "languages": {
-    "Typst": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "typstyle",
-          "arguments": ["-c", "80", "--wrap-text"]
-        }
-      }
-    },
-    "Uiua": {
-      "show_edit_predictions": false
-    },
-    "Markdown-Inline": {
-      "show_edit_predictions": false,
-      "format_on_save": "on",
-      "preferred_line_length": 80
-    },
-    "Svelte": {
-      "format_on_save": "on",
-      "use_autoclose": true
-    },
-    "JavaScript": {
-      "format_on_save": "on",
-      "use_autoclose": true
-    },
-    "Markdown": {
-      "show_edit_predictions": false,
-      "format_on_save": "on"
-    },
-    "TypeScript": {
-      "format_on_save": "on",
-      "use_autoclose": true,
-      "tab_size": 4
-    },
-    "Python": {
-      "language_servers": ["ruff", "ty"],
-      "extend_comment_on_newline": false
-    }
-  },
-  "Julia": {
-    "show_edit_predictions": true,
-    // "language_servers": ["julia"],
-    "format_on_save": "on",
-    "use_autoclose": false
-  },
 
-  // "unnecessary_code_fade": 0.8,
+  // ========================================
+  // COLLABORATION & COMMUNICATION
+  // ========================================
   "calls": {
-    // Join calls with the microphone live by default
     "mute_on_join": true,
-    // Share your project when you are the first to join a channel
     "share_on_join": false
   },
-  "centered_layout": {
-    "enabled": true,
-    "left_padding": 0.1,
-    "right_padding": 0.1
+
+  // ========================================
+  // JOURNAL CONFIGURATION
+  // ========================================
+  "journal": {
+    "path": "~/desk/text/journal",
+    "hour_format": "hour24"
   },
-  "project_panel": {
-    "button": false,
-    "dock": "right",
-    "git_status": true
-  },
-  "collaboration_panel": {
-    "button": false,
-    "dock": "right"
-  },
-  "chat_panel": {
-    "button": "never",
-    "dock": "right"
-  },
-  "outline_panel": {
-    "dock": "right",
-    "button": false
-  },
-  "notification_panel": {
-    "button": false
-  },
-  "terminal": {
-    "dock": "right",
-    "button": false,
-    "detect_venv": {
-      "on": {
-        "activate_script": "fish",
-        "command": "source .venv/bin/activate.fish"
-      }
-    },
-    // "shell": {
-    // "program": "fish"
-    // },
-    "line_height": {
-      "custom": 2.5
-    },
-    // "default_width": 600,
-    "font_family": "FiraCode Nerd Font Mono",
-    "font_features": {
-      "liga": true,
-      "calt": true
-    }
-  },
+
+  // ========================================
+  // MISCELLANEOUS SETTINGS
+  // ========================================
   "task": {
     "show_status_indicator": false
   },
-  "relative_line_numbers": true,
-  "expand_excerpt_lines": 5,
-  "always_treat_brackets_as_autoclosed": true,
-  "auto_signature_help": true,
-  "auto_install_extensions": {
-    "enabled": true,
-    "ruff": true,
-    "ty": true,
-    "toml": true,
-    "svelte": true,
-    "nix": true,
-    "typst": true,
-    "julia": true,
-    "uiua": true,
-    "astro": true
-  },
-  "restore_on_startup": "none",
   "slash_commands": {
     "docs": {
       "enabled": true
     }
   },
-  "tab_bar": {
-    "show": false
-  },
-  "toolbar": {
-    "breadcrumbs": true
-    // "quick_actions": false
-  },
-  "dock": "right",
-  "git": {
-    // "git_gutter": "hide",
-    // "gutter_debounce": null,
-    "inline_blame": {
-      "enabled": true
-      // "show_commit_summary": true
-    }
-  },
-  // "indent_guides": {
-  // "enabled": true
-  // "line_width": 1,
-  // "active_line_width": 2,
-  // "coloring": "fixed",
-  // "background_coloring": "disabled"
-  // },
-  "jupyter": {
-    "enabled": true,
-    "dock": "right",
-    "kernel_selections": {
-      "python": "miiii"
-    }
-  },
-  "ui_font_size": 16,
-  "soft_wrap": "editor_width",
-  // "preferred_line_length": null,
-  "format_on_save": "on",
-  "buffer_font_family": "FiraCode Nerd Font Mono",
-  "buffer_font_size": 16.0,
-  "show_user_picture": false,
-  "buffer_line_height": {
-    "custom": 2.5
-  },
-  "current_line_highlight": "all",
-  "vim": {
-    "use_multiline_find": true
-  },
-  "use_autoclose": true,
-  "vim_mode": true,
-  "scrollbar": {
-    "show": "auto",
-    "cursors": true,
-    "git_diff": true,
-    "search_results": true,
-    "selected_symbol": true
-  },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Lila (Dark)"
-  },
-  "journal": {
-    "path": "~/desk/text/journal",
-    "hour_format": "hour24"
-  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
   }
 }
