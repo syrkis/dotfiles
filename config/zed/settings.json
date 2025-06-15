@@ -21,7 +21,7 @@
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "buffer_font_size": 16.0,
   "buffer_line_height": {
-    "custom": 2.3
+    "custom": 2.5
   },
 
   // ========================================
@@ -63,8 +63,9 @@
     "git_status": true
   },
   "toolbar": {
-    "breadcrumbs": true,
-    "quick_actions": false
+    // "show": true,
+    // "breadcrumbs": false,
+    // "quick_actions": false
   },
 
   // ========================================
@@ -136,7 +137,7 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "minimal",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
@@ -178,7 +179,7 @@
   // ========================================
   "languages": {
     "Python": {
-      "language_servers": ["ruff", "ty"],
+      "language_servers": ["ruff", "ty", "pyright"],
       "extend_comment_on_newline": false
     },
     "Julia": {
@@ -233,6 +234,7 @@
     "ruff": true,
     "ty": true,
     "toml": true,
+    "pyright": true,
     "svelte": true,
     "nix": true,
     "typst": true,
@@ -314,5 +316,15 @@
   "telemetry": {
     "diagnostics": false,
     "metrics": false
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": null
   }
 }

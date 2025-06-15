@@ -111,3 +111,12 @@ echo "   rm ~/.config/fish"
 echo "   rm ~/.config/starship.toml"
 echo "   rm ~/.config/epy"
 echo "   # Then restore from backup if needed"
+
+# Skim PDF viewer
+if command -v duti >/dev/null 2>&1; then
+    echo "📄 Setting up Skim as default PDF reader..."
+    duti -s net.sourceforge.skim-app.skim pdf all
+    echo "  ✅ Skim set as default PDF reader"
+else
+    echo "  ⚠️  Warning: duti not found, skipping Skim PDF setup"
+fi

@@ -116,7 +116,7 @@
         // "hidden": "#878a98ff",
         // "hidden.background": "#696b771a",
         // "hidden.border": "#414754ff",
-        // "hint": "#788ca6ff",
+        "hint": "#666",
         // "hint.background": "#5a6f891a",
         // "hint.border": "#293b5bff",
         // "ignored": "#878a98ff",
