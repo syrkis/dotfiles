@@ -58,4 +58,3 @@ keybind = global:alt+space=toggle_quick_terminal
 # macOS specific settings (only applied on macOS)
 macos-option-as-alt = true
 macos-titlebar-style = hidden
-keybind = shift+enter=text:\n

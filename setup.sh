@@ -83,14 +83,6 @@ if [ -d "$DOTFILES_DIR/config/epy" ]; then
     create_link "$DOTFILES_DIR/config/epy" "$HOME/.config/epy"
 fi
 
-# Add more configurations here as needed
-# Example:
-# if [ -f "$DOTFILES_DIR/.tmux.conf" ]; then
-#     echo "🖥️  Setting up tmux..."
-#     backup_and_remove "$HOME/.tmux.conf"
-#     create_link "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
-# fi
-
 echo ""
 if [ -d "$BACKUP_DIR" ]; then
     echo "✅ Setup complete! Old files backed up to: $BACKUP_DIR"
@@ -116,6 +108,7 @@ echo "   # Then restore from backup if needed"
 if command -v duti >/dev/null 2>&1; then
     echo "📄 Setting up Skim as default PDF reader..."
     duti -s net.sourceforge.skim-app.skim pdf all
+    duti -s com.readest.readest epub all
     echo "  ✅ Skim set as default PDF reader"
 else
     echo "  ⚠️  Warning: duti not found, skipping Skim PDF setup"

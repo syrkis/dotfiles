@@ -13,8 +13,8 @@
   // ========================================
   "theme": {
     "mode": "system",
-    "light": "Lila Light",
-    "dark": "Lila Dark"
+    "light": "Lilka Light",
+    "dark": "Lilka Dark"
   },
   "ui_font_family": "FiraCode Nerd Font Mono",
   "ui_font_size": 16,
@@ -28,25 +28,23 @@
   // EDITOR BEHAVIOR
   // ========================================
   "vim_mode": true,
-  "vim": {
-    "use_multiline_find": true
-  },
   "use_autoclose": true,
-  "always_treat_brackets_as_autoclosed": true,
+  "always_treat_brackets_as_autoclosed": false,
   "auto_signature_help": true,
   "current_line_highlight": "none",
   "relative_line_numbers": true,
-  "expand_excerpt_lines": 5,
   "extend_comment_on_newline": true,
   "soft_wrap": "editor_width",
   "format_on_save": "on",
-  "restore_on_startup": "none",
+  "restore_on_startup": "last_workspace",
 
   // ========================================
   // EDITOR VISUAL ELEMENTS
   // ========================================
   "minimap": {
-    "show": "always"
+    "show": "auto",
+    "thumb": "hover",
+    "current_line_highlight": "all"
   },
   "scrollbar": {
     "show": "auto",
@@ -63,17 +61,15 @@
     "git_status": true
   },
   "toolbar": {
-    // "show": true,
-    // "breadcrumbs": false,
-    // "quick_actions": false
+    // "show": false,
+    "breadcrumbs": false,
+    "quick_actions": false
   },
 
   // ========================================
   // LAYOUT & PANELS
   // ========================================
-  "dock": "right",
   "centered_layout": {
-    "enabled": true,
     "left_padding": 0.1,
     "right_padding": 0.1
   },
@@ -100,6 +96,9 @@
   "search": {
     "button": false
   },
+  "debugger": {
+    "dock": "right"
+  },
 
   // ========================================
   // TERMINAL CONFIGURATION
@@ -117,8 +116,7 @@
     },
     "detect_venv": {
       "on": {
-        "activate_script": "fish",
-        "command": "source .venv/bin/activate.fish"
+        "activate_script": "fish"
       }
     }
   },
@@ -137,13 +135,12 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "minimal",
+    "default_profile": "write",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4-thinking"
+    }
   },
   "edit_predictions": {
     "mode": "subtle"
@@ -156,10 +153,19 @@
   // LANGUAGE SERVERS & FORMATTING
   // ========================================
   "lsp": {
+    "harper": {
+      "enable_lsp_tasks": true
+    },
+
     "ty": {
       "binary": {
         "path": "/etc/profiles/per-user/nobr/bin/ty",
         "arguments": ["server"]
+      },
+      "initialization_options": {
+        "settings": {
+          "logLevel": "debug"
+        }
       }
     },
     "nil": {
@@ -170,7 +176,9 @@
       }
     },
     "tinymist": {
-      "settings": {}
+      "settings": {
+        "exportPdf": "onSave"
+      }
     }
   },
 
@@ -179,7 +187,7 @@
   // ========================================
   "languages": {
     "Python": {
-      "language_servers": ["ruff", "ty", "pyright"],
+      "language_servers": ["ruff", "ty"],
       "extend_comment_on_newline": false
     },
     "Julia": {
@@ -210,7 +218,7 @@
       "use_autoclose": true
     },
     "Markdown": {
-      "show_edit_predictions": false,
+      "show_edit_predictions": true,
       "format_on_save": "on"
     },
     "Markdown-Inline": {
@@ -232,6 +240,11 @@
   "auto_install_extensions": {
     "enabled": true,
     "ruff": true,
+    "dockerfile": true,
+    "python-snippets": true,
+    "snippets": true,
+    "wakatime": true,
+    "harper": true,
     "ty": true,
     "toml": true,
     "pyright": true,
@@ -240,7 +253,8 @@
     "typst": true,
     "julia": true,
     "uiua": true,
-    "astro": true
+    "astro": true,
+    "lean4": true
   },
 
   // ========================================
@@ -250,7 +264,7 @@
     "enabled": true,
     "dock": "right",
     "kernel_selections": {
-      "python": "miiii"
+      "python": ".venv"
     }
   },
 
@@ -268,21 +282,30 @@
       ]
     },
     {
-      "host": "tripper2.itu.dk",
+      "host": "tripper4.itu.dk",
       "username": "noah",
       "projects": [
         {
-          "paths": ["~/c2sim"]
+          "paths": ["~/nebellum"]
         },
         {
-          "paths": ["~/miiii"]
+          "paths": ["~/parabellum"]
         }
       ]
     },
     {
-      "host": "tripper2.itu.dk",
+      "host": "tripper4.itu.dk",
       "username": "noah",
       "projects": []
+    },
+    {
+      "host": "hpc.itu.dk",
+      "username": "nobr",
+      "projects": [
+        {
+          "paths": ["/home/nobr/nebellum"]
+        }
+      ]
     }
   ],
 
@@ -298,7 +321,7 @@
   // JOURNAL CONFIGURATION
   // ========================================
   "journal": {
-    "path": "~/desk/text/journal",
+    "path": "~/desk/text",
     "hour_format": "hour24"
   },
 
@@ -326,5 +349,16 @@
     "edit_debounce_ms": 700,
     "scroll_debounce_ms": 50,
     "toggle_on_modifiers_press": null
+  },
+  "experimental.theme_overrides": {
+    // "editor.background": "#333",
+    "syntax": {
+      "comment": {
+        "font_style": "italic"
+      },
+      "comment.doc": {
+        "font_style": "italic"
+      }
+    }
   }
 }
