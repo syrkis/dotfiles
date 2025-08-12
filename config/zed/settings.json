@@ -135,7 +135,7 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "minimal",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
@@ -240,14 +240,13 @@
   "auto_install_extensions": {
     "enabled": true,
     "ruff": true,
+    "hurl": true,
     "dockerfile": true,
     "python-snippets": true,
-    "snippets": true,
     "wakatime": true,
     "harper": true,
     "ty": true,
     "toml": true,
-    "pyright": true,
     "svelte": true,
     "nix": true,
     "typst": true,
