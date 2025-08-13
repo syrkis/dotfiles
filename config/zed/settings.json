@@ -13,8 +13,8 @@
   // ========================================
   "theme": {
     "mode": "system",
-    "light": "Lilka Light",
-    "dark": "Lilka Dark"
+    "light": "Monosami Light",
+    "dark": "Monosami Dark"
   },
   "ui_font_family": "FiraCode Nerd Font Mono",
   "ui_font_size": 16,
@@ -63,7 +63,7 @@
   "toolbar": {
     // "show": false,
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": true
   },
 
   // ========================================
@@ -135,11 +135,11 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "minimal",
+    "default_profile": "write",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking"
+      "model": "claude-opus-4-1-thinking"
     }
   },
   "edit_predictions": {
@@ -260,8 +260,6 @@
   // JUPYTER INTEGRATION
   // ========================================
   "jupyter": {
-    "enabled": true,
-    "dock": "right",
     "kernel_selections": {
       "python": ".venv"
     }
