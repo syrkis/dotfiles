@@ -135,7 +135,7 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
@@ -158,15 +158,15 @@
     },
 
     "ty": {
-      "binary": {
-        "path": "/etc/profiles/per-user/nobr/bin/ty",
-        "arguments": ["server"]
-      },
-      "initialization_options": {
-        "settings": {
-          "logLevel": "debug"
-        }
-      }
+      // "binary": {
+      // "path": "/etc/profiles/per-user/nobr/bin/ty",
+      // "arguments": ["server"]
+      // },
+      // "initialization_options": {
+      // "settings": {
+      // "logLevel": "debug"
+      // }
+      // }
     },
     "nil": {
       "initialization_options": {
@@ -355,6 +355,44 @@
       },
       "comment.doc": {
         "font_style": "italic"
+      }
+    }
+  },
+  "profiles": {
+    "Focus": {
+      "ui_font_size": 16,
+      "buffer_font_size": 18,
+      "buffer_line_height": { "custom": 2.0 },
+      "tab_bar": {
+        "show": false,
+        "show_tab_bar_buttons": false,
+        "show_nav_history_buttons": false
+      },
+      "toolbar": {
+        "breadcrumbs": false,
+        "quick_actions": false,
+        "selections_menu": false,
+        "code_actions": false
+        // "agent_review": false
+      },
+      "gutter": {
+        "line_numbers": false,
+        "folds": false,
+        "breakpoints": false,
+        "runnables": false,
+        "min_line_number_digits": 0
+      },
+      "indent_guides": {
+        "enabled": false
+      },
+      "current_line_highlight": "none",
+      "scrollbar": {
+        "show": "never",
+        "cursors": false,
+        "git_diff": false,
+        "diagnostics": "none",
+        "search_results": false,
+        "selected_symbol": false
       }
     }
   }
