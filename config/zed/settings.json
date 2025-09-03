@@ -14,7 +14,7 @@
   "theme": {
     "mode": "system",
     "light": "Monosami Light",
-    "dark": "Monosami Dark"
+    "dark": "Lilka Dark"
   },
   "ui_font_family": "FiraCode Nerd Font Mono",
   "ui_font_size": 16,
@@ -42,8 +42,8 @@
   // EDITOR VISUAL ELEMENTS
   // ========================================
   "minimap": {
-    "show": "auto",
-    "thumb": "hover",
+    "show": "always",
+    "thumb": "always",
     "current_line_highlight": "all"
   },
   "scrollbar": {
@@ -135,11 +135,11 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "ask",
+    "default_profile": "minimal",
     "button": false,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-opus-4-1-thinking"
+      "model": "claude-sonnet-4"
     }
   },
   "edit_predictions": {
@@ -193,7 +193,13 @@
     "Julia": {
       "show_edit_predictions": true,
       "format_on_save": "on",
-      "use_autoclose": false
+      "use_autoclose": false,
+      "formatter": {
+        "external": {
+          "command": "julia",
+          "arguments": ["-e", "using Runic; exit(Runic.main(ARGS))"]
+        }
+      }
     },
     "Typst": {
       "format_on_save": "on",
@@ -239,6 +245,7 @@
   },
   "auto_install_extensions": {
     "enabled": true,
+    "biome": true,
     "ruff": true,
     "hurl": true,
     "dockerfile": true,
@@ -260,9 +267,9 @@
   // JUPYTER INTEGRATION
   // ========================================
   "jupyter": {
-    "kernel_selections": {
-      "python": ".venv"
-    }
+    // "kernel_selections": {
+    // "python": ".venv"
+    // }
   },
 
   // ========================================
@@ -279,8 +286,8 @@
       ]
     },
     {
-      "host": "tripper4.itu.dk",
-      "username": "noah",
+      "host": "hpc.itu.dk",
+      "username": "nobr",
       "projects": [
         {
           "paths": ["~/nebellum"]
@@ -325,9 +332,9 @@
   // ========================================
   // MISCELLANEOUS SETTINGS
   // ========================================
-  "task": {
-    "show_status_indicator": false
-  },
+  // "task": {
+  // "show_status_indicator": false
+  // },
   "slash_commands": {
     "docs": {
       "enabled": true

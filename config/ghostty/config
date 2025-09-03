@@ -7,7 +7,7 @@ font-size = 20
 adjust-cell-height = 30
 
 # Theme Configuration - adapts to system light/dark mode
-theme = light:xcodelighthc,dark:Batman
+theme = light:3024 Day,dark:Batman
 
 # Cursor Configuration
 cursor-style = block
