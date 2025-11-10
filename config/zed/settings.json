@@ -27,7 +27,8 @@
   // ========================================
   // EDITOR BEHAVIOR
   // ========================================
-  "vim_mode": true,
+  // "vim_mode": true,
+  "helix_mode": true,
   "use_autoclose": true,
   "always_treat_brackets_as_autoclosed": false,
   "auto_signature_help": true,
@@ -62,7 +63,7 @@
   },
   "toolbar": {
     // "show": false,
-    "breadcrumbs": false,
+    "breadcrumbs": true,
     "quick_actions": true
   },
 
@@ -80,10 +81,6 @@
   },
   "collaboration_panel": {
     "button": false,
-    "dock": "right"
-  },
-  "chat_panel": {
-    "button": "never",
     "dock": "right"
   },
   "outline_panel": {
@@ -112,7 +109,7 @@
       "calt": true
     },
     "line_height": {
-      "custom": 2.5
+      "custom": 2
     },
     "detect_venv": {
       "on": {
@@ -135,11 +132,11 @@
   // ========================================
   "agent": {
     "always_allow_tool_actions": true,
-    "default_profile": "minimal",
+    "default_profile": "write",
     "button": false,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "openai",
+      "model": "gpt-4.1"
     }
   },
   "edit_predictions": {
@@ -155,6 +152,19 @@
   "lsp": {
     "harper": {
       "enable_lsp_tasks": true
+    },
+
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": true
+          },
+          "forwardSearch": {
+            "executable": "NONE"
+          }
+        }
+      }
     },
 
     "ty": {
@@ -186,6 +196,15 @@
   // LANGUAGE-SPECIFIC SETTINGS
   // ========================================
   "languages": {
+    "LaTeX": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "tex-fmt",
+          "arguments": ["--stdin"]
+        }
+      }
+    },
     "Python": {
       "language_servers": ["ruff", "ty"],
       "extend_comment_on_newline": false
@@ -202,6 +221,7 @@
       }
     },
     "Typst": {
+      "show_edit_predictions": false,
       "format_on_save": "on",
       "formatter": {
         "external": {
@@ -213,11 +233,12 @@
     "TypeScript": {
       "format_on_save": "on",
       "use_autoclose": true,
-      "tab_size": 4
+      "formatter": "language_server"
     },
     "JavaScript": {
       "format_on_save": "on",
-      "use_autoclose": true
+      "use_autoclose": true,
+      "formatter": "language_server"
     },
     "Svelte": {
       "format_on_save": "on",
@@ -246,13 +267,12 @@
   "auto_install_extensions": {
     "enabled": true,
     "biome": true,
-    "ruff": true,
+    "deno": true,
     "hurl": true,
     "dockerfile": true,
     "python-snippets": true,
     "wakatime": true,
     "harper": true,
-    "ty": true,
     "toml": true,
     "svelte": true,
     "nix": true,
@@ -291,6 +311,9 @@
       "projects": [
         {
           "paths": ["~/nebellum"]
+        },
+        {
+          "paths": ["~/miiii"]
         },
         {
           "paths": ["~/parabellum"]

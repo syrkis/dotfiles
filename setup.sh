@@ -55,6 +55,13 @@ if [ -d "$DOTFILES_DIR/config/nvim" ]; then
     create_link "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
 fi
 
+# Helix
+if [ -d "$DOTFILES_DIR/config/helix" ]; then
+    echo "📝 Setting up Helix..."
+    backup_and_remove "$HOME/.config/helix"
+    create_link "$DOTFILES_DIR/config/helix" "$HOME/.config/helix"
+fi
+
 # Ghostty terminal
 if [ -d "$DOTFILES_DIR/config/ghostty" ]; then
     echo "👻 Setting up Ghostty..."

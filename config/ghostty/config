@@ -3,11 +3,12 @@
 
 # Font Configuration
 font-family = "Fira Code Nerd Font"
-font-size = 20
-adjust-cell-height = 30
+font-size = 18
+adjust-cell-height = 28
+
 
 # Theme Configuration - adapts to system light/dark mode
-theme = light:3024 Day,dark:Batman
+theme = light:Xcode Light hc,dark:Black Metal (Burzum)
 
 # Cursor Configuration
 cursor-style = block
@@ -16,13 +17,14 @@ cursor-color = #f5e0dc
 # Window Configuration
 window-padding-x = 8
 window-padding-y = 8
-window-decoration = none
-background-opacity = 0.6
+# window-decoration = none
+background-opacity = 0.5
+unfocused-split-opacity = 1
 background-blur = true
 
 # Terminal Behavior
 scrollback-limit = 10000
-copy-on-select = true
+copy-on-select = false
 clipboard-trim-trailing-spaces = true
 
 # Shell Integration
@@ -48,14 +50,15 @@ window-vsync = true
 
 # Quick Terminal (Dropdown) Configuration
 quick-terminal-position = bottom
-quick-terminal-screen = main
-quick-terminal-animation-duration = 0.2
+quick-terminal-screen = mouse
+quick-terminal-animation-duration = 0.1
 
 
 # Global keybind for dropdown terminal
 keybind = global:alt+space=toggle_quick_terminal
 
 # macOS specific settings (only applied on macOS)
-macos-option-as-alt = true
+# macos-option-as-alt = true
 macos-titlebar-style = hidden
 keybind = shift+enter=text:\n
+macos-option-as-alt = "right"

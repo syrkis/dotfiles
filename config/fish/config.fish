@@ -5,6 +5,8 @@
 set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1
 
+set -gx LAKE /Users/nobr/desk/lake
+
 source /nix/store/p8870c40wka5chg6yk08d9kwxx79k9ac-hm-session-vars.fish
 
 status is-login; and begin
@@ -32,6 +34,7 @@ status is-interactive; and begin
     alias lt 'eza --tree'
     alias man tldr
     alias vimdiff 'nvim -d'
+    alias t dstask
 
     # Interactive shell initialisation
     /nix/store/80hwwq3k3xhmhvd2my22px2nwi0kng23-fzf-0.62.0/bin/fzf --fish | source
