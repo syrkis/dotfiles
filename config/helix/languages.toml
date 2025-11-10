@@ -1,0 +1,199 @@
+[language-server]
+lean = { command = "lake", args = ["serve"] }
+nu-lsp = { command = "nu", args = [ "--lsp" ] }
+nixd = { command = "nixd"}
+ty = { command = "ty", args = ["server"]}
+ruff = { command = "ruff", args = ["server"] }
+
+
+[language-server.astro-ls]
+command = "astro-ls"
+args = [ "--stdio" ]
+config = { typescript = { tsdk = "node_modules/typescript/lib" } }
+
+[language-server.lua-language-server]
+command = "lua-language-server"
+
+[language-server.lua-language-server.config.Lua.hint]
+enable = true
+arrayIndex = "Enable"
+setType = true
+paramName = "All"
+paramType = true
+await = true
+
+[language-server.astral-ty]
+command = "ty"
+args = ["server"]
+
+[[language]]
+name = "python"
+scope = "source.python"
+comment-token = "#"
+auto-format = true
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
+language-servers = [
+  "ruff",
+  "ty",
+]
+
+
+[[grammar]]
+name = "python"
+source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "4bfdd9033a2225cc95032ce77066b7aeca9e2efc" }
+
+[language-server.uiua-lsp]
+command = "uiua"
+args = ["lsp"]
+
+[[language]]
+name = "uiua"
+scope = "source.uiua"
+injection-regex = "uiua"
+file-types = ["ua"]
+roots = []
+auto-format = true
+comment-token = "#"
+language-servers = ["uiua-lsp"]
+indent = {tab-width = 2, unit = " "}
+auto-pairs = {'(' = ')', '{' = '}', '[' = ']', '"' = '"'}
+
+[[grammar]]
+name = "uiua"
+source.git = "https://github.com/shnarazk/tree-sitter-uiua"
+source.rev = "0da15357bc1179b187018131dc20c2395e77ce71"
+
+[language-server.tinymist]
+command = "tinymist"
+config = { exportPdf = "onType", outputPath = "$dir/$name" }
+
+[[language]]
+name = "typst"
+scope = "source.typst"
+injection-regex = "typ(st)?"
+file-types = ["typst", "typ"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["tinymist"]
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "typstyle", args = ["-c", "80", "--wrap-text"]}
+auto-format = true
+
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'$' = '$'
+'"' = '"'
+
+[[grammar]]
+name = "typst"
+source = { git = "https://github.com/uben0/tree-sitter-typst", rev = "13863ddcbaa7b68ee6221cea2e3143415e64aea4" }
+
+[[language]]
+name = "julia"
+scope = "source.julia"
+injection-regex = "julia"
+file-types = ["jl"]
+shebangs = ["julia"]
+roots = ["Manifest.toml", "Project.toml"]
+comment-token = "#"
+block-comment-tokens = { start = "#=", end = "=#" }
+language-servers = [ "julia" ]
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "julia"
+source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "e84f10db8eeb8b9807786bfc658808edaa1b4fa2" }
+
+[[language]]
+name = "astro"
+scope = "source.astro"
+injection-regex = "astro"
+file-types = ["astro"]
+block-comment-tokens = { start = "<!--", end = "-->" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "astro-ls" ]
+
+[[grammar]]
+name = "astro"
+source = { git = "https://github.com/virchau13/tree-sitter-astro", rev = "947e93089e60c66e681eba22283f4037841451e7" }
+
+
+[[language]]
+name = "lean"
+scope = "source.lean"
+injection-regex = "lean"
+file-types = ["lean"]
+roots = [ "lakefile.lean", "lakefile.toml" ]
+comment-token = "--"
+block-comment-tokens = { start = "/-", end = "-/" }
+language-servers = [ "lean" ]
+indent = { tab-width = 2, unit = "  " }
+rulers = [101]
+text-width = 100
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'⟨' = '⟩'
+
+[[grammar]]
+name = "lean"
+source = { git = "https://github.com/Julian/tree-sitter-lean", rev = "d98426109258b266e1e92358c5f11716d2e8f638" }
+
+[[language]]
+name = "lua"
+injection-regex = "lua"
+scope = "source.lua"
+file-types = ["lua", "rockspec"]
+shebangs = ["lua", "luajit"]
+roots = [".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"]
+comment-token = "--"
+block-comment-tokens = { start = "--[[", end = "--]]" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "lua-language-server" ]
+
+[[grammar]]
+name = "lua"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-lua", rev = "88e446476a1e97a8724dff7a23e2d709855077f2" }
+
+[[language]]
+name = "nix"
+scope = "source.nix"
+injection-regex = "nix"
+file-types = ["nix"]
+shebangs = []
+comment-token = "#"
+language-servers = [ "nil", "nixd" ]
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "nixfmt" }
+
+[[grammar]]
+name = "nix"
+source = { git = "https://github.com/nix-community/tree-sitter-nix", rev = "1b69cf1fa92366eefbe6863c184e5d2ece5f187d" }
+
+[[language]]
+name = "latex"
+scope = "source.tex"
+injection-regex = "tex"
+file-types = ["tex", "sty", "cls", "Rd", "bbx", "cbx"]
+comment-token = "%"
+language-servers = [ "texlab" ]
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+formatter = { command = "tex-fmt", args = ["--stdin"] }
+
+[[grammar]]
+name = "latex"
+source = { git = "https://github.com/latex-lsp/tree-sitter-latex", rev = "8c75e93cd08ccb7ce1ccab22c1fbd6360e3bcea6" }
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]

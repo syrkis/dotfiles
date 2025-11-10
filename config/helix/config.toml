@@ -1,0 +1,15 @@
+[theme]
+dark = "dark"
+light = "light"
+
+[editor]
+bufferline = "multiple"
+line-number = "relative"
+mouse = false
+auto-format = true
+auto-completion = true
+path-completion = true
+
+[editor.lsp]
+display-inlay-hints = true
+

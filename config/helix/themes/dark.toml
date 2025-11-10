@@ -1,0 +1,14 @@
+inherits = "lilka"
+
+"attribute" = "dark"
+"comment"   = { fg = "dark", modifiers = ["italic"]}
+"type"      = "dark"
+"constructor" = "dark"
+"constant" = "dim"
+"string"   = "white"
+"variable" = "dim"
+"operator" = "white"
+"function"  =  "white"
+"namespace" = "white"
+
+

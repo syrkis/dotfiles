@@ -1,0 +1,22 @@
+"ui.selection"                    = { underline = { style = "line" }, modifiers = ["bold"] }
+"ui.cursor"                       = { underline = { style = "line" }, modifiers = ["bold", "italic"] }
+"ui.cursor.primary.insert"        = { underline = { style = "curl" }, modifiers = ["bold", "italic"] }
+"ui.cursorline.primary"           = { underline = { style = "curl" } }
+"ui.cursorline.secondary"         = { underline = { style = "curl" } }
+"ui.background"                   = { bg = "none", fg = "text" }
+"ui.statusline"                   = { fg = "text", bg = "none" }
+
+
+# "ui.virtual.inlay-hint"           = { fg = "white", bg = "none" }
+# "ui.virtual.inlay-hint.parameter" = { fg = "white", bg = "none"}
+# "ui.virtual.inlay-hint.type"      = { fg = "white", bg = "none"}
+
+
+[palette]
+white = "#ffffff"
+pale  = "#d9d9d9"
+light = "#bfbfbf"
+grey  = "#999999"
+dim   = "#737373"
+dark  = "#4d4d4d"
+black = "#000000"
