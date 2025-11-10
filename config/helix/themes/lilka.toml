@@ -1,5 +1,5 @@
 "ui.selection"                    = { underline = { style = "line" }, modifiers = ["bold"] }
-"ui.cursor"                       = { underline = { style = "line" }, modifiers = ["bold", "italic"] }
+"ui.cursor"                       = { underline = { style = "line" }, modifiers = ["bold"] }
 "ui.cursor.primary.insert"        = { underline = { style = "curl" }, modifiers = ["bold", "italic"] }
 "ui.cursorline.primary"           = { underline = { style = "curl" } }
 "ui.cursorline.secondary"         = { underline = { style = "curl" } }

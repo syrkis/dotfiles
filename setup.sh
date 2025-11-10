@@ -62,6 +62,13 @@ if [ -d "$DOTFILES_DIR/config/helix" ]; then
     create_link "$DOTFILES_DIR/config/helix" "$HOME/.config/helix"
 fi
 
+# zellij
+if [ -d "$DOTFILES_DIR/config/zellij" ]; then
+    echo "📝 Setting up zellij..."
+    backup_and_remove "$HOME/.config/zellij"
+    create_link "$DOTFILES_DIR/config/zellij" "$HOME/.config/zellij"
+fi
+
 # Ghostty terminal
 if [ -d "$DOTFILES_DIR/config/ghostty" ]; then
     echo "👻 Setting up Ghostty..."
