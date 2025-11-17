@@ -1,4 +1,6 @@
-theme = {dark = "dark", light = "light"}
+[theme]
+dark = "dark"
+light = "light"
 
 [editor]
 bufferline = "multiple"

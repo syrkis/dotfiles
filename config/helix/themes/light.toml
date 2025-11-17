@@ -1,14 +1,18 @@
-inherits = "lilka"
+inherits                          = "lilka"
 
-"attribute"   = "pale"
-"comment"     = { fg = "pale", modifiers = ["italic"]}
-"type"        = "pale"
-"constructor" = "pale"
-"constant"    = "light"
-"string"      = "black"
-"variable"    = "light"
-"operator"    = "black"
-"function"    = "black"
-"namespace"   = "black"
+"ui.selection"                    = { fg = "black", underline = { style = "line" }, modifiers = ["bold"] }
+"attribute"                       = "pale"
+"comment"                         = { fg = "pale", modifiers = ["italic"]}
+"type"                            = "pale"
+"warning"                         = "dark"
+"info"                         = "light"
+"hint"                     = "light"
+"constructor"                     = "pale"
+"constant"                        = "light"
+"string"                          = "black"
+"variable"                        = "light"
+"operator"                        = "black"
+"function"                        = "black"
+"namespace"                       = "black"
 
 

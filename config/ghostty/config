@@ -8,10 +8,12 @@ adjust-cell-height = 28
 
 
 # Theme Configuration - adapts to system light/dark mode
-theme = light:Xcode Light hc,dark:Black Metal (Burzum)
+theme = light:Xcode Light,dark:Black Metal (Burzum)
 
 # Cursor Configuration
 cursor-style = block
+split-divider-color = #000000
+# unfocused-split-divider-opacity = 0
 cursor-color = #f5e0dc
 
 # Window Configuration

@@ -1,14 +1,27 @@
-inherits = "lilka"
+inherits                          = "lilka"
 
-"attribute" = "dark"
-"comment"   = { fg = "dark", modifiers = ["italic"]}
-"type"      = "dark"
-"constructor" = "dark"
-"constant" = "dim"
-"string"   = "white"
-"variable" = "dim"
-"operator" = "white"
-"function"  =  "white"
-"namespace" = "white"
+"ui.virtual.inlay-hint"           = { fg = "dim", bg = "none" }
+"ui.virtual.inlay-hint.parameter" = { fg = "dim", bg = "none"}
+"ui.virtual.inlay-hint.type"      = { fg = "dim", bg = "none"}
+
+# "diagnostic.warning"              = { fg = "dark" }
+# "diagnostic.info"                 = { fg = "dark" }
+# "diagnostic.hint"                 = { fg = "dark" }
+# "diagnostic.error"                 = { fg = "dark" }
+
+"ui.selection"                    = { fg = "white", underline = { style = "line" }, modifiers = ["bold"] }
+"attribute"                       = "dark"
+"comment"                         = { fg = "dark", modifiers = ["italic"]}
+"type"                            = "dark"
+"warning"                         = "dark"
+"info"                         = "dark"
+"hint"                     = "dark"
+"constructor"                     = "dark"
+"constant"                        = "dim"
+"string"                          = "white"
+"variable"                        = "dim"
+"operator"                        = "white"
+"function"                        =  "white"
+"namespace"                       = "white"
 
 
