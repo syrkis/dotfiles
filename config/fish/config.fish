@@ -7,6 +7,8 @@ set -g __fish_home_manager_config_sourced 1
 
 set -gx LAKE /Users/nobr/desk/lake
 
+bind \cz 'fg 2>/dev/null; commandline -f repaint' # ctrl z to reopen hx
+
 source /nix/store/p8870c40wka5chg6yk08d9kwxx79k9ac-hm-session-vars.fish
 
 status is-login; and begin
@@ -32,7 +34,7 @@ status is-interactive; and begin
     alias lla 'eza -la'
     alias ls eza
     alias lt 'eza --tree'
-    alias man tldr
+    # alias man tldr
     alias vimdiff 'nvim -d'
     alias t dstask
 
@@ -59,4 +61,6 @@ status is-interactive; and begin
 end
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/nobr/google-cloud-sdk/path.fish.inc' ]; . '/Users/nobr/google-cloud-sdk/path.fish.inc'; end
+if [ -f '/Users/nobr/google-cloud-sdk/path.fish.inc' ]
+    . '/Users/nobr/google-cloud-sdk/path.fish.inc'
+end

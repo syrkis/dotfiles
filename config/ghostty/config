@@ -2,14 +2,15 @@
 # Basic configuration with sensible defaults
 
 # Font Configuration
-font-family = "Fira Code Nerd Font"
-font-size = 18
-adjust-cell-height = 28
+font-family = "Uiua386"
+font-size = 16
+adjust-cell-height = 24
 
 
 # Theme Configuration - adapts to system light/dark mode
 theme = light:Xcode Light,dark:Black Metal (Burzum)
 
+# theme = light:rose-pine-dawn,dark:rose-pine
 # Cursor Configuration
 cursor-style = block
 split-divider-color = #000000

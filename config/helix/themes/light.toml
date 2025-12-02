@@ -1,16 +1,20 @@
 inherits                          = "lilka"
 
 "ui.selection"                    = { fg = "black", underline = { style = "line" }, modifiers = ["bold"] }
-"attribute"                       = "pale"
+"ui.virtual.inlay-hint"           = { fg = "light", bg = "none" }
+"ui.virtual.inlay-hint.parameter" = "pale"
+"ui.virtual.inlay-hint.type"      = "pale"
+
+"attribute"                       = "grey"
 "comment"                         = { fg = "pale", modifiers = ["italic"]}
-"type"                            = "pale"
+"type"                            = "light"
 "warning"                         = "dark"
-"info"                         = "light"
-"hint"                     = "light"
+"info"                            = "light"
+"hint"                            = "light"
 "constructor"                     = "pale"
 "constant"                        = "light"
 "string"                          = "black"
-"variable"                        = "light"
+"variable"                        = "grey"
 "operator"                        = "black"
 "function"                        = "black"
 "namespace"                       = "black"
