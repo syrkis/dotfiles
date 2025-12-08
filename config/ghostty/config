@@ -3,8 +3,10 @@
 
 # Font Configuration
 font-family = "Uiua386"
-font-size = 16
-adjust-cell-height = 24
+font-size = 20
+adjust-cell-height = 30
+term=xterm-256color
+
 
 
 # Theme Configuration - adapts to system light/dark mode

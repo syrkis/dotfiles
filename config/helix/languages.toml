@@ -6,6 +6,7 @@ ty = { command = "ty", args = ["server"]}
 ruff = { command = "ruff", args = ["server"] }
 
 
+
 [language-server.astro-ls]
 command = "astro-ls"
 args = [ "--stdio" ]
@@ -26,6 +27,9 @@ await = true
 command = "ty"
 args = ["server"]
 
+[language-server.wakatime-ls]
+command = "wakatime-ls"
+
 [[language]]
 name = "python"
 scope = "source.python"
@@ -35,6 +39,7 @@ roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 language-servers = [
   "ruff",
   "ty",
+  "wakatime-ls"
   # "lsp-ai"
 ]
 
@@ -55,7 +60,7 @@ file-types = ["ua"]
 roots = []
 auto-format = true
 comment-token = "#"
-language-servers = ["uiua-lsp"]
+language-servers = ["uiua-lsp", "wakatime-ls"]
 indent = {tab-width = 2, unit = " "}
 auto-pairs = {'(' = ')', '{' = '}', '[' = ']', '"' = '"'}
 
@@ -75,8 +80,9 @@ injection-regex = "typ(st)?"
 file-types = ["typst", "typ"]
 comment-token = "//"
 block-comment-tokens = { start = "/*", end = "*/" }
-language-servers = ["tinymist", "harper-ls"]
+language-servers = [ "tinymist", "harper-ls", "wakatime-ls" ]
 indent = { tab-width = 2, unit = "  " }
+roots = ["notes.typ", ".git"]  # pick something that exists in your notes repo
 formatter = { command = "typstyle", args = ["-c", "80", "--wrap-text"]}
 auto-format = true
 
@@ -101,7 +107,7 @@ shebangs = ["julia"]
 roots = ["Manifest.toml", "Project.toml"]
 comment-token = "#"
 block-comment-tokens = { start = "#=", end = "=#" }
-language-servers = [ "julia" ]
+language-servers = [ "julia", "wakatime-ls" ]
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
@@ -260,6 +266,7 @@ IgnoreLinkTitle = false
 # role = "system"
 # content= "You are a code assistant chatbot. The user will ask you for assistance coding and you will do your best to answer succinctly and accurately given the code context:\n\n{CONTEXT}"
 
+# [[language-server.rumdl]]
 
 [[language]]
 name = "sql"
@@ -273,3 +280,36 @@ injection-regex = "sql"
 [[grammar]]
 name = "sql"
 source = { git = "https://github.com/DerekStride/tree-sitter-sql", rev = "b9d109588d5b5ed986c857464830c2f0bef53f18" }
+
+# [language-server.rumdl]
+# command = "efm-langserver"
+
+
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "livemd", "markdown", "mdx", "mkd", "mkdn", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "workbook", { glob = "PULLREQ_EDITMSG" }]
+roots = [".marksman.toml"]
+auto-format = true
+formatter = { command = "rumdl", args = ["fmt", "-", "--quiet"] }
+language-servers = [ "marksman", "markdown-oxide", "rumdl" ]
+indent = { tab-width = 2, unit = "  " }
+block-comment-tokens = { start = "<!--", end = "-->" }
+word-completion.trigger-length = 4
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+'`' = '`'
+'‘' = '’'
+'«' = '»'
+'“' = '”'
+
+[[grammar]]
+name = "markdown"
+source = { git = "https://github.com/tree-sitter-grammars/tree-sitter-markdown", rev = "2dfd57f547f06ca5631a80f601e129d73fc8e9f0", subpath = "tree-sitter-markdown" }
+

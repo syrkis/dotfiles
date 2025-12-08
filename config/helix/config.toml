@@ -25,12 +25,12 @@ X = "select_line_above"
 # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
 C-s = ":w"
 
-C-g = [ # git
-    ":write-all",
-    ":new",
-    ":insert-output lazygit",
-    ":buffer-close!",
-    ":redraw",
-    ":reload-all"
-]
+# C-g = [ # git
+#     ":write-all",
+#     ":new",
+#     ":insert-output lazygit",
+#     ":buffer-close!",
+#     ":redraw",
+#     ":reload-all"
+# ]
 

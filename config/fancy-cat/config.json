@@ -1,42 +1,52 @@
 {
   "KeyMap": {
-    "next": { "key": "n", "modifiers": [] },
-    "prev": { "key": "p", "modifiers": [] },
-    "scroll_up": { "key": "k", "modifiers": [] },
-    "scroll_down": { "key": "j", "modifiers": [] },
-    "scroll_left": { "key": "h", "modifiers": [] },
-    "scroll_right": { "key": "l", "modifiers": [] },
-    "zoom_in": { "key": "i", "modifiers": [] },
-    "zoom_out": { "key": "o", "modifiers": [] },
-    "width_mode": { "key": "w", "modifiers": [] },
-    "colorize": { "key": "z", "modifiers": [] },
-    "quit": { "key": "c", "modifiers": ["ctrl"] },
-    "enter_command_mode": { "key": "colon", "modifiers": [] },
-    "exit_command_mode": { "key": "escape", "modifiers": [] },
-    "execute_command": { "key": "enter", "modifiers": [] }
+    "next": { "key": "n" },
+    "prev": { "key": "p" },
+    "scroll_up": { "key": "k" },
+    "scroll_down": { "key": "j" },
+    "scroll_left": { "key": "h" },
+    "scroll_right": { "key": "l" },
+    "zoom_in": { "key": "i" },
+    "zoom_out": { "key": "o" },
+    "width_mode": { "key": "w" },
+    "colorize": { "key": "z" },
+    "quit": { "key": "c", "modifiers": [ "ctrl" ] },
+    "full_screen": { "key": "f"},
+    "enter_command_mode": { "key": ":" },
+    "exit_command_mode": { "key": "escape" },
+    "execute_command": { "key": "enter" },
+    "history_back": { "key": "up" },
+    "history_forward": { "key": "down" }
   },
   "FileMonitor": {
     "enabled": true,
-    "latency": 0.1
+    "latency": 0.1,
+    "reload_indicator_duration": 1.0
   },
   "General": {
     "colorize": true,
-    "white": "0x000000",
-    "black": "0xffffff",
+    "white": "#000000",
+    "black": "#ffffff",
     "size": 1.0,
     "zoom_step": 1.25,
     "zoom_min": 1.0,
     "scroll_step": 100.0,
     "retry_delay": 0.2,
     "timeout": 5.0,
-    "dpi": 96.0
+    "detect_dpi": true,
+    "dpi": 96.0,
+    "history": 1000
   },
   "StatusBar": {
     "enabled": false,
-    "style": {
-      "bg": { "rgb": [0, 0, 0] },
-      "fg": { "rgb": [255, 255, 255] }
-    }
+    "style": { "bg": "#000000", "fg": "#ffffff" },
+    "items": [
+      " ",
+      { "view": { "text": "VIS" }, "command": { "text": "CMD" } },
+      "   <path> ",
+      { "idle": { "text": " " }, "reload": { "text": "*" }, "watching": { "text": " " } },
+      "<separator><page>:<total_pages> "
+    ]
   },
   "Cache": {
     "enabled": true,
