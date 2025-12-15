@@ -1,8 +1,8 @@
 inherits                          = "lilka"
 
-"ui.virtual.inlay-hint"           = { fg = "dim", bg = "none" }
-"ui.virtual.inlay-hint.parameter" = { fg = "dim", bg = "none"}
-"ui.virtual.inlay-hint.type"      = { fg = "dim", bg = "none"}
+"ui.virtual.inlay-hint"           = { fg = "dark", bg = "none" }
+"ui.virtual.inlay-hint.parameter" = { fg = "dark", bg = "none"}
+"ui.virtual.inlay-hint.type"      = { fg = "dark", bg = "none"}
 "ui.menu.selected"                = { modifiers = ["reversed"] }
 
 

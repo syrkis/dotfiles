@@ -1,6 +1,5 @@
-[theme]
-dark = "dark"
-light = "light"
+theme = { dark = "dark", light = "light" }
+
 
 [editor]
 bufferline = "multiple"
@@ -24,6 +23,13 @@ x = "select_line_below"
 X = "select_line_above"
 # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
 C-s = ":w"
+# z = ":toggle gutters.line-numbers.min-width 48 3"
+# i = ":toggle lsp.display-inlay-hints"
+# z = [":set-max-width 120", ":set gutters.layout []"]
+# Z = [":set-max-width 0", ':set gutters.layout ["diagnostics","spacer","line-numbers","spacer","diff"]']
+# [keys.normal."+"]
+# # Creates a basic 'zen-mode' similar to VSCode's
+
 
 # C-g = [ # git
 #     ":write-all",

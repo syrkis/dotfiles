@@ -1,5 +1,8 @@
 # Ghostty Configuration
 # Basic configuration with sensible defaults
+auto-update-channel = tip
+shell-integration = fish
+
 
 # Font Configuration
 font-family = "Uiua386"
