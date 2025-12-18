@@ -143,7 +143,7 @@ roots = [ "lakefile.lean", "lakefile.toml" ]
 comment-token = "--"
 block-comment-tokens = { start = "/-", end = "-/" }
 auto-format = true
-language-servers = [ "lean", "lake", "wakatime" ]
+language-servers = [ "lean", "wakatime" ]
 indent = { tab-width = 2, unit = "  " }
 rulers = [101]
 text-width = 100
