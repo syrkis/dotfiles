@@ -6,6 +6,9 @@ set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1
 
 set -gx LAKE /Users/nobr/desk/lake
+set -x MACOSX_DEPLOYMENT_TARGET 14.4
+set -x SDKROOT (xcrun --show-sdk-path)
+set -x LIBRARY_PATH $SDKROOT/usr/lib
 
 bind \cz 'fg 2>/dev/null; commandline -f repaint' # ctrl z to reopen hx
 
