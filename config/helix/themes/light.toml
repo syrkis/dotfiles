@@ -1,22 +1,29 @@
 inherits                          = "lilka"
 
-"ui.selection"                    = { fg = "black", underline = { style = "line" }, modifiers = ["bold"] }
-"ui.virtual.inlay-hint"           = { fg = "light", bg = "none" }
-"ui.virtual.inlay-hint.parameter" = "pale"
-"ui.virtual.inlay-hint.type"      = "pale"
+"ui.virtual.inlay-hint"           = { fg = "pale", bg = "none" }
+# "ui.virtual.inlay-hint.parameter" = { fg = "pale", bg = "none"}
+# "ui.virtual.inlay-hint.type"      = { fg = "pale", bg = "none"}
+"ui.menu.selected"                = { modifiers = ["reversed"] }
 
-"attribute"                       = "grey"
-"comment"                         = { fg = "pale", modifiers = ["italic"]}
-"type"                            = "light"
+
+"diagnostic.warning"              = { fg = "dark" }
+"diagnostic.info"                 = { fg = "dark" }
+"diagnostic.hint"                 = { fg = "dark" }
+"diagnostic.error"                = { fg = "dark" }
+
+"ui.selection"                    = { fg = "grey", underline = { style = "line" }, modifiers = ["bold"] }
+"attribute"                       = "dark"
+"comment"                         = { fg = "dark", modifiers = ["italic"]}
+"type"                            = "grey"
 "warning"                         = "dark"
-"info"                            = "light"
-"hint"                            = "light"
-"constructor"                     = "pale"
-"constant"                        = "light"
-"string"                          = "black"
-"variable"                        = "grey"
-"operator"                        = "black"
-"function"                        = "black"
-"namespace"                       = "black"
+"info"                            = "dark"
+"hint"                            = "dark"
+"constructor"                     = "dark"
+"constant"                        = "dim"
+"string"                          = "pale"
+"variable"                        = "dim"
+"operator"                        = "pale"
+"function"                        = "dim"
+"namespace"                       = "dim"
 
 

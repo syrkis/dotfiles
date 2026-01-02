@@ -1,8 +1,19 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
-    normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        // Keybindings specific to 'Normal' mode.
+    normal {
+        // Intercept `Enter`.
+        // bind "Enter" {
+            // Passthru `Enter`.
+            // WriteChars "\u{000D}";
+            // Invoke autolock to immediately assess proper lock state.
+            // (This provides a snappier experience compared to
+            // solely relying on `reaction_seconds` to elapse.)
+            // MessagePlugin "autolock" {};
+        // }
+        //...
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -221,6 +232,12 @@ keybinds {
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
+    autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
+        is_enabled true
+        triggers "nvim|vim|git|fzf|zoxide|atuin|hx"
+        reaction_seconds "0.3"
+        print_to_log true
+    }
     tab-bar location="zellij:tab-bar"
     status-bar location="zellij:status-bar"
     strider location="zellij:strider"
@@ -241,6 +258,7 @@ plugins {
 load_plugins {
   // "file:/path/to/my-plugin.wasm"
   // "https://example.com/my-plugin.wasm"
+  // autolock
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP

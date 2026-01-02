@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Dotfiles setup script
 # Run this script to set up symlinks to your dotfiles
 
@@ -90,13 +89,6 @@ if [ -f "$DOTFILES_DIR/config/starship.toml" ]; then
     create_link "$DOTFILES_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 fi
 
-# Epy ebook reader
-if [ -d "$DOTFILES_DIR/config/epy" ]; then
-    echo "📚 Setting up Epy ebook reader..."
-    backup_and_remove "$HOME/.config/epy"
-    create_link "$DOTFILES_DIR/config/epy" "$HOME/.config/epy"
-fi
-
 echo ""
 if [ -d "$BACKUP_DIR" ]; then
     echo "✅ Setup complete! Old files backed up to: $BACKUP_DIR"
@@ -117,13 +109,3 @@ echo "   rm ~/.config/fish"
 echo "   rm ~/.config/starship.toml"
 echo "   rm ~/.config/epy"
 echo "   # Then restore from backup if needed"
-
-# Skim PDF viewer
-if command -v duti >/dev/null 2>&1; then
-    echo "📄 Setting up Skim as default PDF reader..."
-    duti -s net.sourceforge.skim-app.skim pdf all
-    duti -s com.readest.readest epub all
-    echo "  ✅ Skim set as default PDF reader"
-else
-    echo "  ⚠️  Warning: duti not found, skipping Skim PDF setup"
-fi

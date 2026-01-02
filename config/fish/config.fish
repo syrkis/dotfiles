@@ -1,6 +1,17 @@
 # ~/.config/fish/config.fish: DO NOT EDIT -- this file has been generated
 # automatically by home-manager.
 
+# Nix per-user profile tools
+if test -d /etc/profiles/per-user/nobr/bin
+  fish_add_path -g /etc/profiles/per-user/nobr/bin
+end
+
+# Homebrew (Apple Silicon)
+if test -d /opt/homebrew/bin
+  fish_add_path -g /opt/homebrew/bin
+end
+
+
 # Only execute this file once per shell.
 set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1

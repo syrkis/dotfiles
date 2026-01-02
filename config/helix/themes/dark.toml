@@ -9,12 +9,12 @@ inherits                          = "lilka"
 # "diagnostic.warning"              = { fg = "dark" }
 # "diagnostic.info"                 = { fg = "dark" }
 # "diagnostic.hint"                 = { fg = "dark" }
-# "diagnostic.error"                 = { fg = "dark" }
+# "diagnostic.error"                = { fg = "dark" }
 
 "ui.selection"                    = { fg = "white", underline = { style = "line" }, modifiers = ["bold"] }
 "attribute"                       = "dark"
 "comment"                         = { fg = "dark", modifiers = ["italic"]}
-"type"                            = "dark"
+"type"                            = "grey"
 "warning"                         = "dark"
 "info"                            = "dark"
 "hint"                            = "dark"
@@ -23,7 +23,7 @@ inherits                          = "lilka"
 "string"                          = "white"
 "variable"                        = "dim"
 "operator"                        = "white"
-"function"                        =  "white"
+"function"                        = "white"
 "namespace"                       = "white"
 
 
