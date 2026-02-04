@@ -12,6 +12,7 @@ command = "astro-ls"
 args = [ "--stdio" ]
 config = { typescript = { tsdk = "node_modules/typescript/lib" } }
 
+
 [language-server.lua-language-server]
 command = "lua-language-server"
 
@@ -47,6 +48,16 @@ language-servers = [
 [[grammar]]
 name = "python"
 source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "4bfdd9033a2225cc95032ce77066b7aeca9e2efc" }
+
+[[grammar]]
+name = "pie"
+source = { git = "https://github.com/syrkis/tree-sitter-pie", rev = "cee9b08691457f6ddc3c1e50ef195b8df8272b65" }
+
+[[language]]
+name = "pie"
+file-types = ["pie"]
+scope = "source.pie"
+comment-token = ";"
 
 [language-server.uiua-lsp]
 command = "uiua"
@@ -124,9 +135,32 @@ injection-regex = "astro"
 file-types = ["astro"]
 block-comment-tokens = { start = "<!--", end = "-->" }
 indent = { tab-width = 2, unit = "  " }
-language-servers = [ "astro-ls", "wakatime" ]
-formatter = { command = "dprint", args = ["fmt", "--stdin", "astro"]}
+language-servers = [ "astro-ls", "wakatime", "biome"]
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "{input}"] }
 auto-format = true
+
+
+[[language]]
+name = "css"
+auto-format = true
+formatter = { command = "biome", args = ["format", "--stdin-file-path", "{input}"] }
+language-servers = [{ name = "biome" }]
+
+[[language]]
+name = "javascript"
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome"
+]
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = ["format"] },
+  "biome"
+]
 
 
 [[grammar]]
@@ -244,6 +278,10 @@ ForceStable = false
 
 [language-server.harper-ls.config.harper-ls.markdown]
 IgnoreLinkTitle = false
+
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
 
 # [language-server.lsp-ai]
 # command = "lsp-ai"

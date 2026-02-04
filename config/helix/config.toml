@@ -21,6 +21,10 @@ j = { k = "normal_mode" }
 [keys.normal]
 x = "select_line_below"
 X = "select_line_above"
+C-d = ":half-page-down-smooth"
+C-u = ":half-page-up-smooth"
+pageup = ":page-up-smooth"
+pagedown = ":page-down-smooth"
 # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
 C-s = ":w"
 # z = ":toggle gutters.line-numbers.min-width 48 3"

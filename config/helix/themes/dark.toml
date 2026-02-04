@@ -4,6 +4,8 @@ inherits                          = "lilka"
 "ui.virtual.inlay-hint.parameter" = { fg = "dark", bg = "none"}
 "ui.virtual.inlay-hint.type"      = { fg = "dark", bg = "none"}
 "ui.menu.selected"                = { modifiers = ["reversed"] }
+"ui.linenr"                       = {fg = "inky"}
+"ui.linenr.selected"              = {fg = "light"}
 
 
 # "diagnostic.warning"              = { fg = "dark" }
@@ -13,7 +15,7 @@ inherits                          = "lilka"
 
 "ui.selection"                    = { fg = "white", underline = { style = "line" }, modifiers = ["bold"] }
 "attribute"                       = "dark"
-"comment"                         = { fg = "dark", modifiers = ["italic"]}
+"comment"                         = { fg = "inky", modifiers = ["italic"]}
 "type"                            = "grey"
 "warning"                         = "dark"
 "info"                            = "dark"
@@ -25,5 +27,3 @@ inherits                          = "lilka"
 "operator"                        = "white"
 "function"                        = "white"
 "namespace"                       = "white"
-
-

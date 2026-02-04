@@ -1,13 +1,16 @@
 # Ghostty Configuration
 # Basic configuration with sensible defaults
 auto-update-channel = tip
+custom-shader = ~/.config/ghostty/shaders/bloom.glsl
 shell-integration = fish
 
 
 # Font Configuration
 font-family = "Uiua386"
 font-size = 20
-adjust-cell-height = 30
+# letter-spacing = 5
+adjust-cell-width = 2
+adjust-cell-height = 35
 term=xterm-256color
 
 
@@ -25,7 +28,6 @@ cursor-color = #f5e0dc
 # Window Configuration
 window-padding-x = 8
 window-padding-y = 8
-# window-decoration = none
 background-opacity = 0.5
 unfocused-split-opacity = 1
 background-blur = true
@@ -42,9 +44,6 @@ shell-integration = detect
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 3
 
-# Tab navigation
-keybind = ctrl+shift+left=previous_tab
-keybind = ctrl+shift+right=next_tab
 
 # Quality of life improvements
 confirm-close-surface = true
@@ -53,8 +52,6 @@ initial-window = false
 window-inherit-working-directory = true
 window-inherit-font-size = true
 
-# Performance
-window-vsync = true
 
 # Quick Terminal (Dropdown) Configuration
 quick-terminal-position = bottom
@@ -67,6 +64,6 @@ keybind = global:alt+space=toggle_quick_terminal
 
 # macOS specific settings (only applied on macOS)
 # macos-option-as-alt = true
-macos-titlebar-style = hidden
-keybind = shift+enter=text:\n
+# macos-titlebar-style = hidden
+# keybind = shift+enter=text:\n
 macos-option-as-alt = "right"

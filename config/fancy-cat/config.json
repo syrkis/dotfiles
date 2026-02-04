@@ -1,7 +1,7 @@
 {
   "KeyMap": {
-    "next": { "key": "n" },
-    "prev": { "key": "p" },
+    "next": { "key": "." },
+    "prev": { "key": "," },
     "scroll_up": { "key": "k" },
     "scroll_down": { "key": "j" },
     "scroll_left": { "key": "h" },
@@ -40,13 +40,7 @@
   "StatusBar": {
     "enabled": false,
     "style": { "bg": "#000000", "fg": "#ffffff" },
-    "items": [
-      " ",
-      { "view": { "text": "VIS" }, "command": { "text": "CMD" } },
-      "   <path> ",
-      { "idle": { "text": " " }, "reload": { "text": "*" }, "watching": { "text": " " } },
-      "<separator><page>:<total_pages> "
-    ]
+    "items": []
   },
   "Cache": {
     "enabled": true,

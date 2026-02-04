@@ -11,19 +11,19 @@ inherits                          = "lilka"
 "diagnostic.hint"                 = { fg = "dark" }
 "diagnostic.error"                = { fg = "dark" }
 
-"ui.selection"                    = { fg = "grey", underline = { style = "line" }, modifiers = ["bold"] }
+"ui.selection"                    = { fg = "dim", underline = { style = "line" }, modifiers = ["bold"] }
 "attribute"                       = "dark"
 "comment"                         = { fg = "dark", modifiers = ["italic"]}
-"type"                            = "grey"
+"type"                            = "dark"
 "warning"                         = "dark"
 "info"                            = "dark"
 "hint"                            = "dark"
 "constructor"                     = "dark"
-"constant"                        = "dim"
-"string"                          = "pale"
-"variable"                        = "dim"
-"operator"                        = "pale"
-"function"                        = "dim"
-"namespace"                       = "dim"
+"constant"                        = "dark"
+"string"                          = "dark"
+"variable"                        = "black"
+"operator"                        = "dark"
+"function"                        = "black"
+"namespace"                       = "black"
 
 
