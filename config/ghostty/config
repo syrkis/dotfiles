@@ -16,7 +16,7 @@ term=xterm-256color
 
 
 # Theme Configuration - adapts to system light/dark mode
-theme = light:Xcode Light,dark:Black Metal (Burzum)
+theme = light:Xcode Light,dark:Ultra Dark
 
 # theme = light:rose-pine-dawn,dark:rose-pine
 # Cursor Configuration

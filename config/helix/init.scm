@@ -1,18 +1,28 @@
-(require-builtin steel/random as rand::)
-; (require "smooth-scroll/smooth-scroll.scm")
-; (require "hetex/hetex.scm")
+(require "smooth-scroll/smooth-scroll.scm")
 (require "showkeys/showkeys.scm")
+(require "nrepl.scm")
+(require "jj/jj.scm")
+(require "cogs/keymaps.scm")
+(require "helix-file-watcher/file-watcher.scm")
+(require "steel-pty/term.scm")
+
 (require (prefix-in helix. "helix/commands.scm"))
 (require (prefix-in helix.static. "helix/static.scm"))
 
-;; Picking one from the possible themes
-; (define possible-themes '("ayu_mirage" "tokyonight_storm" "catppuccin_macchiato"))
+(require-builtin steel/random as rand::)
 
-(define (select-random lst)
-  (let ([index (rand::rng->gen-range 0 (length lst))]) (list-ref lst index)))
-
-; (define (randomly-pick-theme options)
-;; Randomly select the theme from the possible themes list
-; (helix.theme (select-random options)))
-
-; (randomly-pick-theme possible-themes)
+(keymap (global)
+  (normal (space (n (C ":nrepl-connect")
+                  (D ":nrepl-disconnect")
+                  (b ":nrepl-eval-buffer")
+                  (m ":nrepl-eval-multiple-selections")
+                  (p ":nrepl-eval-prompt")
+                  (s ":nrepl-eval-selection")))
+    (A-ret ":nrepl-eval-selection"))
+  (select (space (n (C ":nrepl-connect")
+                  (D ":nrepl-disconnect")
+                  (b ":nrepl-eval-buffer")
+                  (m ":nrepl-eval-multiple-selections")
+                  (p ":nrepl-eval-prompt")
+                  (s ":nrepl-eval-selection")))
+    (A-ret ":nrepl-eval-selection")))

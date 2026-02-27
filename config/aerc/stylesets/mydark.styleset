@@ -1,0 +1,5 @@
+*.default=true
+*.normal=true
+*.selected.bg=0
+*.selected.fg=15
+statusline.selected.bg=12

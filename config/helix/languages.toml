@@ -230,9 +230,15 @@ source = { git = "https://github.com/nix-community/tree-sitter-nix", rev = "1b69
 name = "latex"
 scope = "source.tex"
 injection-regex = "tex"
-file-types = ["tex", "sty", "cls", "Rd", "bbx", "cbx"]
+file-types = [ "tex", "sty", "cls", "Rd", "bbx", "cbx"]
 comment-token = "%"
-language-servers = [ "texlab", "wakatime", "harper-ls" ]
+# roots = ["main.tex", "latexmkrc", ".git"]
+language-servers = [
+  "harper-ls",
+  # { name = "harper-ls", config = { linters = { Spaces = false } } },
+  "texlab", 
+  "wakatime"
+]
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 formatter = { command = "tex-fmt", args = ["--stdin"] }
@@ -244,40 +250,42 @@ source = { git = "https://github.com/latex-lsp/tree-sitter-latex", rev = "8c75e9
 [language-server.texlab.config.texlab.build]
 onSave = true
 
+
 [language-server.harper-ls]
 command = "harper-ls"
 args = ["--stdio"]
+config = { linters = { Spaces = false } }
 
 
-[language-server.harper-ls.config.harper-ls]
+# [language-server.harper-ls.config.harper-ls]
 # userDictPath = ""
 # workspaceDictPath = ""
 # fileDictPath = ""
-diagnosticSeverity = "hint"
-isolateEnglish = false
-dialect = "British"
-maxFileLength = 120000
-ignoredLintsPath = ""
-excludePatterns = []
+# diagnosticSeverity = "hint"
+# isolateEnglish = false
+# dialect = "British"
+# maxFileLength = 120000
+# ignoredLintsPath = ""
+# excludePatterns = []
 
-[language-server.harper-ls.config.harper-ls.linters]
-SpellCheck = true
-SpelledNumbers = false
-AnA = true
-SentenceCapitalization = true
-UnclosedQuotes = true
-WrongQuotes = false
-LongSentences = true
-RepeatedWords = true
-Spaces = true
-Matcher = true
-CorrectNumberSuffix = true
+# [language-server.harper-ls.config.harper-ls.linters]
+# SpellCheck = true
+# SpelledNumbers = false
+# AnA = true
+# SentenceCapitalization = true
+# UnclosedQuotes = true
+# WrongQuotes = false
+# LongSentences = true
+# RepeatedWords = true
+# Spaces = true
+# Matcher = true
+# CorrectNumberSuffix = true
 
-[language-server.harper-ls.config.harper-ls.codeActions]
-ForceStable = false
+# [language-server.harper-ls.config.harper-ls.codeActions]
+# ForceStable = false
 
-[language-server.harper-ls.config.harper-ls.markdown]
-IgnoreLinkTitle = false
+# [language-server.harper-ls.config.harper-ls.markdown]
+# IgnoreLinkTitle = false
 
 [language-server.biome]
 command = "biome"
