@@ -10,7 +10,7 @@
 # Simulated “border” effect using reverse toggle highlight (optional)
 *.selected.reverse = false
 *.selected.bold = true
-*.selected.underline = true
+*.selected.italic = true
 
 # Optional: “pill” style (for tags, etc.)
 *_pill.reverse = true
