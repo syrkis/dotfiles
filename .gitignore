@@ -1,5 +1,5 @@
 # Exclude all files from .config directory
-config/*
+dot_config/*
 **/*.db
 **/.DS_Store
 **/pack/
@@ -8,24 +8,24 @@ config/fish/fish_variables
 **/*.mdb
 
 # Include specific files within .config directory
-!config/epy
-!config/tmux
-!config/helix
-!config/aerc
-!config/nvim
-!config/alacritty
-!config/zed
-!config/ghostty
-!config/zellij
-!config/starship.toml
-!config/fish
-!config/fancy-cat
+!dot_config/epy
+!dot_config/tmux
+!dot_config/helix
+!dot_config/aerc
+!dot_config/nvim
+!dot_config/alacritty
+!dot_config/zed
+!dot_config/ghostty
+!dot_config/zellij
+!dot_config/starship.toml
+!dot_config/fish
+!dot_config/fancy-cat
 
 # Except this stuff
-config/zed/embeddings/
-config/zed/prompts/
-config/zed/conversations/
-config/helix/cogs
-config/ghostty/shaders
+dot_config/zed/embeddings/
+dot_config/zed/prompts/
+dot_config/zed/conversations/
+dot_config/helix/cogs
+dot_config/ghostty/shaders
 
 
