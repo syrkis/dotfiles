@@ -10,7 +10,7 @@ font-family = "Uiua386"
 font-size = 20
 # letter-spacing = 5
 adjust-cell-width = 2
-adjust-cell-height = 35
+adjust-cell-height = 20
 term=xterm-256color
 
 

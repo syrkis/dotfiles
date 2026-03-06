@@ -7,6 +7,12 @@ ruff = { command = "ruff", args = ["server"] }
 
 
 
+[language-server.helix-assist]
+command = "/Users/nobr/go/bin/helix-assist"
+# Optional
+args = ["--handler", "anthropic", "--num-suggestions", "2"]
+
+
 [language-server.astro-ls]
 command = "astro-ls"
 args = [ "--stdio" ]
@@ -40,7 +46,8 @@ roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 language-servers = [
   "ruff",
   "ty",
-  "wakatime"
+  "wakatime",
+  "helix-assist"
   # "lsp-ai"
 ]
 
@@ -128,6 +135,8 @@ indent = { tab-width = 4, unit = "    " }
 name = "julia"
 source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "e84f10db8eeb8b9807786bfc658808edaa1b4fa2" }
 
+
+
 [[language]]
 name = "astro"
 scope = "source.astro"
@@ -135,9 +144,11 @@ injection-regex = "astro"
 file-types = ["astro"]
 block-comment-tokens = { start = "<!--", end = "-->" }
 indent = { tab-width = 2, unit = "  " }
-language-servers = [ "astro-ls", "wakatime", "biome"]
-formatter = { command = "biome", args = ["format", "--stdin-file-path", "{input}"] }
+language-servers = [ "astro-ls", "wakatime" ]
+# formatter = { command = "biome", args = ["format", "--stdin-file-path", "{input}"] }
+formatter = { command = "prettier", args = ["--plugin", "prettier-plugin-astro", "--parser", "astro"] }
 auto-format = true
+
 
 
 [[language]]
@@ -347,7 +358,7 @@ file-types = ["md", "livemd", "markdown", "mdx", "mkd", "mkdn", "mdwn", "mdown",
 roots = [".marksman.toml"]
 auto-format = true
 formatter = { command = "rumdl", args = ["fmt", "-", "--quiet"] }
-language-servers = [ "marksman", "markdown-oxide", "rumdl", "wakatime" ]
+language-servers = [ "marksman", "markdown-oxide", "rumdl", "wakatime", "harper-ls" ]
 indent = { tab-width = 2, unit = "  " }
 block-comment-tokens = { start = "<!--", end = "-->" }
 word-completion.trigger-length = 4
