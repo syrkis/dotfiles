@@ -1,7 +1,7 @@
 # Ghostty Configuration
 # Basic configuration with sensible defaults
 auto-update-channel = tip
-custom-shader = ~/.config/ghostty/shaders/bloom.glsl
+custom-shader = ~/.config/ghostty/bloom.glsl
 shell-integration = fish
 
 
