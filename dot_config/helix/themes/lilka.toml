@@ -1,0 +1,158 @@
+# Shared monochrome base for Lilka variants.
+# Leave backgrounds unset unless you explicitly want to override the terminal background.
+
+"ui.background"            = { fg = "text" }
+"ui.text"                  = "text"
+"ui.text.inactive"         = "muted"
+"ui.text.info"             = "mid"
+"ui.text.directory"        = "strong"
+
+"ui.window"                = "faint"
+"ui.gutter"                = "faint"
+"ui.linenr"                = "faint"
+"ui.linenr.selected"       = "strong"
+
+"ui.statusline"            = { fg = "text" }
+"ui.statusline.inactive"   = { fg = "muted" }
+"ui.statusline.normal"     = { fg = "text", modifiers = ["bold"] }
+"ui.statusline.insert"     = { fg = "strong", modifiers = ["bold"] }
+"ui.statusline.select"     = { fg = "mid", modifiers = ["bold"] }
+"ui.statusline.separator"  = "faint"
+
+"ui.popup"                 = { fg = "text" }
+"ui.help"                  = { fg = "text" }
+
+"ui.menu"                  = { fg = "text" }
+"ui.menu.selected"         = { fg = "text", modifiers = ["reversed"] }
+"ui.menu.scroll"           = { fg = "mid", bg = "faint" }
+
+"ui.selection"             = { underline = { style = "line", color = "selection" }, modifiers = ["bold"] }
+"ui.selection.primary"     = { underline = { style = "double_line", color = "selection" }, modifiers = ["bold"] }
+
+"ui.cursor"                = { underline = { style = "line", color = "cursor" }, modifiers = ["reversed"] }
+"ui.cursor.primary"        = { underline = { style = "line", color = "cursor" }, modifiers = ["bold", "reversed"] }
+"ui.cursor.insert"         = { underline = { style = "curl", color = "cursor" } }
+"ui.cursor.primary.insert" = { underline = { style = "curl", color = "cursor" }, modifiers = ["bold"] }
+"ui.cursor.match"          = { underline = { style = "double_line", color = "strong" } }
+
+"ui.cursorline.primary"    = { underline = { style = "curl", color = "cursorline" } }
+"ui.cursorline.secondary"  = { underline = { style = "line", color = "cursorline" } }
+
+"ui.virtual.ruler"         = "faint"
+"ui.virtual.whitespace"    = "faint"
+"ui.virtual.indent-guide"  = "faint"
+"ui.virtual.wrap"          = "muted"
+
+"ui.virtual.inlay-hint"           = { fg = "inlay" }
+"ui.virtual.inlay-hint.parameter" = { fg = "inlay_strong" }
+"ui.virtual.inlay-hint.type"      = { fg = "inlay" }
+
+"ui.highlight"             = { underline = { style = "line", color = "mid" } }
+"ui.highlight.frameline"   = { underline = { style = "double_line", color = "strong" } }
+
+"warning"                  = "strong"
+"error"                    = "text"
+"info"                     = "muted"
+"hint"                     = "faint"
+
+"diagnostic"               = { underline = { style = "curl", color = "muted" } }
+"diagnostic.warning"       = { underline = { style = "double_line", color = "strong" } }
+"diagnostic.error"         = { underline = { style = "curl", color = "text" } }
+"diagnostic.info"          = { underline = { style = "dashed", color = "muted" } }
+"diagnostic.hint"          = { underline = { style = "dotted", color = "faint" } }
+"diagnostic.unnecessary"   = { modifiers = ["dim"] }
+"diagnostic.deprecated"    = { modifiers = ["crossed_out"] }
+
+"attribute"                = "mid"
+
+"comment"                  = { fg = "faint", modifiers = ["italic"] }
+"comment.line"             = { fg = "faint", modifiers = ["italic"] }
+"comment.block"            = { fg = "faint", modifiers = ["italic"] }
+"comment.documentation"    = { fg = "muted", modifiers = ["italic"] }
+
+"type"                     = "mid"
+"type.builtin"             = "strong"
+"type.parameter"           = "muted"
+"type.enum.variant"        = "strong"
+
+"constructor"              = "strong"
+
+"constant"                 = "strong"
+"constant.builtin"         = "text"
+"constant.numeric"         = "mid"
+"constant.character"       = "mid"
+"constant.character.escape"= "text"
+
+"string"                   = "strong"
+"string.regexp"            = "text"
+"string.special"           = "text"
+"string.special.path"      = "mid"
+"string.special.url"       = { fg = "text", modifiers = ["underlined"] }
+"string.special.symbol"    = "strong"
+
+"variable"                 = "muted"
+"variable.builtin"         = "strong"
+"variable.parameter"       = "mid"
+"variable.other.member"    = "mid"
+
+"label"                    = "strong"
+
+"punctuation"              = "muted"
+"punctuation.delimiter"    = "muted"
+"punctuation.bracket"      = "mid"
+"punctuation.special"      = "strong"
+
+"keyword"                  = "text"
+"keyword.control"          = "text"
+"keyword.control.return"   = "text"
+"keyword.directive"        = "strong"
+"keyword.function"         = "text"
+"keyword.operator"         = "mid"
+"keyword.storage"          = "mid"
+"keyword.storage.modifier" = "strong"
+"keyword.storage.type"     = "mid"
+
+"operator"                 = "text"
+
+"function"                 = "text"
+"function.builtin"         = "strong"
+"function.method"          = "text"
+"function.macro"           = "mid"
+"function.special"         = "strong"
+
+"tag"                      = "mid"
+"tag.builtin"              = "strong"
+
+"namespace"                = "mid"
+"special"                  = "strong"
+
+"markup.heading"           = { fg = "text", modifiers = ["bold"] }
+"markup.list"              = "mid"
+"markup.bold"              = { fg = "text", modifiers = ["bold"] }
+"markup.italic"            = { fg = "strong", modifiers = ["italic"] }
+"markup.strikethrough"     = { fg = "muted", modifiers = ["crossed_out"] }
+"markup.link.url"          = { fg = "text", modifiers = ["underlined"] }
+"markup.link.text"         = "strong"
+"markup.quote"             = "muted"
+"markup.raw"               = "mid"
+"markup.raw.inline"        = "mid"
+"markup.raw.block"         = "mid"
+
+"diff.plus"                = "strong"
+"diff.plus.gutter"         = "strong"
+"diff.minus"               = "muted"
+"diff.minus.gutter"        = "muted"
+"diff.delta"               = "mid"
+"diff.delta.gutter"        = "mid"
+
+[palette]
+text         = "#ffffff"
+strong       = "#d9d9d9"
+mid          = "#bfbfbf"
+muted        = "#999999"
+faint        = "#737373"
+cursor       = "#ffffff"
+cursorline   = "#4d4d4d"
+selection    = "#d9d9d9"
+inlay        = "#737373"
+inlay_strong = "#999999"

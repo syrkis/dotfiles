@@ -1,0 +1,13 @@
+inherits = "lilka"
+
+[palette]
+text         = "#000000"
+strong       = "#333333"
+mid          = "#4d4d4d"
+muted        = "#737373"
+faint        = "#999999"
+cursor       = "#000000"
+cursorline   = "#bfbfbf"
+selection    = "#4d4d4d"
+inlay        = "#737373"
+inlay_strong = "#4d4d4d"
