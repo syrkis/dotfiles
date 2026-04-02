@@ -146,13 +146,15 @@
 "diff.delta.gutter"        = "mid"
 
 [palette]
-text         = "#ffffff"
-strong       = "#d9d9d9"
-mid          = "#bfbfbf"
-muted        = "#999999"
-faint        = "#737373"
+text         = "#ffffff"  # max foreground
+strong       = "#e6e6e6"  # very bright grey
+mid          = "#c2c2c2"  # clear mid tone
+muted        = "#8c8c8c"  # readable but subdued
+faint        = "#595959"  # comments / low emphasis
+
 cursor       = "#ffffff"
-cursorline   = "#4d4d4d"
-selection    = "#d9d9d9"
-inlay        = "#737373"
-inlay_strong = "#999999"
+cursorline   = "#404040"  # stronger than before so you can actually see it
+selection    = "#bfbfbf"  # visible but not overpowering
+
+inlay        = "#666666"
+inlay_strong = "#8c8c8c"

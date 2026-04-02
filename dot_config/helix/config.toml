@@ -16,6 +16,7 @@ snippets = true
 [keys.insert]
 "C-c" = "normal_mode"
 j = { k = "normal_mode" }
+C-s = ":w"
 
 [keys.normal]
 x = "select_line_below"
