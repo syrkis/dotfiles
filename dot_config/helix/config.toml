@@ -12,6 +12,7 @@ path-completion = true
 display-inlay-hints = true
 display-signature-help-docs = true
 snippets = true
+auto-document-highlight = true
 
 [keys.insert]
 "C-c" = "normal_mode"
