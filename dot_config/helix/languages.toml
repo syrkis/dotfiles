@@ -90,6 +90,15 @@ roots = ["notes.typ", ".git"]  # pick something that exists in your notes repo
 formatter = { command = "typstyle", args = ["-c", "80", "--wrap-text"]}
 auto-format = true
 
+[[language]]
+name = "hy"
+file-types = ["hy"]
+auto-format = false
+formatter = { command = "beautifhy" }
+# comment-token = "#"
+# language-servers = ["uiua-lsp", "wakatime"]
+# indent = {tab-width = 2, unit = " "}
+# auto-pairs = {'(' = ')', '{' = '}', '[' = ']', '"' = '"'}
 
 [language.auto-pairs]
 '(' = ')'
