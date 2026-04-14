@@ -1,7 +1,13 @@
 Host tripper2 tripper2.itu.dk
   HostName tripper2.itu.dk
   User nobr
-  IdentityFile ~/.ssh/yubi-primary
-  IdentityFile ~/.ssh/yubi-backup
+  IdentityAgent none
   IdentitiesOnly yes
-  ForwardAgent yes
+  IdentityFile ~/.ssh/yubi-primary
+
+Host vaporwave vaporwave.itu.dk
+  HostName vaporwave.itu.dk
+  User nobr
+  IdentityAgent none
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/yubi-primary
