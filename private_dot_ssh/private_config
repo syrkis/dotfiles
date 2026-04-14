@@ -1,21 +1,7 @@
-Host colima
-  HostName 127.0.0.1
-  User root
-  Port 22
-  IdentityFile ~/.colima/_lima/_config/user
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
 Host tripper2 tripper2.itu.dk
   HostName tripper2.itu.dk
   User nobr
-  IdentityFile ~/.ssh/id_ecdsa_sk2
+  IdentityFile ~/.ssh/yubi-primary
+  IdentityFile ~/.ssh/yubi-backup
   IdentitiesOnly yes
-  IdentityAgent none
-
-Host vaporwave vaporwave.itu.dk
-  HostName vaporwave.itu.dk
-  User nobr
-  IdentityFile ~/.ssh/id_ecdsa_sk2
-  IdentitiesOnly yes
-  IdentityAgent none
+  ForwardAgent yes
