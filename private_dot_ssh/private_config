@@ -3,11 +3,23 @@ Host tripper2 tripper2.itu.dk
   User nobr
   IdentityAgent none
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_sk_nano
   IdentityFile ~/.ssh/yubi-primary
+  IdentityFile ~/.ssh/yubi-backup
+
+  ControlMaster auto
+  ControlPersist 30m
+  ControlPath ~/.ssh/ctl-%C
 
 Host vaporwave vaporwave.itu.dk
   HostName vaporwave.itu.dk
   User nobr
   IdentityAgent none
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_sk_nano
   IdentityFile ~/.ssh/yubi-primary
+  IdentityFile ~/.ssh/yubi-backup
+
+  ControlMaster auto
+  ControlPersist 30m
+  ControlPath ~/.ssh/ctl-%C
