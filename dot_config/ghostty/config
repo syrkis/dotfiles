@@ -1,36 +1,32 @@
 # Ghostty Configuration
 # Basic configuration with sensible defaults
 auto-update-channel = tip
-# custom-shader = ~/.config/ghostty/bloom.glsl
+custom-shader = ~/.config/ghostty/cursor_sweep.glsl
 shell-integration = fish
 
 
 # Font Configuration
 font-family = "Uiua386"
-font-size = 20
+font-size = 18
 # letter-spacing = 5
 adjust-cell-width = 2
-adjust-cell-height = 30
+adjust-cell-height = 18
 term=xterm-256color
 
-
-
 # Theme Configuration - adapts to system light/dark mode
-theme = light:Xcode Light,dark:Ultra Dark
+theme = light:Xcode Light,dark:Black Metal (Marduk) 
 
-# theme = light:rose-pine-dawn,dark:rose-pine
 # Cursor Configuration
 cursor-style = block
 split-divider-color = #000000
-# unfocused-split-divider-opacity = 0
-cursor-color = #f5e0dc
+# cursor-color = #ffffff
 
 # Window Configuration
 window-padding-x = 8
 window-padding-y = 8
-background-opacity = 0.5
 unfocused-split-opacity = 1
-background-blur = true
+background-opacity = 1.0
+background-blur = macos-glass-clear
 
 # Terminal Behavior
 scrollback-limit = 10000
@@ -38,7 +34,6 @@ copy-on-select = false
 clipboard-trim-trailing-spaces = true
 
 # Shell Integration
-shell-integration = detect
 
 # Mouse Configuration
 mouse-hide-while-typing = true
@@ -60,10 +55,12 @@ quick-terminal-animation-duration = 0.1
 
 
 # Global keybind for dropdown terminal
-keybind = global:alt+space=toggle_quick_terminal
+keybind = global:alt+space=toggle_quick_terminal 
 
 # macOS specific settings (only applied on macOS)
 # macos-option-as-alt = true
 # macos-titlebar-style = hidden
 # keybind = shift+enter=text:\n
 macos-option-as-alt = "right"
+# window-decoration = none
+macos-titlebar-style = hidden

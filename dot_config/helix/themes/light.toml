@@ -1,13 +1,19 @@
+# light.toml
 inherits = "lilka"
 
 [palette]
 text         = "#000000"
-strong       = "#333333"
-mid          = "#4d4d4d"
-muted        = "#737373"
-faint        = "#999999"
+strong       = "#242424"
+mid          = "#4a4a4a"
+muted        = "#6f6f6f"
+subtle       = "#8f8f8f"
+faint        = "#b3b3b3"
+ghost        = "#d6d6d6"
+mist         = "#e6e6e6"
+
 cursor       = "#000000"
-cursorline   = "#bfbfbf"
-selection    = "#4d4d4d"
-inlay        = "#737373"
-inlay_strong = "#4d4d4d"
+cursorline   = "#cfcfcf"
+selection    = "#3f3f3f"
+
+inlay        = "#8f8f8f"
+inlay_strong = "#6f6f6f"

@@ -1,13 +1,19 @@
+# dark.toml
 inherits = "lilka"
 
 [palette]
 text         = "#ffffff"
-strong       = "#d9d9d9"
-mid          = "#bfbfbf"
+strong       = "#e6e6e6"
+mid          = "#c2c2c2"
 muted        = "#999999"
-faint        = "#737373"
+subtle       = "#737373"
+faint        = "#595959"
+ghost        = "#404040"
+mist         = "#333333"
+
 cursor       = "#ffffff"
-cursorline   = "#4d4d4d"
-selection    = "#d9d9d9"
-inlay        = "#737373"
+cursorline   = "#404040"
+selection    = "#c2c2c2"
+
+inlay        = "#666666"
 inlay_strong = "#999999"

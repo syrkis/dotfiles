@@ -1,4 +1,7 @@
-theme = { dark = "dark", light = "light" }
+[theme]
+dark = "dark"
+light = "light"
+fallback = "dark"
 
 [editor]
 bufferline = "multiple"
@@ -7,12 +10,19 @@ mouse = false
 auto-format = true
 auto-completion = true
 path-completion = true
+# rulers = [80, 120]
+
+[editor.indent-guides]
+render = false
+# character = "│"
+# skip-levels = 0
 
 [editor.lsp]
 display-inlay-hints = true
 display-signature-help-docs = true
 snippets = true
 auto-document-highlight = true
+
 
 [keys.insert]
 "C-c" = "normal_mode"
@@ -23,3 +33,4 @@ C-s = ":w"
 x = "select_line_below"
 X = "select_line_above"
 C-s = ":w"
+C-x = ":x"

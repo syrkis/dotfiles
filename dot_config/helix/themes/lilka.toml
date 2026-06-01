@@ -1,30 +1,33 @@
+# lilka.toml
 # Shared monochrome base for Lilka variants.
-# Leave backgrounds unset unless you explicitly want to override the terminal background.
+# Palettes live in light.toml and dark.toml.
 
-"ui.background"            = { fg = "text" }
+"ui.background"            = {}
 "ui.text"                  = "text"
-"ui.text.inactive"         = "muted"
+"ui.text.inactive"         = "subtle"
 "ui.text.info"             = "mid"
 "ui.text.directory"        = "strong"
 
-"ui.window"                = "faint"
-"ui.gutter"                = "faint"
-"ui.linenr"                = "faint"
+"ui.window"                = "ghost"
+"ui.gutter"                = "ghost"
+"ui.gutter.selected"       = "faint"
+"ui.linenr"                = "ghost"
 "ui.linenr.selected"       = "strong"
 
 "ui.statusline"            = { fg = "text" }
-"ui.statusline.inactive"   = { fg = "muted" }
+"ui.statusline.inactive"   = { fg = "subtle" }
 "ui.statusline.normal"     = { fg = "text", modifiers = ["bold"] }
 "ui.statusline.insert"     = { fg = "strong", modifiers = ["bold"] }
 "ui.statusline.select"     = { fg = "mid", modifiers = ["bold"] }
 "ui.statusline.separator"  = "faint"
 
 "ui.popup"                 = { fg = "text" }
+"ui.popup.info"            = { fg = "mid" }
 "ui.help"                  = { fg = "text" }
 
 "ui.menu"                  = { fg = "text" }
 "ui.menu.selected"         = { fg = "text", modifiers = ["reversed"] }
-"ui.menu.scroll"           = { fg = "mid", bg = "faint" }
+# "ui.menu.scroll"           = { fg = "mid", bg = "faint" }
 
 "ui.selection"             = { underline = { style = "line", color = "selection" }, modifiers = ["bold"] }
 "ui.selection.primary"     = { underline = { style = "double_line", color = "selection" }, modifiers = ["bold"] }
@@ -38,10 +41,10 @@
 "ui.cursorline.primary"    = { underline = { style = "curl", color = "cursorline" } }
 "ui.cursorline.secondary"  = { underline = { style = "line", color = "cursorline" } }
 
-"ui.virtual.ruler"         = "faint"
-"ui.virtual.whitespace"    = "faint"
-"ui.virtual.indent-guide"  = "faint"
-"ui.virtual.wrap"          = "muted"
+"ui.virtual.ruler"         = "ghost"
+"ui.virtual.whitespace"    = "ghost"
+"ui.virtual.indent-guide"  = "mist"
+"ui.virtual.wrap"          = "subtle"
 
 "ui.virtual.inlay-hint"           = { fg = "inlay" }
 "ui.virtual.inlay-hint.parameter" = { fg = "inlay_strong" }
@@ -52,22 +55,22 @@
 
 "warning"                  = "strong"
 "error"                    = "text"
-"info"                     = "muted"
-"hint"                     = "faint"
+"info"                     = "mid"
+"hint"                     = "subtle"
 
-"diagnostic"               = { underline = { style = "curl", color = "muted" } }
+"diagnostic"               = { underline = { style = "curl", color = "subtle" } }
 "diagnostic.warning"       = { underline = { style = "double_line", color = "strong" } }
 "diagnostic.error"         = { underline = { style = "curl", color = "text" } }
-"diagnostic.info"          = { underline = { style = "dashed", color = "muted" } }
-"diagnostic.hint"          = { underline = { style = "dotted", color = "faint" } }
+"diagnostic.info"          = { underline = { style = "dashed", color = "mid" } }
+"diagnostic.hint"          = { underline = { style = "dotted", color = "subtle" } }
 "diagnostic.unnecessary"   = { modifiers = ["dim"] }
 "diagnostic.deprecated"    = { modifiers = ["crossed_out"] }
 
 "attribute"                = "mid"
 
-"comment"                  = { fg = "faint", modifiers = ["italic"] }
-"comment.line"             = { fg = "faint", modifiers = ["italic"] }
-"comment.block"            = { fg = "faint", modifiers = ["italic"] }
+"comment"                  = { fg = "subtle", modifiers = ["italic"] }
+"comment.line"             = { fg = "subtle", modifiers = ["italic"] }
+"comment.block"            = { fg = "subtle", modifiers = ["italic"] }
 "comment.documentation"    = { fg = "muted", modifiers = ["italic"] }
 
 "type"                     = "mid"
@@ -144,17 +147,3 @@
 "diff.minus.gutter"        = "muted"
 "diff.delta"               = "mid"
 "diff.delta.gutter"        = "mid"
-
-[palette]
-text         = "#ffffff"  # max foreground
-strong       = "#e6e6e6"  # very bright grey
-mid          = "#c2c2c2"  # clear mid tone
-muted        = "#8c8c8c"  # readable but subdued
-faint        = "#595959"  # comments / low emphasis
-
-cursor       = "#ffffff"
-cursorline   = "#404040"  # stronger than before so you can actually see it
-selection    = "#bfbfbf"  # visible but not overpowering
-
-inlay        = "#666666"
-inlay_strong = "#8c8c8c"

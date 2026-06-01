@@ -23,3 +23,17 @@ Host vaporwave vaporwave.itu.dk
   ControlMaster auto
   ControlPersist 30m
   ControlPath ~/.ssh/ctl-%C
+
+Host iplis swiss
+  HostName 192.168.136.32
+  User iplis
+  IdentityAgent none
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ecdsa
+  IdentityFile ~/.ssh/id_ed25519_sk_nano
+  IdentityFile ~/.ssh/yubi-primary
+  IdentityFile ~/.ssh/yubi-backup
+
+  ControlMaster auto
+  ControlPersist 30m
+  ControlPath ~/.ssh/ctl-%C
