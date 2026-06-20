@@ -1,6 +1,4 @@
-Host tripper2 tripper2.itu.dk
-  HostName tripper2.itu.dk
-  User nobr
+Host *
   IdentityFile ~/.ssh/id_ecdsa_sk_rk
   IdentitiesOnly yes
   IdentityAgent none
@@ -9,13 +7,10 @@ Host tripper2 tripper2.itu.dk
   ControlPersist 4h
   ControlPath ~/.ssh/ctl-%C
 
-Host vaporwave vaporwave.itu.dk
+Host vaporwave
   HostName vaporwave.itu.dk
   User nobr
-  IdentityFile ~/.ssh/id_ecdsa_sk_rk
-  IdentitiesOnly yes
-  IdentityAgent none
 
-  ControlMaster auto
-  ControlPersist 4h
-  ControlPath ~/.ssh/ctl-%C
+Host tripper2
+  HostName tripper2.itu.dk
+  User nobr
