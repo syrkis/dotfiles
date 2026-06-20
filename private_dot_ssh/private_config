@@ -1,39 +1,21 @@
 Host tripper2 tripper2.itu.dk
   HostName tripper2.itu.dk
   User nobr
-  IdentityAgent none
+  IdentityFile ~/.ssh/id_ecdsa_sk_rk
   IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_ed25519_sk_nano
-  IdentityFile ~/.ssh/yubi-primary
-  IdentityFile ~/.ssh/yubi-backup
+  IdentityAgent none
 
   ControlMaster auto
-  ControlPersist 30m
+  ControlPersist 4h
   ControlPath ~/.ssh/ctl-%C
 
 Host vaporwave vaporwave.itu.dk
   HostName vaporwave.itu.dk
   User nobr
-  IdentityAgent none
+  IdentityFile ~/.ssh/id_ecdsa_sk_rk
   IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_ed25519_sk_nano
-  IdentityFile ~/.ssh/yubi-primary
-  IdentityFile ~/.ssh/yubi-backup
+  IdentityAgent none
 
   ControlMaster auto
-  ControlPersist 30m
-  ControlPath ~/.ssh/ctl-%C
-
-Host iplis swiss
-  HostName 192.168.136.32
-  User iplis
-  IdentityAgent none
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_ecdsa
-  IdentityFile ~/.ssh/id_ed25519_sk_nano
-  IdentityFile ~/.ssh/yubi-primary
-  IdentityFile ~/.ssh/yubi-backup
-
-  ControlMaster auto
-  ControlPersist 30m
+  ControlPersist 4h
   ControlPath ~/.ssh/ctl-%C

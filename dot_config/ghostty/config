@@ -25,8 +25,10 @@ split-divider-color = #000000
 window-padding-x = 8
 window-padding-y = 8
 unfocused-split-opacity = 1
+background-opacity-cells = 0
 background-opacity = 1.0
 background-blur = macos-glass-clear
+# background = false
 
 # Terminal Behavior
 scrollback-limit = 10000

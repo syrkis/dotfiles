@@ -138,7 +138,7 @@ auto-format = true
 [[language]]
 name = "hy"
 file-types = ["hy"]
-auto-format = false
+auto-format = true
 formatter = { command = "beautifhy" }
 language-servers = ["hyuga", "wakatime"]
 comment-token = ";"
@@ -259,7 +259,6 @@ file-types = ["lua", "rockspec"]
 shebangs = ["lua", "luajit"]
 auto-format = true
 roots = [".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"]
-comment-token = "--"
 block-comment-tokens = { start = "--[[", end = "--]]" }
 indent = { tab-width = 2, unit = "  " }
 language-servers = [ "lua-language-server" ]

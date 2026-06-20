@@ -4,19 +4,19 @@
 (require "jj/jj.scm")
 (require "cogs/keymaps.scm")
 (require "helix-file-watcher/file-watcher.scm")
-(require "steel-pty/term.scm")
+; (require "steel-pty/term.scm")
 (require "fake-warp/fake-warp.scm")
 (install-fake-warp!)
 
-(set-default-shell! "/etc/profiles/per-user/nobr/bin/fish")
+; (set-default-shell! "/etc/profiles/per-user/nobr/bin/fish")
 
 (require (prefix-in helix. "helix/commands.scm"))
 (require (prefix-in helix.static. "helix/static.scm"))
 
 (require-builtin steel/random as rand::)
 
-(keymap (global)
-  (normal (space (t ":open-term"))))
+; (keymap (global)
+; (normal (space (t ":open-term"))))
 
 ; (keymap (global)
 ;   (normal (space (n (C ":nrepl-connect")
