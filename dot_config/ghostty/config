@@ -10,7 +10,7 @@ font-family = "Uiua386"
 font-size = 18
 # letter-spacing = 5
 adjust-cell-width = 2
-adjust-cell-height = 18
+adjust-cell-height = 27
 term=xterm-256color
 
 # Theme Configuration - adapts to system light/dark mode

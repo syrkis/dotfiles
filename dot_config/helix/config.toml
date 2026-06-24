@@ -28,9 +28,10 @@ auto-document-highlight = true
 "C-c" = "normal_mode"
 j = { k = "normal_mode" }
 C-s = ":w"
+C-q = ":x"
 
 [keys.normal]
 x = "select_line_below"
 X = "select_line_above"
 C-s = ":w"
-# C-x = ":x"
+C-q = ":x"
