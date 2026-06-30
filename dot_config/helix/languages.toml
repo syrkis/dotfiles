@@ -287,15 +287,16 @@ source = { git = "https://github.com/nix-community/tree-sitter-nix", rev = "1b69
 name = "latex"
 scope = "source.tex"
 injection-regex = "tex"
-file-types = [ "tex", "sty", "cls", "Rd", "bbx", "cbx"]
+file-types = [ "tex", "sty", "cls", "Rd", "bbx", "cbx" ]
 comment-token = "%"
-# roots = ["main.tex", "latexmkrc", ".git"]
+roots = ["main.tex", "latexmkrc", ".git"]
+
 language-servers = [
-  "harper-ls",
-  # { name = "harper-ls", config = { linters = { Spaces = false } } },
-  "texlab", 
-  "wakatime"
+  "texlab",
+  { name = "harper-ls-latex", only-features = ["diagnostics", "code-action"] },
+  "wakatime",
 ]
+
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 formatter = { command = "tex-fmt", args = ["--stdin"] }
@@ -307,24 +308,30 @@ source = { git = "https://github.com/latex-lsp/tree-sitter-latex", rev = "8c75e9
 [language-server.texlab.config.texlab.build]
 onSave = true
 
-
-[language-server.harper-ls]
+[language-server.harper-ls-latex]
 command = "harper-ls"
 args = ["--stdio"]
-config = { linters = { Spaces = false } }
 
+[language-server.harper-ls-latex.config.harper-ls]
+diagnosticSeverity = "hint"
+dialect = "American"
+# Optional: ignore generated/build output if those ever get opened as buffers.
+excludePatterns = ["**/*.aux", "**/*.log", "**/*.out", "**/*.toc"]
 
-# [language-server.harper-ls.config.harper-ls]
-# userDictPath = ""
-# workspaceDictPath = ""
-# fileDictPath = ""
-# diagnosticSeverity = "hint"
-# isolateEnglish = false
-# dialect = "British"
-# maxFileLength = 120000
-# ignoredLintsPath = ""
-# excludePatterns = []
+[language-server.harper-ls-latex.config.harper-ls.linters]
+# This is the one causing the soft-line-break false positives in LaTeX.
+SentenceCapitalization = false
 
+# You already wanted this off.
+Spaces = false
+
+# Keep useful low-noise checks on.
+SpellCheck = true
+RepeatedWords = true
+AnA = true
+UnclosedQuotes = true
+LongSentences = true
+CorrectNumberSuffix = true
 # [language-server.harper-ls.config.harper-ls.linters]
 # SpellCheck = true
 # SpelledNumbers = false
@@ -402,3 +409,22 @@ auto-format = true
 [language-server.steel-language-server]
 command = "steel-language-server"
 args = []
+
+
+
+[language-server.cl-lsp]
+command = "/Users/nobr/.roswell/bin/cl-lsp"
+
+[[language]]
+name = "pddl"
+scope = "source.pddl"
+file-types = ["pddl"]
+comment-tokens = ";"
+grammar = "common-lisp"
+language-id = "common-lisp"
+
+language-servers = [{ name = "cl-lsp", except-features = ["format"] }]
+formatter = { command = "cl-indentify" }
+
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
